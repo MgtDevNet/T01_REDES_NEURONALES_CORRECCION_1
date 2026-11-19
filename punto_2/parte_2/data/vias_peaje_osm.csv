@@ -1,0 +1,70 @@
+ref,km_calzada,tipos_highway
+AP-7,374.21,"motorway,motorway_link"
+AP-9,295.35,"motorway,motorway_link"
+(sin ref),281.46,"motorway,motorway_link,primary,trunk,trunk_link,unclassified"
+AP-36,246.02,"motorway,motorway_link"
+AP-1,203.46,"motorway,motorway_link"
+AP-15,171.64,"motorway,motorway_link"
+AP-66,153.53,"motorway,motorway_link"
+AP-68,145.56,motorway
+AP-6,135.21,motorway
+AP-41,116.38,"motorway,motorway_link"
+R-4,113.75,"motorway,motorway_link"
+R-2,113.29,"motorway,motorway_link"
+AP-8,97.39,"motorway,motorway_link"
+C-16,85.42,"motorway,motorway_link,trunk"
+R-5,81.14,"motorway,motorway_link"
+AP-53,80.54,motorway
+AP-71,69.99,motorway
+C-32,65.16,motorway
+AP-61,56.16,motorway
+AP-46,54.76,"motorway,motorway_link"
+AP-9F,54.09,motorway
+AP-51,51.15,"motorway,motorway_link"
+R-3,50.52,"motorway,motorway_link"
+AG-55,47.27,motorway
+AG-57,37.4,"motorway,motorway_link,trunk"
+AP-636,35.22,"motorway,motorway_link,trunk"
+M-12,7.28,motorway
+DO,6.91,motorway
+AP-9M,6.21,motorway_link
+AG-57N,5.91,"motorway,motorway_link"
+Bizkaiko Golkoko Autobidea,4.89,motorway
+SG-A-7261,3.62,tertiary
+Enlace de La Magdalena,2.73,motorway_link
+GI-20,2.58,motorway
+BI-626,2.56,"motorway_link,trunk"
+M-203,2.12,motorway
+Enlace Barrios de Luna,2.06,motorway_link
+AP-9SF,2.02,motorway
+Itsasargiko pasealekua,1.93,residential
+BI-627,1.92,"motorway_link,trunk"
+AP-9FS,1.76,motorway
+AP-9 M,1.61,motorway_link
+N-634-D,1.51,"trunk,trunk_link"
+Kantauriko Autobidea,1.44,motorway_link
+Gerediaga - Elorrio Autobidea,1.22,"motorway,motorway_link"
+N-622,1.1,motorway
+AP-8 Supersur,0.83,motorway_link
+A-66,0.8,motorway
+A 9,0.61,motorway
+Autoestrada Central Galega,0.58,motorway_link
+EM 308-1,0.58,secondary
+Via-T,0.56,motorway_link
+Salida M 300,0.5,motorway_link
+Variante Sur Metropolitana,0.49,motorway_link
+Acceso Autovia,0.34,motorway_link
+MP-203,0.26,motorway
+SG-P-7211,0.22,tertiary
+Sortida 41 C-32,0.19,motorway_link
+Parking Express T1,0.19,tertiary
+Calle Martínez Molina,0.18,residential
+Calle de la Saxífraga,0.11,residential
+Calle de la Amargura,0.1,residential
+Autovía Gerediaga-Elorrio,0.1,motorway
+Salbe zubia,0.09,trunk
+Puente de Juntas,0.04,unclassified
+VG-20,0.03,motorway_link
+Calle Larga,0.02,residential
+Autoestrada do Atlántico,0.02,motorway_link
+PA-34,0.01,motorway

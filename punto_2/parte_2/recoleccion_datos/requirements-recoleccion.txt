@@ -1,0 +1,4 @@
+# Solo para regenerar los datos (no hace falta para ejecutar src/tsp_espana.py)
+# pip install -r ../../../requirements.txt -r requirements-recoleccion.txt
+osmium==4.3.2
+requests==2.34.2

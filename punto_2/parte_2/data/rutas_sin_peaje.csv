@@ -1,0 +1,2163 @@
+origen,destino,km,horas,km_peaje,peaje_por_via
+Vitoria-Gasteiz,Albacete,602.098,5.93542,0.0,{}
+Vitoria-Gasteiz,Alacant/Alicante,754.09,7.382,0.0,{}
+Vitoria-Gasteiz,Almería,927.607,9.08325,0.0,{}
+Vitoria-Gasteiz,Oviedo,352.045,4.23806,0.0,{}
+Vitoria-Gasteiz,Ávila,372.68,3.87283,0.0,{}
+Vitoria-Gasteiz,Badajoz,648.108,6.60033,0.0,{}
+Vitoria-Gasteiz,Barcelona,565.984,5.66539,0.0,{}
+Vitoria-Gasteiz,Bilbao,68.686,1.45975,0.0,{}
+Vitoria-Gasteiz,Burgos,116.404,1.39808,0.0,{}
+Vitoria-Gasteiz,Cáceres,558.202,5.45292,0.0,{}
+Vitoria-Gasteiz,Cádiz,935.442,9.09811,0.0,{}
+Vitoria-Gasteiz,Santander,170.063,2.52642,0.0,{}
+Vitoria-Gasteiz,Castelló de la Plana/Castellón de la Plana,577.024,5.82914,0.0,{}
+Vitoria-Gasteiz,Ciudad Real,562.1,5.78536,0.0,{}
+Vitoria-Gasteiz,Córdoba,752.414,7.47628,0.0,{}
+Vitoria-Gasteiz,A Coruña,607.246,6.13417,0.0,{}
+Vitoria-Gasteiz,Cuenca,514.104,5.19342,0.0,{}
+Vitoria-Gasteiz,Donostia/San Sebastián,114.258,1.43522,0.0,{}
+Vitoria-Gasteiz,Girona,634.645,6.25567,0.0,{}
+Vitoria-Gasteiz,Granada,776.888,7.67444,0.0,{}
+Vitoria-Gasteiz,Guadalajara,386.794,3.91297,0.0,{}
+Vitoria-Gasteiz,Huelva,900.473,8.61483,0.0,{}
+Vitoria-Gasteiz,Huesca,260.784,3.28531,0.0,{}
+Vitoria-Gasteiz,Jaén,693.168,6.91853,0.0,{}
+Vitoria-Gasteiz,Logroño,92.843,1.15158,0.0,{}
+Vitoria-Gasteiz,León,288.643,2.95319,0.0,{}
+Vitoria-Gasteiz,Lleida,405.109,3.98142,0.0,{}
+Vitoria-Gasteiz,Lugo,503.818,5.19628,0.0,{}
+Vitoria-Gasteiz,Madrid,351.724,3.61772,0.0,{}
+Vitoria-Gasteiz,Málaga,887.471,9.0275,0.0,{}
+Vitoria-Gasteiz,Murcia,743.95,7.24589,0.0,{}
+Vitoria-Gasteiz,Pamplona/Iruña,97.077,1.24167,0.0,{}
+Vitoria-Gasteiz,Ourense,566.148,5.53611,0.0,{}
+Vitoria-Gasteiz,Palencia,200.053,2.11747,0.0,{}
+Vitoria-Gasteiz,Pontevedra,659.026,6.70367,0.0,{}
+Vitoria-Gasteiz,Salamanca,353.893,3.53361,0.0,{}
+Vitoria-Gasteiz,Segovia,349.571,3.65897,0.0,{}
+Vitoria-Gasteiz,Sevilla,818.808,7.98597,0.0,{}
+Vitoria-Gasteiz,Soria,185.843,2.33692,0.0,{}
+Vitoria-Gasteiz,Tarragona,488.627,4.90075,0.0,{}
+Vitoria-Gasteiz,Teruel,429.027,4.235,0.0,{}
+Vitoria-Gasteiz,Toledo,438.419,4.463,0.0,{}
+Vitoria-Gasteiz,Valencia,567.175,5.67383,0.0,{}
+Vitoria-Gasteiz,Valladolid,236.862,2.48325,0.0,{}
+Vitoria-Gasteiz,Zamora,333.874,3.39394,0.0,{}
+Vitoria-Gasteiz,Zaragoza,260.159,2.64219,0.0,{}
+Albacete,Vitoria-Gasteiz,600.384,5.87614,0.0,{}
+Albacete,Alacant/Alicante,168.347,1.76425,0.0,{}
+Albacete,Almería,353.569,3.48144,0.0,{}
+Albacete,Oviedo,840.098,8.21922,0.0,{}
+Albacete,Ávila,376.654,4.29833,0.017,"{""R-2"": 0.017}"
+Albacete,Badajoz,525.492,5.67867,0.0,{}
+Albacete,Barcelona,560.725,5.59311,0.0,{}
+Albacete,Bilbao,668.013,7.09897,0.0,{}
+Albacete,Burgos,492.877,4.86908,0.0,{}
+Albacete,Cáceres,517.484,5.10436,0.0,{}
+Albacete,Cádiz,640.77,6.39417,0.0,{}
+Albacete,Santander,701.137,6.87128,0.0,{}
+Albacete,Castelló de la Plana/Castellón de la Plana,270.663,2.83606,0.0,{}
+Albacete,Ciudad Real,220.308,2.21628,0.0,{}
+Albacete,Córdoba,389.779,3.93425,0.0,{}
+Albacete,A Coruña,870.489,8.93039,0.017,"{""R-2"": 0.017}"
+Albacete,Cuenca,164.32,2.04119,0.0,{}
+Albacete,Donostia/San Sebastián,713.119,7.05319,0.0,{}
+Albacete,Girona,638.247,6.24461,0.0,{}
+Albacete,Granada,342.013,3.92983,0.0,{}
+Albacete,Guadalajara,295.277,2.94667,0.0,{}
+Albacete,Huelva,618.908,6.17383,0.0,{}
+Albacete,Huesca,478.504,5.21861,0.0,{}
+Albacete,Jaén,265.048,3.15219,0.0,{}
+Albacete,Logroño,563.59,5.83639,0.0,{}
+Albacete,León,661.576,6.42439,0.0,{}
+Albacete,Lleida,543.134,5.316,0.0,{}
+Albacete,Lugo,767.061,7.9925,0.017,"{""R-2"": 0.017}"
+Albacete,Madrid,255.409,2.58931,0.0,{}
+Albacete,Málaga,452.596,5.28289,0.0,{}
+Albacete,Murcia,145.853,1.55992,0.0,{}
+Albacete,Pamplona/Iruña,572.719,6.56592,0.199,"{""AP-15"": 0.199}"
+Albacete,Ourense,769.19,8.04519,0.017,"{""R-2"": 0.017}"
+Albacete,Palencia,494.134,5.28383,0.0,{}
+Albacete,Pontevedra,862.068,9.21278,0.017,"{""R-2"": 0.017}"
+Albacete,Salamanca,483.405,5.34636,0.017,"{""R-2"": 0.017}"
+Albacete,Segovia,365.303,4.23342,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Albacete,Sevilla,523.487,5.29631,0.0,{}
+Albacete,Soria,463.057,4.51436,0.0,{}
+Albacete,Tarragona,455.949,4.50172,0.0,{}
+Albacete,Teruel,228.74,2.85936,0.0,{}
+Albacete,Toledo,260.546,2.66808,0.0,{}
+Albacete,Valencia,187.138,2.04508,0.0,{}
+Albacete,Valladolid,475.12,5.20286,0.0,{}
+Albacete,Zamora,522.185,5.75294,0.017,"{""R-2"": 0.017}"
+Albacete,Zaragoza,405.448,4.58,0.0,{}
+Alacant/Alicante,Vitoria-Gasteiz,764.544,7.37633,0.0,{}
+Alacant/Alicante,Albacete,168.325,1.777,0.0,{}
+Alacant/Alicante,Almería,295.665,2.98131,0.0,{}
+Alacant/Alicante,Oviedo,1004.258,9.71942,0.0,{}
+Alacant/Alicante,Ávila,540.814,5.79853,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Badajoz,689.652,7.17886,0.0,{}
+Alacant/Alicante,Barcelona,551.14,5.49661,0.0,{}
+Alacant/Alicante,Bilbao,832.173,8.59917,0.0,{}
+Alacant/Alicante,Burgos,657.037,6.36928,0.0,{}
+Alacant/Alicante,Cáceres,681.644,6.60456,0.0,{}
+Alacant/Alicante,Cádiz,680.037,7.15247,0.0,{}
+Alacant/Alicante,Santander,865.297,8.37147,0.0,{}
+Alacant/Alicante,Castelló de la Plana/Castellón de la Plana,261.078,2.73956,0.0,{}
+Alacant/Alicante,Ciudad Real,384.468,3.7165,0.0,{}
+Alacant/Alicante,Córdoba,553.939,5.43444,0.0,{}
+Alacant/Alicante,A Coruña,1034.649,10.43058,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Cuenca,328.48,3.54142,0.0,{}
+Alacant/Alicante,Donostia/San Sebastián,755.642,7.92278,0.199,"{""AP-15"": 0.199}"
+Alacant/Alicante,Girona,628.662,6.14814,0.0,{}
+Alacant/Alicante,Granada,349.917,3.68075,0.0,{}
+Alacant/Alicante,Guadalajara,459.437,4.44689,0.0,{}
+Alacant/Alicante,Huelva,693.22,7.14192,0.0,{}
+Alacant/Alicante,Huesca,574.29,5.60872,0.0,{}
+Alacant/Alicante,Jaén,435.248,4.42703,0.0,{}
+Alacant/Alicante,Logroño,665.779,6.53422,0.0,{}
+Alacant/Alicante,León,825.736,7.92458,0.0,{}
+Alacant/Alicante,Lleida,533.548,5.2195,0.0,{}
+Alacant/Alicante,Lugo,931.221,9.49269,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Madrid,419.57,4.0895,0.0,{}
+Alacant/Alicante,Málaga,473.955,5.05025,0.0,{}
+Alacant/Alicante,Murcia,82.934,0.98964,0.0,{}
+Alacant/Alicante,Pamplona/Iruña,668.506,6.95603,0.199,"{""AP-15"": 0.199}"
+Alacant/Alicante,Ourense,933.351,9.54539,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Palencia,658.294,6.78403,0.0,{}
+Alacant/Alicante,Pontevedra,1026.229,10.71297,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Salamanca,647.565,6.84656,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Segovia,529.463,5.73361,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Alacant/Alicante,Sevilla,597.818,6.20328,0.0,{}
+Alacant/Alicante,Soria,552.387,5.92383,0.0,{}
+Alacant/Alicante,Tarragona,446.364,4.40522,0.0,{}
+Alacant/Alicante,Teruel,331.16,3.34494,0.0,{}
+Alacant/Alicante,Toledo,424.706,4.16828,0.0,{}
+Alacant/Alicante,Valencia,177.553,1.94858,0.0,{}
+Alacant/Alicante,Valladolid,639.28,6.70306,0.0,{}
+Alacant/Alicante,Zamora,686.346,7.25314,0.017,"{""R-2"": 0.017}"
+Alacant/Alicante,Zaragoza,501.234,4.97008,0.0,{}
+Almería,Vitoria-Gasteiz,925.632,9.10731,0.0,{}
+Almería,Albacete,353.85,3.50858,0.0,{}
+Almería,Alacant/Alicante,295.031,2.978,0.0,{}
+Almería,Oviedo,1025.598,11.41769,0.0,{}
+Almería,Ávila,648.114,6.95742,0.0,{}
+Almería,Badajoz,649.688,6.63453,0.0,{}
+Almería,Barcelona,797.4,7.807,0.0,{}
+Almería,Bilbao,993.261,10.33014,0.0,{}
+Almería,Burgos,818.124,8.10022,0.0,{}
+Almería,Cáceres,669.071,6.84144,0.0,{}
+Almería,Cádiz,490.882,5.28942,0.0,{}
+Almería,Santander,1026.384,10.10242,0.0,{}
+Almería,Castelló de la Plana/Castellón de la Plana,507.338,5.04994,0.0,{}
+Almería,Ciudad Real,448.225,4.50675,0.0,{}
+Almería,Córdoba,318.605,3.67628,0.0,{}
+Almería,A Coruña,1171.802,11.89325,0.0,{}
+Almería,Cuenca,514.005,5.27297,0.0,{}
+Almería,Donostia/San Sebastián,1001.902,10.23317,0.199,"{""AP-15"": 0.199}"
+Almería,Girona,874.922,8.45853,0.0,{}
+Almería,Granada,160.763,1.81767,0.0,{}
+Almería,Guadalajara,620.525,6.17783,0.0,{}
+Almería,Huelva,504.065,5.27886,0.0,{}
+Almería,Huesca,820.55,7.91911,0.0,{}
+Almería,Jaén,246.094,2.56397,0.0,{}
+Almería,Logroño,912.039,8.84461,0.0,{}
+Almería,León,906.997,9.47189,0.0,{}
+Almería,Lleida,779.809,7.52989,0.0,{}
+Almería,Lugo,1068.374,10.95536,0.0,{}
+Almería,Madrid,568.92,5.76003,0.0,{}
+Almería,Málaga,202.08,2.50481,0.0,{}
+Almería,Murcia,222.641,2.25808,0.0,{}
+Almería,Pamplona/Iruña,914.766,9.26642,0.199,"{""AP-15"": 0.199}"
+Almería,Ourense,1070.503,11.00806,0.0,{}
+Almería,Palencia,819.382,8.515,0.0,{}
+Almería,Pontevedra,1163.381,12.17561,0.0,{}
+Almería,Salamanca,752.353,8.04761,0.0,{}
+Almería,Segovia,666.615,7.19628,0.075,"{""AP-6"": 0.075}"
+Almería,Sevilla,408.664,4.34022,0.0,{}
+Almería,Soria,788.304,7.7455,0.0,{}
+Almería,Tarragona,692.624,6.71561,0.0,{}
+Almería,Teruel,577.42,5.65533,0.0,{}
+Almería,Toledo,520.44,5.25258,0.0,{}
+Almería,Valencia,423.813,4.25897,0.0,{}
+Almería,Valladolid,782.882,8.27125,0.075,"{""AP-6"": 0.075}"
+Almería,Zamora,823.498,8.71578,0.0,{}
+Almería,Zaragoza,747.495,7.28047,0.0,{}
+Oviedo,Vitoria-Gasteiz,353.277,4.2945,0.0,{}
+Oviedo,Albacete,843.13,8.31078,0.0,{}
+Oviedo,Alacant/Alicante,1007.476,9.82558,0.0,{}
+Oviedo,Almería,1024.196,11.26461,0.0,{}
+Oviedo,Ávila,381.73,4.77353,0.0,{}
+Oviedo,Badajoz,615.428,7.15111,0.0,{}
+Oviedo,Barcelona,962.481,9.61958,0.0,{}
+Oviedo,Bilbao,286.817,3.17183,0.0,{}
+Oviedo,Burgos,322.656,3.81047,0.0,{}
+Oviedo,Cáceres,525.522,6.00367,0.0,{}
+Oviedo,Cádiz,902.762,9.64889,0.0,{}
+Oviedo,Santander,195.413,2.14575,0.0,{}
+Oviedo,Castelló de la Plana/Castellón de la Plana,973.521,9.78333,0.0,{}
+Oviedo,Ciudad Real,641.977,7.96622,0.0,{}
+Oviedo,Córdoba,840.028,9.65158,0.0,{}
+Oviedo,A Coruña,299.354,3.06114,0.0,{}
+Oviedo,Cuenca,755.136,7.56878,0.0,{}
+Oviedo,Donostia/San Sebastián,404.104,5.00272,0.0,{}
+Oviedo,Girona,1031.143,10.20986,0.0,{}
+Oviedo,Granada,873.476,9.85578,0.0,{}
+Oviedo,Guadalajara,627.825,6.28833,0.0,{}
+Oviedo,Huelva,867.793,9.16561,0.0,{}
+Oviedo,Huesca,729.141,7.31189,0.0,{}
+Oviedo,Jaén,789.756,9.09986,0.0,{}
+Oviedo,Logroño,489.34,5.10578,0.0,{}
+Oviedo,León,114.762,2.03072,0.0,{}
+Oviedo,Lleida,801.606,7.93561,0.0,{}
+Oviedo,Lugo,254.14,2.63408,0.0,{}
+Oviedo,Madrid,456.647,5.93119,0.0,{}
+Oviedo,Málaga,990.913,10.81811,0.0,{}
+Oviedo,Murcia,984.981,9.62122,0.0,{}
+Oviedo,Pamplona/Iruña,443.857,5.27381,0.0,{}
+Oviedo,Ourense,350.13,3.71169,0.0,{}
+Oviedo,Palencia,341.399,3.52817,0.0,{}
+Oviedo,Pontevedra,364.334,4.44464,0.0,{}
+Oviedo,Salamanca,323.264,4.11722,0.0,{}
+Oviedo,Segovia,410.365,5.03983,0.0,{}
+Oviedo,Sevilla,786.129,8.53672,0.0,{}
+Oviedo,Soria,494.625,5.76969,0.0,{}
+Oviedo,Tarragona,885.124,8.85494,0.0,{}
+Oviedo,Teruel,825.524,8.18919,0.0,{}
+Oviedo,Toledo,524.934,6.55067,0.0,{}
+Oviedo,Valencia,942.591,9.27994,0.0,{}
+Oviedo,Valladolid,301.459,3.88783,0.0,{}
+Oviedo,Zamora,258.586,3.54011,0.0,{}
+Oviedo,Zaragoza,656.656,6.59639,0.0,{}
+Ávila,Vitoria-Gasteiz,371.397,3.80444,0.0,{}
+Ávila,Albacete,381.066,4.2505,0.0,{}
+Ávila,Alacant/Alicante,545.411,5.76528,0.0,{}
+Ávila,Almería,652.231,6.84214,0.0,{}
+Ávila,Oviedo,382.878,4.76269,0.0,{}
+Ávila,Badajoz,322.698,4.12197,0.0,{}
+Ávila,Barcelona,731.652,7.84431,0.0,{}
+Ávila,Bilbao,469.293,4.97147,0.0,{}
+Ávila,Burgos,264.088,2.82192,0.0,{}
+Ávila,Cáceres,232.792,2.97453,0.0,{}
+Ávila,Cádiz,625.0,6.61614,0.0,{}
+Ávila,Santander,381.626,3.94408,0.0,{}
+Ávila,Castelló de la Plana/Castellón de la Plana,547.314,5.92333,0.0,{}
+Ávila,Ciudad Real,252.296,3.46656,0.0,{}
+Ávila,Córdoba,477.037,5.23517,0.0,{}
+Ávila,A Coruña,529.082,5.23822,0.0,{}
+Ávila,Cuenca,293.072,3.5085,0.0,{}
+Ávila,Donostia/San Sebastián,484.132,4.9815,0.0,{}
+Ávila,Girona,800.314,8.43458,0.0,{}
+Ávila,Granada,501.511,5.43333,0.0,{}
+Ávila,Guadalajara,169.589,2.37772,0.0,{}
+Ávila,Huelva,590.032,6.13286,0.0,{}
+Ávila,Huesca,498.312,5.53664,0.0,{}
+Ávila,Jaén,417.791,4.67742,0.0,{}
+Ávila,Logroño,391.201,4.11647,0.0,{}
+Ávila,León,264.277,2.81686,0.0,{}
+Ávila,Lleida,570.777,6.16036,0.0,{}
+Ávila,Lugo,425.654,4.30036,0.0,{}
+Ávila,Madrid,109.853,1.78678,0.0,{}
+Ávila,Málaga,612.094,6.78639,0.0,{}
+Ávila,Murcia,522.917,5.56094,0.0,{}
+Ávila,Pamplona/Iruña,466.951,4.78797,0.0,{}
+Ávila,Ourense,427.784,4.35306,0.0,{}
+Ávila,Palencia,184.248,2.04661,0.0,{}
+Ávila,Pontevedra,520.662,5.52061,0.0,{}
+Ávila,Salamanca,105.825,1.22203,0.0,{}
+Ávila,Segovia,70.571,1.25931,0.019,"{""AP-51"": 0.019}"
+Ávila,Sevilla,508.367,5.50397,0.0,{}
+Ávila,Soria,256.341,3.82808,0.019,"{""AP-51"": 0.019}"
+Ávila,Tarragona,654.295,7.07969,0.0,{}
+Ávila,Teruel,436.472,5.22008,0.0,{}
+Ávila,Toledo,133.839,2.04411,0.0,{}
+Ávila,Valencia,480.527,5.21967,0.0,{}
+Ávila,Valladolid,138.584,1.6195,0.0,{}
+Ávila,Zamora,175.464,1.93019,0.0,{}
+Ávila,Zaragoza,425.827,4.82114,0.0,{}
+Badajoz,Vitoria-Gasteiz,646.845,6.56322,0.0,{}
+Badajoz,Albacete,525.898,5.664,0.0,{}
+Badajoz,Alacant/Alicante,690.244,7.17881,0.0,{}
+Badajoz,Almería,614.871,6.53706,0.0,{}
+Badajoz,Oviedo,616.762,7.14883,0.0,{}
+Badajoz,Ávila,323.372,4.13794,0.0,{}
+Badajoz,Barcelona,1019.74,9.90342,0.0,{}
+Badajoz,Bilbao,744.74,7.73025,0.0,{}
+Badajoz,Burgos,539.535,5.58069,0.0,{}
+Badajoz,Cáceres,91.232,1.38775,0.0,{}
+Badajoz,Cádiz,326.249,3.69358,0.0,{}
+Badajoz,Santander,657.073,6.70283,0.0,{}
+Badajoz,Castelló de la Plana/Castellón de la Plana,724.965,7.59822,0.0,{}
+Badajoz,Ciudad Real,304.195,3.56953,0.0,{}
+Badajoz,Córdoba,262.408,3.65706,0.0,{}
+Badajoz,A Coruña,762.966,7.62436,0.0,{}
+Badajoz,Cuenca,562.923,5.49069,0.0,{}
+Badajoz,Donostia/San Sebastián,759.579,7.74028,0.0,{}
+Badajoz,Girona,1088.402,10.49369,0.0,{}
+Badajoz,Granada,457.819,5.13756,0.0,{}
+Badajoz,Guadalajara,457.677,4.43683,0.0,{}
+Badajoz,Huelva,234.552,3.12378,0.0,{}
+Badajoz,Huesca,786.4,7.59572,0.0,{}
+Badajoz,Jaén,374.403,4.92814,0.0,{}
+Badajoz,Logroño,666.648,6.87525,0.0,{}
+Badajoz,León,498.161,5.20303,0.0,{}
+Badajoz,Lleida,858.865,8.21947,0.0,{}
+Badajoz,Lugo,659.538,6.6865,0.0,{}
+Badajoz,Madrid,401.522,3.94561,0.0,{}
+Badajoz,Málaga,414.4,4.86281,0.0,{}
+Badajoz,Murcia,667.75,6.97447,0.0,{}
+Badajoz,Pamplona/Iruña,742.399,7.54672,0.0,{}
+Badajoz,Ourense,617.426,6.65214,0.0,{}
+Badajoz,Palencia,459.695,4.80539,0.0,{}
+Badajoz,Pontevedra,710.304,7.81969,0.0,{}
+Badajoz,Salamanca,292.017,3.30536,0.0,{}
+Badajoz,Segovia,392.365,5.19883,0.019,"{""AP-51"": 0.019}"
+Badajoz,Sevilla,209.615,2.58144,0.0,{}
+Badajoz,Soria,625.456,6.0045,0.0,{}
+Badajoz,Tarragona,942.383,9.13881,0.0,{}
+Badajoz,Teruel,706.324,7.20228,0.0,{}
+Badajoz,Toledo,363.926,3.6395,0.0,{}
+Badajoz,Valencia,658.177,6.89456,0.0,{}
+Badajoz,Valladolid,414.031,4.37825,0.0,{}
+Badajoz,Zamora,359.129,3.92992,0.0,{}
+Badajoz,Zaragoza,713.915,6.88022,0.0,{}
+Barcelona,Vitoria-Gasteiz,563.62,5.62283,0.0,{}
+Barcelona,Albacete,559.06,5.68136,0.0,{}
+Barcelona,Alacant/Alicante,551.21,5.581,0.0,{}
+Barcelona,Almería,796.144,7.85344,0.0,{}
+Barcelona,Oviedo,957.185,9.49686,0.0,{}
+Barcelona,Ávila,730.808,7.79911,0.017,"{""R-2"": 0.017}"
+Barcelona,Badajoz,1025.821,9.90411,0.0,{}
+Barcelona,Bilbao,631.249,6.84567,0.0,{}
+Barcelona,Burgos,606.424,6.14689,0.0,{}
+Barcelona,Cáceres,924.262,9.02597,0.0,{}
+Barcelona,Cádiz,1127.545,11.15294,0.0,{}
+Barcelona,Santander,728.873,7.89733,0.0,{}
+Barcelona,Castelló de la Plana/Castellón de la Plana,293.61,3.23678,0.0,{}
+Barcelona,Ciudad Real,707.083,6.97506,0.0,{}
+Barcelona,Córdoba,876.555,8.69303,0.0,{}
+Barcelona,A Coruña,1097.265,10.883,0.0,{}
+Barcelona,Cuenca,555.419,6.02425,0.0,{}
+Barcelona,Donostia/San Sebastián,517.404,6.11281,0.0,{}
+Barcelona,Girona,104.118,1.48531,0.0,{}
+Barcelona,Granada,850.395,8.55289,0.0,{}
+Barcelona,Guadalajara,563.998,5.58739,0.0,{}
+Barcelona,Huelva,1105.684,10.93261,0.0,{}
+Barcelona,Huesca,274.276,3.11972,0.0,{}
+Barcelona,Jaén,817.309,8.13525,0.0,{}
+Barcelona,Logroño,476.379,4.76228,0.0,{}
+Barcelona,León,778.662,7.702,0.0,{}
+Barcelona,Lleida,157.8,1.99897,0.0,{}
+Barcelona,Lugo,993.837,9.94511,0.0,{}
+Barcelona,Madrid,618.67,6.18658,0.0,{}
+Barcelona,Málaga,974.433,9.92239,0.0,{}
+Barcelona,Murcia,588.427,5.93189,0.0,{}
+Barcelona,Pamplona/Iruña,430.268,5.14606,0.0,{}
+Barcelona,Ourense,1056.167,10.28492,0.0,{}
+Barcelona,Palencia,690.073,6.86631,0.0,{}
+Barcelona,Pontevedra,1149.045,11.4525,0.0,{}
+Barcelona,Salamanca,843.913,8.28242,0.0,{}
+Barcelona,Segovia,719.457,7.73419,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Barcelona,Sevilla,1010.263,10.05508,0.0,{}
+Barcelona,Soria,471.712,4.98075,0.0,{}
+Barcelona,Tarragona,111.867,1.53278,0.0,{}
+Barcelona,Teruel,442.039,4.69628,0.0,{}
+Barcelona,Toledo,693.373,6.93186,0.0,{}
+Barcelona,Valencia,364.873,3.85625,0.0,{}
+Barcelona,Valladolid,726.881,7.23206,0.0,{}
+Barcelona,Zamora,823.893,8.14275,0.0,{}
+Barcelona,Zaragoza,310.318,3.22553,0.0,{}
+Bilbao,Vitoria-Gasteiz,70.655,1.46303,0.0,{}
+Bilbao,Albacete,667.577,7.11678,0.0,{}
+Bilbao,Alacant/Alicante,819.569,8.56333,0.0,{}
+Bilbao,Almería,993.087,10.26458,0.0,{}
+Bilbao,Oviedo,282.624,3.10094,0.0,{}
+Bilbao,Ávila,468.742,5.00078,0.0,{}
+Bilbao,Badajoz,744.17,7.72825,0.0,{}
+Bilbao,Barcelona,631.463,6.84672,0.0,{}
+Bilbao,Burgos,181.883,2.57942,0.0,{}
+Bilbao,Cáceres,654.264,6.58083,0.0,{}
+Bilbao,Cádiz,1031.504,10.22603,0.0,{}
+Bilbao,Santander,100.641,1.38931,0.0,{}
+Bilbao,Castelló de la Plana/Castellón de la Plana,642.503,7.01047,0.0,{}
+Bilbao,Ciudad Real,627.579,6.96669,0.0,{}
+Bilbao,Córdoba,817.893,8.65764,0.0,{}
+Bilbao,A Coruña,553.702,5.71117,0.0,{}
+Bilbao,Cuenca,579.583,6.37478,0.0,{}
+Bilbao,Donostia/San Sebastián,120.406,2.13564,0.0,{}
+Bilbao,Girona,700.124,7.437,0.0,{}
+Bilbao,Granada,842.367,8.85578,0.0,{}
+Bilbao,Guadalajara,452.273,5.09431,0.0,{}
+Bilbao,Huelva,996.535,9.74275,0.0,{}
+Bilbao,Huesca,318.174,4.46369,0.0,{}
+Bilbao,Jaén,758.647,8.09986,0.0,{}
+Bilbao,Logroño,158.322,2.33294,0.0,{}
+Bilbao,León,350.917,3.77494,0.0,{}
+Bilbao,Lleida,470.588,5.16278,0.0,{}
+Bilbao,Lugo,508.489,5.28411,0.0,{}
+Bilbao,Madrid,417.203,4.79908,0.0,{}
+Bilbao,Málaga,952.95,10.20886,0.0,{}
+Bilbao,Murcia,809.429,8.42722,0.0,{}
+Bilbao,Pamplona/Iruña,154.467,2.42003,0.0,{}
+Bilbao,Ourense,628.422,6.35786,0.0,{}
+Bilbao,Palencia,286.948,3.15242,0.0,{}
+Bilbao,Pontevedra,618.683,7.09464,0.0,{}
+Bilbao,Salamanca,449.955,4.66153,0.0,{}
+Bilbao,Segovia,445.634,4.78692,0.0,{}
+Bilbao,Sevilla,914.871,9.11389,0.0,{}
+Bilbao,Soria,251.322,3.51825,0.0,{}
+Bilbao,Tarragona,554.106,6.08211,0.0,{}
+Bilbao,Teruel,494.506,5.41633,0.0,{}
+Bilbao,Toledo,503.898,5.64433,0.0,{}
+Bilbao,Valencia,632.654,6.85517,0.0,{}
+Bilbao,Valladolid,332.924,3.61117,0.0,{}
+Bilbao,Zamora,429.936,4.52186,0.0,{}
+Bilbao,Zaragoza,325.638,3.82353,0.0,{}
+Burgos,Vitoria-Gasteiz,115.657,1.36589,0.0,{}
+Burgos,Albacete,493.441,4.88408,0.0,{}
+Burgos,Alacant/Alicante,657.787,6.39886,0.0,{}
+Burgos,Almería,818.95,8.03192,0.0,{}
+Burgos,Oviedo,358.382,3.69939,0.0,{}
+Burgos,Ávila,263.897,2.82419,0.0,{}
+Burgos,Badajoz,539.325,5.55169,0.0,{}
+Burgos,Barcelona,608.601,6.19169,0.0,{}
+Burgos,Bilbao,183.286,2.58869,0.0,{}
+Burgos,Cáceres,449.419,4.40428,0.0,{}
+Burgos,Cádiz,826.659,8.04947,0.0,{}
+Burgos,Santander,219.421,2.35142,0.0,{}
+Burgos,Castelló de la Plana/Castellón de la Plana,619.641,6.35547,0.0,{}
+Burgos,Ciudad Real,453.442,4.734,0.0,{}
+Burgos,Córdoba,643.757,6.42494,0.0,{}
+Burgos,A Coruña,498.463,5.08553,0.0,{}
+Burgos,Cuenca,405.447,4.14208,0.0,{}
+Burgos,Donostia/San Sebastián,228.392,2.54294,0.0,{}
+Burgos,Girona,677.263,6.78197,0.0,{}
+Burgos,Granada,668.23,6.62308,0.0,{}
+Burgos,Guadalajara,278.136,2.86161,0.0,{}
+Burgos,Huelva,791.69,7.56619,0.0,{}
+Burgos,Huesca,375.261,3.88403,0.0,{}
+Burgos,Jaén,584.511,5.86717,0.0,{}
+Burgos,Logroño,135.46,1.67792,0.0,{}
+Burgos,León,179.86,1.90453,0.0,{}
+Burgos,Lleida,447.726,4.50775,0.0,{}
+Burgos,Lugo,395.035,4.14764,0.0,{}
+Burgos,Madrid,243.066,2.56639,0.0,{}
+Burgos,Málaga,778.813,7.97617,0.0,{}
+Burgos,Murcia,635.292,6.19453,0.0,{}
+Burgos,Pamplona/Iruña,211.211,2.34939,0.0,{}
+Burgos,Ourense,457.365,4.48747,0.0,{}
+Burgos,Palencia,91.27,1.06883,0.0,{}
+Burgos,Pontevedra,550.243,5.65503,0.0,{}
+Burgos,Salamanca,245.11,2.48494,0.0,{}
+Burgos,Segovia,240.788,2.61033,0.0,{}
+Burgos,Sevilla,710.025,6.93733,0.0,{}
+Burgos,Soria,144.936,2.343,0.0,{}
+Burgos,Tarragona,531.244,5.42708,0.0,{}
+Burgos,Teruel,471.644,4.76133,0.0,{}
+Burgos,Toledo,329.761,3.41164,0.0,{}
+Burgos,Valencia,592.902,5.85325,0.0,{}
+Burgos,Valladolid,128.079,1.43461,0.0,{}
+Burgos,Zamora,225.091,2.34528,0.0,{}
+Burgos,Zaragoza,302.776,3.16853,0.0,{}
+Cáceres,Vitoria-Gasteiz,555.964,5.38972,0.0,{}
+Cáceres,Albacete,520.106,5.06036,0.0,{}
+Cáceres,Alacant/Alicante,684.452,6.57514,0.0,{}
+Cáceres,Almería,670.611,6.76286,0.0,{}
+Cáceres,Oviedo,525.881,5.97531,0.0,{}
+Cáceres,Ávila,232.491,2.96442,0.0,{}
+Cáceres,Badajoz,91.213,1.41431,0.0,{}
+Cáceres,Barcelona,918.094,8.996,0.0,{}
+Cáceres,Bilbao,653.859,6.55672,0.0,{}
+Cáceres,Burgos,448.654,4.40717,0.0,{}
+Cáceres,Cádiz,381.989,3.91942,0.0,{}
+Cáceres,Santander,566.192,5.52933,0.0,{}
+Cáceres,Castelló de la Plana/Castellón de la Plana,719.173,6.99458,0.0,{}
+Cáceres,Ciudad Real,273.851,3.59611,0.0,{}
+Cáceres,Córdoba,319.255,3.92211,0.0,{}
+Cáceres,A Coruña,672.086,6.45086,0.0,{}
+Cáceres,Cuenca,461.277,4.58328,0.0,{}
+Cáceres,Donostia/San Sebastián,668.698,6.56678,0.0,{}
+Cáceres,Girona,986.756,9.58628,0.0,{}
+Cáceres,Granada,513.559,5.36336,0.0,{}
+Cáceres,Guadalajara,356.031,3.52942,0.0,{}
+Cáceres,Huelva,347.02,3.43614,0.0,{}
+Cáceres,Huesca,684.754,6.68831,0.0,{}
+Cáceres,Jaén,431.25,5.19319,0.0,{}
+Cáceres,Logroño,575.767,5.70175,0.0,{}
+Cáceres,León,407.281,4.0295,0.0,{}
+Cáceres,Lleida,757.219,7.31203,0.0,{}
+Cáceres,Lugo,568.658,5.51297,0.0,{}
+Cáceres,Madrid,299.876,3.03819,0.0,{}
+Cáceres,Málaga,470.14,5.08861,0.0,{}
+Cáceres,Murcia,661.957,6.37081,0.0,{}
+Cáceres,Pamplona/Iruña,651.518,6.37322,0.0,{}
+Cáceres,Ourense,526.545,5.47861,0.0,{}
+Cáceres,Palencia,368.814,3.63189,0.0,{}
+Cáceres,Pontevedra,619.423,6.64619,0.0,{}
+Cáceres,Salamanca,201.137,2.13183,0.0,{}
+Cáceres,Segovia,301.485,4.02531,0.019,"{""AP-51"": 0.019}"
+Cáceres,Sevilla,265.355,2.80725,0.0,{}
+Cáceres,Soria,523.81,5.09708,0.0,{}
+Cáceres,Tarragona,840.737,8.23136,0.0,{}
+Cáceres,Teruel,604.678,6.29486,0.0,{}
+Cáceres,Toledo,262.28,2.73208,0.0,{}
+Cáceres,Valencia,652.385,6.29092,0.0,{}
+Cáceres,Valladolid,323.151,3.20475,0.0,{}
+Cáceres,Zamora,268.248,2.75639,0.0,{}
+Cáceres,Zaragoza,612.269,5.97281,0.0,{}
+Cádiz,Vitoria-Gasteiz,934.859,9.11983,0.0,{}
+Cádiz,Albacete,638.343,6.36544,0.0,{}
+Cádiz,Alacant/Alicante,708.256,7.1655,0.0,{}
+Cádiz,Almería,519.098,5.22811,0.0,{}
+Cádiz,Oviedo,904.776,9.70544,0.0,{}
+Cádiz,Ávila,611.386,6.69456,0.0,{}
+Cádiz,Badajoz,362.64,3.77267,0.0,{}
+Cádiz,Barcelona,1127.471,11.05675,0.0,{}
+Cádiz,Bilbao,1032.755,10.28686,0.0,{}
+Cádiz,Burgos,827.549,8.13731,0.0,{}
+Cádiz,Cáceres,382.023,3.97958,0.0,{}
+Cádiz,Santander,945.088,9.25947,0.0,{}
+Cádiz,Castelló de la Plana/Castellón de la Plana,837.41,8.29967,0.0,{}
+Cádiz,Ciudad Real,442.711,4.8125,0.0,{}
+Cádiz,Córdoba,257.863,2.72672,0.0,{}
+Cádiz,A Coruña,1050.981,10.181,0.0,{}
+Cádiz,Cuenca,681.993,7.08656,0.0,{}
+Cádiz,Donostia/San Sebastián,1047.594,10.29689,0.0,{}
+Cádiz,Girona,1204.993,11.70825,0.0,{}
+Cádiz,Granada,362.046,3.82861,0.0,{}
+Cádiz,Guadalajara,695.907,6.95258,0.0,{}
+Cádiz,Huelva,211.406,2.32622,0.0,{}
+Cádiz,Huesca,1024.63,10.11147,0.0,{}
+Cádiz,Jaén,369.602,3.96994,0.0,{}
+Cádiz,Logroño,954.662,9.43186,0.0,{}
+Cádiz,León,786.176,7.75964,0.0,{}
+Cádiz,Lleida,1097.095,10.73519,0.0,{}
+Cádiz,Lugo,947.553,9.24311,0.0,{}
+Cádiz,Madrid,651.555,6.48614,0.0,{}
+Cádiz,Málaga,237.003,3.45897,0.0,{}
+Cádiz,Murcia,635.866,6.44558,0.0,{}
+Cádiz,Pamplona/Iruña,1030.413,10.10336,0.0,{}
+Cádiz,Ourense,905.44,9.20875,0.0,{}
+Cádiz,Palencia,747.71,7.362,0.0,{}
+Cádiz,Pontevedra,998.318,10.37631,0.0,{}
+Cádiz,Salamanca,580.032,5.86197,0.0,{}
+Cádiz,Segovia,728.811,7.74358,0.075,"{""AP-6"": 0.075}"
+Cádiz,Sevilla,123.771,1.56186,0.0,{}
+Cádiz,Soria,863.686,8.52025,0.0,{}
+Cádiz,Tarragona,1022.696,9.96536,0.0,{}
+Cádiz,Teruel,808.597,8.16106,0.0,{}
+Cádiz,Toledo,595.822,6.02731,0.0,{}
+Cádiz,Valencia,770.622,7.596,0.0,{}
+Cádiz,Valladolid,702.046,6.93489,0.0,{}
+Cádiz,Zamora,647.144,6.48653,0.0,{}
+Cádiz,Zaragoza,952.145,9.39597,0.0,{}
+Santander,Vitoria-Gasteiz,169.304,2.54036,0.0,{}
+Santander,Albacete,701.106,6.88781,0.0,{}
+Santander,Alacant/Alicante,865.452,8.40261,0.0,{}
+Santander,Almería,1026.615,10.03564,0.0,{}
+Santander,Oviedo,191.937,2.06694,0.0,{}
+Santander,Ávila,381.17,3.95353,0.0,{}
+Santander,Badajoz,656.597,6.68103,0.0,{}
+Santander,Barcelona,730.112,7.92406,0.0,{}
+Santander,Bilbao,102.845,1.41769,0.0,{}
+Santander,Burgos,180.632,2.3875,0.0,{}
+Santander,Cáceres,566.692,5.53361,0.0,{}
+Santander,Cádiz,943.931,9.17881,0.0,{}
+Santander,Castelló de la Plana/Castellón de la Plana,741.152,8.08783,0.0,{}
+Santander,Ciudad Real,661.107,6.73775,0.0,{}
+Santander,Córdoba,851.422,8.42867,0.0,{}
+Santander,A Coruña,463.015,4.67714,0.0,{}
+Santander,Cuenca,613.112,6.14581,0.0,{}
+Santander,Donostia/San Sebastián,220.132,3.24858,0.0,{}
+Santander,Girona,798.774,8.51433,0.0,{}
+Santander,Granada,875.895,8.62683,0.0,{}
+Santander,Guadalajara,485.801,4.86536,0.0,{}
+Santander,Huelva,908.962,8.69553,0.0,{}
+Santander,Huesca,423.591,5.56333,0.0,{}
+Santander,Jaén,792.176,7.87092,0.0,{}
+Santander,Logroño,256.971,3.41028,0.0,{}
+Santander,León,263.344,2.72772,0.0,{}
+Santander,Lleida,569.237,6.24011,0.0,{}
+Santander,Lugo,417.802,4.25008,0.0,{}
+Santander,Madrid,450.731,4.57011,0.0,{}
+Santander,Málaga,986.478,9.97989,0.0,{}
+Santander,Murcia,842.957,8.19828,0.0,{}
+Santander,Pamplona/Iruña,259.885,3.51967,0.0,{}
+Santander,Ourense,540.849,5.31064,0.0,{}
+Santander,Palencia,199.375,2.10519,0.0,{}
+Santander,Pontevedra,527.996,6.06064,0.0,{}
+Santander,Salamanca,362.383,3.61431,0.0,{}
+Santander,Segovia,358.061,3.73967,0.0,{}
+Santander,Sevilla,827.298,8.06667,0.0,{}
+Santander,Soria,352.602,4.34672,0.0,{}
+Santander,Tarragona,652.755,7.15944,0.0,{}
+Santander,Teruel,593.155,6.49369,0.0,{}
+Santander,Toledo,537.427,5.41539,0.0,{}
+Santander,Valencia,800.567,7.857,0.0,{}
+Santander,Valladolid,245.351,2.56394,0.0,{}
+Santander,Zamora,342.364,3.47464,0.0,{}
+Santander,Zaragoza,424.287,4.90089,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Vitoria-Gasteiz,575.261,5.85353,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Albacete,270.044,2.80519,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Alacant/Alicante,262.193,2.70483,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Almería,507.127,4.97728,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Oviedo,968.826,9.72753,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Ávila,542.039,5.91619,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Badajoz,723.251,7.56128,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Barcelona,295.442,3.17611,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Bilbao,642.89,7.07633,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Burgos,618.065,6.37758,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Cáceres,715.243,6.987,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Cádiz,838.529,8.27681,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Santander,740.514,8.12803,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Ciudad Real,418.067,4.09892,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Córdoba,587.538,5.81686,0.0,{}
+Castelló de la Plana/Castellón de la Plana,A Coruña,1035.874,10.54822,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Cuenca,266.402,3.14808,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Donostia/San Sebastián,577.883,6.38153,0.199,"{""AP-15"": 0.199}"
+Castelló de la Plana/Castellón de la Plana,Girona,372.964,3.82761,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Granada,561.378,5.67672,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Guadalajara,460.662,4.56453,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Huelva,816.667,8.05644,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Huesca,396.531,4.06747,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Jaén,528.292,5.25908,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Logroño,488.02,4.99297,0.0,{}
+Castelló de la Plana/Castellón de la Plana,León,790.304,7.93269,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Lleida,277.851,2.899,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Lugo,932.446,9.61036,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Madrid,420.795,4.20714,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Málaga,685.417,7.04625,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Murcia,299.41,3.05575,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Pamplona/Iruña,490.747,5.41475,0.199,"{""AP-15"": 0.199}"
+Castelló de la Plana/Castellón de la Plana,Ourense,934.576,9.66306,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Palencia,659.519,6.90167,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Pontevedra,1027.454,10.83061,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Salamanca,648.79,6.96419,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Segovia,530.688,5.85128,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Sevilla,721.246,7.17894,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Soria,374.628,4.38258,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Tarragona,190.666,2.08472,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Teruel,153.401,1.80369,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Toledo,458.305,4.55069,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Valencia,75.856,0.98008,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Valladolid,640.505,6.82072,0.0,{}
+Castelló de la Plana/Castellón de la Plana,Zamora,687.571,7.37078,0.017,"{""R-2"": 0.017}"
+Castelló de la Plana/Castellón de la Plana,Zaragoza,323.476,3.42883,0.0,{}
+Ciudad Real,Vitoria-Gasteiz,560.8,5.71478,0.0,{}
+Ciudad Real,Albacete,219.255,2.20267,0.0,{}
+Ciudad Real,Alacant/Alicante,383.601,3.71744,0.0,{}
+Ciudad Real,Almería,428.288,4.39033,0.0,{}
+Ciudad Real,Oviedo,638.745,7.96853,0.0,{}
+Ciudad Real,Ávila,248.079,3.38936,0.0,{}
+Ciudad Real,Badajoz,303.188,3.53781,0.0,{}
+Ciudad Real,Barcelona,708.384,6.89394,0.0,{}
+Ciudad Real,Bilbao,628.429,6.93758,0.0,{}
+Ciudad Real,Burgos,453.293,4.70769,0.0,{}
+Ciudad Real,Cáceres,299.912,3.58914,0.0,{}
+Ciudad Real,Cádiz,441.506,4.76078,0.0,{}
+Ciudad Real,Santander,661.553,6.70989,0.0,{}
+Ciudad Real,Castelló de la Plana/Castellón de la Plana,418.322,4.13689,0.0,{}
+Ciudad Real,Córdoba,190.516,2.30083,0.0,{}
+Ciudad Real,A Coruña,784.95,8.44408,0.0,{}
+Ciudad Real,Cuenca,262.906,2.92378,0.0,{}
+Ciudad Real,Donostia/San Sebastián,673.535,6.89183,0.0,{}
+Ciudad Real,Girona,785.905,7.54547,0.0,{}
+Ciudad Real,Granada,277.568,2.98153,0.0,{}
+Ciudad Real,Guadalajara,255.693,2.78531,0.0,{}
+Ciudad Real,Huelva,419.644,4.54042,0.0,{}
+Ciudad Real,Huesca,584.417,5.94419,0.0,{}
+Ciudad Real,Jaén,193.849,2.22561,0.0,{}
+Ciudad Real,Logroño,524.006,5.675,0.0,{}
+Ciudad Real,León,520.145,6.02272,0.0,{}
+Ciudad Real,Lleida,656.881,6.56794,0.0,{}
+Ciudad Real,Lugo,681.522,7.50619,0.0,{}
+Ciudad Real,Madrid,187.13,2.34967,0.0,{}
+Ciudad Real,Málaga,342.555,4.05417,0.0,{}
+Ciudad Real,Murcia,361.107,3.51311,0.0,{}
+Ciudad Real,Pamplona/Iruña,607.494,6.57911,0.0,{}
+Ciudad Real,Ourense,683.651,7.55889,0.0,{}
+Ciudad Real,Palencia,454.55,5.12247,0.0,{}
+Ciudad Real,Pontevedra,776.529,8.72644,0.0,{}
+Ciudad Real,Salamanca,352.318,4.47956,0.0,{}
+Ciudad Real,Segovia,279.763,3.74711,0.075,"{""AP-6"": 0.075}"
+Ciudad Real,Sevilla,324.223,3.66292,0.0,{}
+Ciudad Real,Soria,423.473,4.35297,0.0,{}
+Ciudad Real,Tarragona,603.608,5.80256,0.0,{}
+Ciudad Real,Teruel,389.509,3.99828,0.0,{}
+Ciudad Real,Toledo,120.405,1.68453,0.0,{}
+Ciudad Real,Valencia,351.534,3.43322,0.0,{}
+Ciudad Real,Valladolid,396.03,4.82208,0.075,"{""AP-6"": 0.075}"
+Ciudad Real,Zamora,421.957,5.18772,0.0,{}
+Ciudad Real,Zaragoza,511.932,5.22869,0.0,{}
+Córdoba,Vitoria-Gasteiz,751.095,7.45628,0.0,{}
+Córdoba,Albacete,388.425,3.93969,0.0,{}
+Córdoba,Alacant/Alicante,552.77,5.45447,0.0,{}
+Córdoba,Almería,320.798,3.70494,0.0,{}
+Córdoba,Oviedo,840.635,9.65614,0.0,{}
+Córdoba,Ávila,473.578,5.30639,0.0,{}
+Córdoba,Badajoz,263.462,3.69525,0.0,{}
+Córdoba,Barcelona,877.553,8.63097,0.0,{}
+Córdoba,Bilbao,818.725,8.67908,0.0,{}
+Córdoba,Burgos,643.588,6.44919,0.0,{}
+Córdoba,Cáceres,317.882,3.93031,0.0,{}
+Córdoba,Cádiz,259.78,2.76094,0.0,{}
+Córdoba,Santander,851.848,8.45139,0.0,{}
+Córdoba,Castelló de la Plana/Castellón de la Plana,587.491,5.87392,0.0,{}
+Córdoba,Ciudad Real,192.792,2.38672,0.0,{}
+Córdoba,A Coruña,986.84,10.13169,0.0,{}
+Córdoba,Cuenca,432.075,4.66081,0.0,{}
+Córdoba,Donostia/San Sebastián,863.83,8.63333,0.0,{}
+Córdoba,Girona,955.075,9.28247,0.0,{}
+Córdoba,Granada,170.231,2.32483,0.0,{}
+Córdoba,Guadalajara,445.989,4.52681,0.0,{}
+Córdoba,Huelva,237.918,2.54058,0.0,{}
+Córdoba,Huesca,774.712,7.68569,0.0,{}
+Córdoba,Jaén,119.683,1.54417,0.0,{}
+Córdoba,Logroño,714.301,7.4165,0.0,{}
+Córdoba,León,722.035,7.71033,0.0,{}
+Córdoba,Lleida,847.177,8.30942,0.0,{}
+Córdoba,Lugo,883.412,9.19381,0.0,{}
+Córdoba,Madrid,394.384,4.109,0.0,{}
+Córdoba,Málaga,161.187,2.05167,0.0,{}
+Córdoba,Murcia,437.566,4.92239,0.0,{}
+Córdoba,Pamplona/Iruña,797.789,8.32061,0.0,{}
+Córdoba,Ourense,841.299,9.15944,0.0,{}
+Córdoba,Palencia,644.846,6.86394,0.0,{}
+Córdoba,Pontevedra,934.177,10.327,0.0,{}
+Córdoba,Salamanca,515.891,5.81267,0.0,{}
+Córdoba,Segovia,492.079,5.54525,0.075,"{""AP-6"": 0.075}"
+Córdoba,Sevilla,142.497,1.66308,0.0,{}
+Córdoba,Soria,613.768,6.09447,0.0,{}
+Córdoba,Tarragona,772.777,7.53958,0.0,{}
+Córdoba,Teruel,558.679,5.73528,0.0,{}
+Córdoba,Toledo,345.904,3.60156,0.0,{}
+Córdoba,Valencia,520.703,5.17025,0.0,{}
+Córdoba,Valladolid,608.346,6.62022,0.075,"{""AP-6"": 0.075}"
+Córdoba,Zamora,583.003,6.43722,0.0,{}
+Córdoba,Zaragoza,702.227,6.97019,0.0,{}
+A Coruña,Vitoria-Gasteiz,607.554,6.11694,0.0,{}
+A Coruña,Albacete,875.547,8.85456,0.0,{}
+A Coruña,Alacant/Alicante,1039.892,10.36936,0.0,{}
+A Coruña,Almería,1171.882,11.72425,0.0,{}
+A Coruña,Oviedo,296.887,2.9955,0.0,{}
+A Coruña,Ávila,529.417,5.23319,0.0,{}
+A Coruña,Badajoz,763.115,7.61075,0.0,{}
+A Coruña,Barcelona,1100.498,10.94278,0.0,{}
+A Coruña,Bilbao,555.986,5.71692,0.0,{}
+A Coruña,Burgos,500.245,5.13442,0.0,{}
+A Coruña,Cáceres,673.209,6.46333,0.0,{}
+A Coruña,Cádiz,1050.448,10.10853,0.0,{}
+A Coruña,Santander,464.582,4.69081,0.0,{}
+A Coruña,Castelló de la Plana/Castellón de la Plana,1041.795,10.52742,0.0,{}
+A Coruña,Ciudad Real,789.664,8.42589,0.0,{}
+A Coruña,Córdoba,987.715,10.11125,0.0,{}
+A Coruña,Cuenca,787.553,8.11256,0.0,{}
+A Coruña,Donostia/San Sebastián,720.289,7.294,0.0,{}
+A Coruña,Girona,1169.16,11.53306,0.0,{}
+A Coruña,Granada,1021.163,10.31544,0.0,{}
+A Coruña,Guadalajara,664.07,6.98181,0.0,{}
+A Coruña,Huelva,1015.48,9.62525,0.0,{}
+A Coruña,Huesca,867.158,8.63508,0.0,{}
+A Coruña,Jaén,937.443,9.55953,0.0,{}
+A Coruña,Logroño,627.357,6.42897,0.0,{}
+A Coruña,León,324.827,3.49153,0.0,{}
+A Coruña,Lleida,939.623,9.25881,0.0,{}
+A Coruña,Lugo,110.372,1.29586,0.0,{}
+A Coruña,Madrid,604.333,6.39086,0.0,{}
+A Coruña,Málaga,1138.6,11.27775,0.0,{}
+A Coruña,Murcia,1017.398,10.16503,0.0,{}
+A Coruña,Pamplona/Iruña,703.108,7.10047,0.0,{}
+A Coruña,Ourense,206.362,2.3735,0.0,{}
+A Coruña,Palencia,494.809,4.77464,0.0,{}
+A Coruña,Pontevedra,132.417,2.41994,0.0,{}
+A Coruña,Salamanca,470.95,4.57686,0.0,{}
+A Coruña,Segovia,558.052,5.49947,0.0,{}
+A Coruña,Sevilla,933.815,8.99639,0.0,{}
+A Coruña,Soria,653.03,6.99903,0.0,{}
+A Coruña,Tarragona,1023.141,10.17814,0.0,{}
+A Coruña,Teruel,963.541,9.51239,0.0,{}
+A Coruña,Toledo,672.621,7.01033,0.0,{}
+A Coruña,Valencia,975.008,9.82375,0.0,{}
+A Coruña,Valladolid,449.146,4.3475,0.0,{}
+A Coruña,Zamora,406.272,3.99975,0.0,{}
+A Coruña,Zaragoza,794.673,7.91958,0.0,{}
+Cuenca,Vitoria-Gasteiz,511.236,5.10606,0.0,{}
+Cuenca,Albacete,164.312,2.02722,0.0,{}
+Cuenca,Alacant/Alicante,328.658,3.54203,0.0,{}
+Cuenca,Almería,513.88,5.25922,0.0,{}
+Cuenca,Oviedo,750.95,7.44911,0.0,{}
+Cuenca,Ávila,287.506,3.52822,0.017,"{""R-2"": 0.017}"
+Cuenca,Badajoz,541.156,5.51133,0.0,{}
+Cuenca,Barcelona,558.549,5.97694,0.0,{}
+Cuenca,Bilbao,578.865,6.32886,0.0,{}
+Cuenca,Burgos,403.729,4.09897,0.0,{}
+Cuenca,Cáceres,439.597,4.63319,0.0,{}
+Cuenca,Cádiz,682.789,7.07306,0.0,{}
+Cuenca,Santander,611.989,6.10117,0.0,{}
+Cuenca,Castelló de la Plana/Castellón de la Plana,268.487,3.21989,0.0,{}
+Cuenca,Ciudad Real,262.327,2.89517,0.0,{}
+Cuenca,Córdoba,431.798,4.61311,0.0,{}
+Cuenca,A Coruña,781.341,8.16028,0.017,"{""R-2"": 0.017}"
+Cuenca,Donostia/San Sebastián,623.971,6.28311,0.0,{}
+Cuenca,Girona,636.07,6.62847,0.0,{}
+Cuenca,Granada,456.272,4.81125,0.0,{}
+Cuenca,Guadalajara,135.897,2.04081,0.0,{}
+Cuenca,Huelva,660.927,6.85269,0.0,{}
+Cuenca,Huesca,398.83,4.30722,0.0,{}
+Cuenca,Jaén,372.552,4.05533,0.0,{}
+Cuenca,Logroño,371.601,4.83242,0.0,{}
+Cuenca,León,572.428,5.65428,0.0,{}
+Cuenca,Lleida,471.49,4.98344,0.0,{}
+Cuenca,Lugo,677.913,7.22239,0.017,"{""R-2"": 0.017}"
+Cuenca,Madrid,166.262,1.81919,0.0,{}
+Cuenca,Málaga,566.855,6.16433,0.0,{}
+Cuenca,Murcia,306.164,3.33767,0.0,{}
+Cuenca,Pamplona/Iruña,493.046,5.65453,0.199,"{""AP-15"": 0.199}"
+Cuenca,Ourense,680.043,7.27508,0.017,"{""R-2"": 0.017}"
+Cuenca,Palencia,404.986,4.51372,0.0,{}
+Cuenca,Pontevedra,772.921,8.44267,0.017,"{""R-2"": 0.017}"
+Cuenca,Salamanca,394.257,4.57625,0.017,"{""R-2"": 0.017}"
+Cuenca,Segovia,276.155,3.46333,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Cuenca,Sevilla,565.506,5.97517,0.0,{}
+Cuenca,Soria,271.067,3.51039,0.0,{}
+Cuenca,Tarragona,453.773,4.88556,0.0,{}
+Cuenca,Teruel,149.066,1.94797,0.0,{}
+Cuenca,Toledo,185.292,2.23494,0.0,{}
+Cuenca,Valencia,201.699,2.51622,0.0,{}
+Cuenca,Valladolid,385.972,4.43275,0.0,{}
+Cuenca,Zamora,433.038,4.98283,0.017,"{""R-2"": 0.017}"
+Cuenca,Zaragoza,325.774,3.66861,0.0,{}
+Donostia/San Sebastián,Vitoria-Gasteiz,115.918,1.50494,0.0,{}
+Donostia/San Sebastián,Albacete,714.731,7.12781,0.0,{}
+Donostia/San Sebastián,Alacant/Alicante,759.393,7.87672,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Almería,1004.326,10.14914,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Oviedo,401.2,4.88531,0.0,{}
+Donostia/San Sebastián,Ávila,485.313,5.06522,0.0,{}
+Donostia/San Sebastián,Badajoz,760.74,7.79272,0.0,{}
+Donostia/San Sebastián,Barcelona,523.33,6.1595,0.0,{}
+Donostia/San Sebastián,Bilbao,121.144,2.05711,0.0,{}
+Donostia/San Sebastián,Burgos,229.037,2.59047,0.0,{}
+Donostia/San Sebastián,Cáceres,670.834,6.64531,0.0,{}
+Donostia/San Sebastián,Cádiz,1048.074,10.2905,0.0,{}
+Donostia/San Sebastián,Santander,219.218,3.17367,0.0,{}
+Donostia/San Sebastián,Castelló de la Plana/Castellón de la Plana,582.326,6.32386,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Ciudad Real,674.732,6.97775,0.0,{}
+Donostia/San Sebastián,Córdoba,865.047,8.66867,0.0,{}
+Donostia/San Sebastián,A Coruña,719.879,7.32656,0.0,{}
+Donostia/San Sebastián,Cuenca,626.737,6.38581,0.0,{}
+Donostia/San Sebastián,Girona,587.664,6.60417,0.0,{}
+Donostia/San Sebastián,Granada,889.52,8.86683,0.0,{}
+Donostia/San Sebastián,Guadalajara,436.615,4.87061,0.0,{}
+Donostia/San Sebastián,Huelva,1013.105,9.80722,0.0,{}
+Donostia/San Sebastián,Huesca,246.523,3.22861,0.0,{}
+Donostia/San Sebastián,Jaén,805.801,8.11092,0.0,{}
+Donostia/San Sebastián,Logroño,167.38,1.933,0.0,{}
+Donostia/San Sebastián,León,401.275,4.14558,0.0,{}
+Donostia/San Sebastián,Lleida,410.411,4.47614,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Lugo,616.45,6.38867,0.0,{}
+Donostia/San Sebastián,Madrid,464.356,4.81011,0.0,{}
+Donostia/San Sebastián,Málaga,1000.103,10.21989,0.0,{}
+Donostia/San Sebastián,Murcia,796.61,8.22761,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Pamplona/Iruña,82.817,1.18497,0.0,{}
+Donostia/San Sebastián,Ourense,678.78,6.7285,0.0,{}
+Donostia/San Sebastián,Palencia,312.686,3.30986,0.0,{}
+Donostia/San Sebastián,Pontevedra,771.658,7.89606,0.0,{}
+Donostia/San Sebastián,Salamanca,466.526,4.726,0.0,{}
+Donostia/San Sebastián,Segovia,462.204,4.85136,0.0,{}
+Donostia/San Sebastián,Sevilla,931.441,9.17836,0.0,{}
+Donostia/San Sebastián,Soria,266.832,3.25936,0.0,{}
+Donostia/San Sebastián,Tarragona,493.929,5.39547,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Teruel,434.33,4.72972,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Toledo,551.052,5.65539,0.0,{}
+Donostia/San Sebastián,Valencia,572.477,6.16853,0.01,"{""AP-15"": 0.01}"
+Donostia/San Sebastián,Valladolid,349.494,3.67564,0.0,{}
+Donostia/San Sebastián,Zamora,446.506,4.58633,0.0,{}
+Donostia/San Sebastián,Zaragoza,265.461,3.13692,0.01,"{""AP-15"": 0.01}"
+Girona,Vitoria-Gasteiz,632.623,6.21461,0.0,{}
+Girona,Albacete,637.134,6.33606,0.0,{}
+Girona,Alacant/Alicante,629.284,6.23569,0.0,{}
+Girona,Almería,874.217,8.50814,0.0,{}
+Girona,Oviedo,1026.188,10.08861,0.0,{}
+Girona,Ávila,799.812,8.39086,0.017,"{""R-2"": 0.017}"
+Girona,Badajoz,1094.825,10.49586,0.0,{}
+Girona,Barcelona,102.871,1.40411,0.0,{}
+Girona,Bilbao,700.253,7.43742,0.0,{}
+Girona,Burgos,675.427,6.73867,0.0,{}
+Girona,Cáceres,993.266,9.61772,0.0,{}
+Girona,Cádiz,1205.619,11.80767,0.0,{}
+Girona,Santander,797.876,8.48911,0.0,{}
+Girona,Castelló de la Plana/Castellón de la Plana,371.683,3.89147,0.0,{}
+Girona,Ciudad Real,785.157,7.62978,0.0,{}
+Girona,Córdoba,954.629,9.34772,0.0,{}
+Girona,A Coruña,1166.269,11.47475,0.0,{}
+Girona,Cuenca,633.492,6.67894,0.0,{}
+Girona,Donostia/San Sebastián,587.205,6.56917,0.0,{}
+Girona,Granada,928.468,9.20758,0.0,{}
+Girona,Guadalajara,633.001,6.17917,0.0,{}
+Girona,Huelva,1183.757,11.58731,0.0,{}
+Girona,Huesca,344.077,3.57611,0.0,{}
+Girona,Jaén,895.382,8.78994,0.0,{}
+Girona,Logroño,545.382,5.35403,0.0,{}
+Girona,León,847.666,8.29378,0.0,{}
+Girona,Lleida,227.602,2.45533,0.0,{}
+Girona,Lugo,1062.841,10.53686,0.0,{}
+Girona,Madrid,687.674,6.77836,0.0,{}
+Girona,Málaga,1052.507,10.57711,0.0,{}
+Girona,Murcia,666.5,6.58661,0.0,{}
+Girona,Pamplona/Iruña,500.069,5.60242,0.0,{}
+Girona,Ourense,1125.171,10.87669,0.0,{}
+Girona,Palencia,759.076,7.45806,0.0,{}
+Girona,Pontevedra,1218.049,12.04425,0.0,{}
+Girona,Salamanca,912.916,8.87419,0.0,{}
+Girona,Segovia,788.461,8.32594,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Girona,Sevilla,1088.336,10.70978,0.0,{}
+Girona,Soria,540.716,5.5725,0.0,{}
+Girona,Tarragona,189.94,2.18747,0.0,{}
+Girona,Teruel,520.112,5.35097,0.0,{}
+Girona,Toledo,762.377,7.52361,0.0,{}
+Girona,Valencia,442.946,4.51094,0.0,{}
+Girona,Valladolid,795.885,7.82383,0.0,{}
+Girona,Zamora,892.897,8.73453,0.0,{}
+Girona,Zaragoza,379.322,3.81728,0.0,{}
+Granada,Vitoria-Gasteiz,774.928,7.68497,0.0,{}
+Granada,Albacete,341.786,3.9615,0.0,{}
+Granada,Alacant/Alicante,350.603,3.74217,0.0,{}
+Granada,Almería,161.445,1.80478,0.0,{}
+Granada,Oviedo,874.894,9.99533,0.0,{}
+Granada,Ávila,497.411,5.53506,0.0,{}
+Granada,Badajoz,492.43,5.2145,0.0,{}
+Granada,Barcelona,852.972,8.57117,0.0,{}
+Granada,Bilbao,842.558,8.90778,0.0,{}
+Granada,Burgos,667.421,6.67789,0.0,{}
+Granada,Cáceres,511.813,5.42142,0.0,{}
+Granada,Cádiz,333.624,3.86939,0.0,{}
+Granada,Santander,875.681,8.68008,0.0,{}
+Granada,Castelló de la Plana/Castellón de la Plana,562.91,5.81411,0.0,{}
+Granada,Ciudad Real,297.522,3.08439,0.0,{}
+Granada,Córdoba,163.972,2.28422,0.0,{}
+Granada,A Coruña,1021.099,10.47089,0.0,{}
+Granada,Cuenca,455.908,4.8895,0.0,{}
+Granada,Donostia/San Sebastián,887.663,8.86203,0.0,{}
+Granada,Girona,930.494,9.22269,0.0,{}
+Granada,Guadalajara,469.822,4.7555,0.0,{}
+Granada,Huelva,346.807,3.85883,0.0,{}
+Granada,Huesca,798.545,7.91439,0.0,{}
+Granada,Jaén,95.39,1.14164,0.0,{}
+Granada,Logroño,738.134,7.64519,0.0,{}
+Granada,León,756.294,8.04953,0.0,{}
+Granada,Lleida,835.38,8.29406,0.0,{}
+Granada,Lugo,917.671,9.533,0.0,{}
+Granada,Madrid,418.217,4.33769,0.0,{}
+Granada,Málaga,127.543,1.76717,0.0,{}
+Granada,Murcia,278.212,3.02225,0.0,{}
+Granada,Pamplona/Iruña,821.622,8.54931,0.0,{}
+Granada,Ourense,919.8,9.58569,0.0,{}
+Granada,Palencia,668.678,7.09264,0.0,{}
+Granada,Pontevedra,1012.678,10.75328,0.0,{}
+Granada,Salamanca,601.649,6.62525,0.0,{}
+Granada,Segovia,515.912,5.77392,0.075,"{""AP-6"": 0.075}"
+Granada,Sevilla,251.406,2.92017,0.0,{}
+Granada,Soria,637.601,6.32317,0.0,{}
+Granada,Tarragona,748.196,7.47981,0.0,{}
+Granada,Teruel,582.511,5.96397,0.0,{}
+Granada,Toledo,369.736,3.83025,0.0,{}
+Granada,Valencia,479.385,5.02314,0.0,{}
+Granada,Valladolid,632.179,6.84892,0.075,"{""AP-6"": 0.075}"
+Granada,Zamora,672.795,7.29344,0.0,{}
+Granada,Zaragoza,726.06,7.19889,0.0,{}
+Guadalajara,Vitoria-Gasteiz,383.358,3.84608,0.0,{}
+Guadalajara,Albacete,294.185,2.95031,0.0,{}
+Guadalajara,Alacant/Alicante,458.53,4.46511,0.0,{}
+Guadalajara,Almería,619.694,6.09814,0.0,{}
+Guadalajara,Oviedo,623.072,6.18917,0.0,{}
+Guadalajara,Ávila,167.94,2.34514,0.017,"{""R-2"": 0.017}"
+Guadalajara,Badajoz,462.953,4.45014,0.0,{}
+Guadalajara,Barcelona,565.639,5.65931,0.0,{}
+Guadalajara,Bilbao,450.988,5.06889,0.0,{}
+Guadalajara,Burgos,275.851,2.839,0.0,{}
+Guadalajara,Cáceres,361.394,3.572,0.0,{}
+Guadalajara,Cádiz,712.234,6.93319,0.0,{}
+Guadalajara,Santander,484.111,4.84119,0.0,{}
+Guadalajara,Castelló de la Plana/Castellón de la Plana,460.433,4.62314,0.0,{}
+Guadalajara,Ciudad Real,254.186,2.80025,0.0,{}
+Guadalajara,Córdoba,444.5,4.49117,0.0,{}
+Guadalajara,A Coruña,661.775,6.97717,0.017,"{""R-2"": 0.017}"
+Guadalajara,Cuenca,137.15,2.09322,0.0,{}
+Guadalajara,Donostia/San Sebastián,437.519,4.90361,0.0,{}
+Guadalajara,Girona,634.301,6.24958,0.0,{}
+Guadalajara,Granada,468.974,4.68931,0.0,{}
+Guadalajara,Huelva,677.265,6.44992,0.0,{}
+Guadalajara,Huesca,332.299,3.35161,0.0,{}
+Guadalajara,Jaén,385.254,3.93342,0.0,{}
+Guadalajara,Logroño,271.888,3.08242,0.0,{}
+Guadalajara,León,444.55,4.39431,0.0,{}
+Guadalajara,Lleida,404.764,3.97533,0.0,{}
+Guadalajara,Lugo,558.347,6.03931,0.017,"{""R-2"": 0.017}"
+Guadalajara,Madrid,55.802,0.73261,0.0,{}
+Guadalajara,Málaga,579.557,6.04239,0.0,{}
+Guadalajara,Murcia,436.036,4.26075,0.0,{}
+Guadalajara,Pamplona/Iruña,355.376,3.98653,0.0,{}
+Guadalajara,Ourense,560.477,6.092,0.017,"{""R-2"": 0.017}"
+Guadalajara,Palencia,277.108,3.25378,0.0,{}
+Guadalajara,Pontevedra,653.355,7.25956,0.017,"{""R-2"": 0.017}"
+Guadalajara,Salamanca,274.691,3.39314,0.017,"{""R-2"": 0.017}"
+Guadalajara,Segovia,156.589,2.28022,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Guadalajara,Sevilla,595.6,5.82106,0.0,{}
+Guadalajara,Soria,171.355,1.76039,0.0,{}
+Guadalajara,Tarragona,488.282,4.89467,0.0,{}
+Guadalajara,Teruel,246.238,3.11914,0.0,{}
+Guadalajara,Toledo,130.505,1.47786,0.0,{}
+Guadalajara,Valencia,393.645,3.9195,0.0,{}
+Guadalajara,Valladolid,258.094,3.17281,0.0,{}
+Guadalajara,Zamora,313.472,3.79972,0.017,"{""R-2"": 0.017}"
+Guadalajara,Zaragoza,259.814,2.63611,0.0,{}
+Huelva,Vitoria-Gasteiz,899.803,8.61186,0.0,{}
+Huelva,Albacete,616.652,6.22019,0.0,{}
+Huelva,Alacant/Alicante,689.594,7.11161,0.0,{}
+Huelva,Almería,500.436,5.17422,0.0,{}
+Huelva,Oviedo,869.721,9.19744,0.0,{}
+Huelva,Ávila,576.33,6.18656,0.0,{}
+Huelva,Badajoz,235.05,3.11244,0.0,{}
+Huelva,Barcelona,1105.78,10.91147,0.0,{}
+Huelva,Bilbao,997.699,9.77886,0.0,{}
+Huelva,Burgos,792.494,7.62931,0.0,{}
+Huelva,Cáceres,346.967,3.47161,0.0,{}
+Huelva,Cádiz,210.235,2.27753,0.0,{}
+Huelva,Santander,910.032,8.75147,0.0,{}
+Huelva,Castelló de la Plana/Castellón de la Plana,815.719,8.15442,0.0,{}
+Huelva,Ciudad Real,421.02,4.66722,0.0,{}
+Huelva,Córdoba,236.172,2.58147,0.0,{}
+Huelva,A Coruña,1015.925,9.673,0.0,{}
+Huelva,Cuenca,660.302,6.94131,0.0,{}
+Huelva,Donostia/San Sebastián,1012.538,9.78892,0.0,{}
+Huelva,Girona,1183.302,11.56297,0.0,{}
+Huelva,Granada,343.384,3.77475,0.0,{}
+Huelva,Guadalajara,672.655,6.46939,0.0,{}
+Huelva,Huesca,1001.378,9.62828,0.0,{}
+Huelva,Jaén,347.911,3.82467,0.0,{}
+Huelva,Logroño,919.607,8.92389,0.0,{}
+Huelva,León,751.12,7.25164,0.0,{}
+Huelva,Lleida,1073.843,10.252,0.0,{}
+Huelva,Lugo,912.497,8.73511,0.0,{}
+Huelva,Madrid,616.5,5.97817,0.0,{}
+Huelva,Málaga,299.965,3.5,0.0,{}
+Huelva,Murcia,617.204,6.39169,0.0,{}
+Huelva,Pamplona/Iruña,995.357,9.59536,0.0,{}
+Huelva,Ourense,870.385,8.70075,0.0,{}
+Huelva,Palencia,712.654,6.85403,0.0,{}
+Huelva,Pontevedra,963.263,9.86833,0.0,{}
+Huelva,Salamanca,544.976,5.35397,0.0,{}
+Huelva,Segovia,693.755,7.23558,0.075,"{""AP-6"": 0.075}"
+Huelva,Sevilla,95.353,1.20494,0.0,{}
+Huelva,Soria,840.434,8.03706,0.0,{}
+Huelva,Tarragona,1001.005,9.82008,0.0,{}
+Huelva,Teruel,786.906,8.01581,0.0,{}
+Huelva,Toledo,578.904,5.67206,0.0,{}
+Huelva,Valencia,748.931,7.45075,0.0,{}
+Huelva,Valladolid,666.99,6.42689,0.0,{}
+Huelva,Zamora,612.088,5.97853,0.0,{}
+Huelva,Zaragoza,928.893,8.91278,0.0,{}
+Huesca,Vitoria-Gasteiz,261.681,3.28919,0.0,{}
+Huesca,Albacete,478.342,5.24183,0.0,{}
+Huesca,Alacant/Alicante,575.338,5.62525,0.0,{}
+Huesca,Almería,820.271,7.89767,0.0,{}
+Huesca,Oviedo,720.544,7.17472,0.0,{}
+Huesca,Ávila,494.168,5.47697,0.017,"{""R-2"": 0.017}"
+Huesca,Badajoz,789.18,7.58197,0.0,{}
+Huesca,Barcelona,280.781,3.14886,0.0,{}
+Huesca,Bilbao,318.492,4.38244,0.0,{}
+Huesca,Burgos,369.783,3.82475,0.0,{}
+Huesca,Cáceres,687.621,6.70383,0.0,{}
+Huesca,Cádiz,1038.461,10.06503,0.0,{}
+Huesca,Santander,422.724,5.47797,0.0,{}
+Huesca,Castelló de la Plana/Castellón de la Plana,398.271,4.07239,0.0,{}
+Huesca,Ciudad Real,580.413,5.93208,0.0,{}
+Huesca,Córdoba,770.728,7.623,0.0,{}
+Huesca,A Coruña,860.625,8.56086,0.0,{}
+Huesca,Cuenca,398.458,4.30917,0.0,{}
+Huesca,Donostia/San Sebastián,246.508,3.20417,0.0,{}
+Huesca,Girona,345.115,3.59353,0.0,{}
+Huesca,Granada,795.201,7.82117,0.0,{}
+Huesca,Guadalajara,327.357,3.26525,0.0,{}
+Huesca,Huelva,1003.492,9.58178,0.0,{}
+Huesca,Jaén,711.482,7.06525,0.0,{}
+Huesca,Logroño,239.738,2.44014,0.0,{}
+Huesca,León,542.021,5.37986,0.0,{}
+Huesca,Lleida,118.3,1.48347,0.0,{}
+Huesca,Lugo,757.197,7.62297,0.0,{}
+Huesca,Madrid,382.029,3.86444,0.0,{}
+Huesca,Málaga,905.784,9.17425,0.0,{}
+Huesca,Murcia,612.555,5.97614,0.0,{}
+Huesca,Pamplona/Iruña,159.373,2.23742,0.0,{}
+Huesca,Ourense,819.526,7.96281,0.0,{}
+Huesca,Palencia,453.432,4.54417,0.0,{}
+Huesca,Pontevedra,912.404,9.13036,0.0,{}
+Huesca,Salamanca,607.272,5.96028,0.0,{}
+Huesca,Segovia,482.816,5.41206,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Huesca,Sevilla,921.828,8.95289,0.0,{}
+Huesca,Soria,235.071,2.65861,0.0,{}
+Huesca,Tarragona,231.337,2.60761,0.0,{}
+Huesca,Teruel,250.275,2.47825,0.0,{}
+Huesca,Toledo,456.732,4.60972,0.0,{}
+Huesca,Valencia,388.423,3.91706,0.0,{}
+Huesca,Valladolid,490.24,4.90994,0.0,{}
+Huesca,Zamora,587.253,5.82061,0.0,{}
+Huesca,Zaragoza,73.547,0.85739,0.0,{}
+Jaén,Vitoria-Gasteiz,691.475,6.91036,0.0,{}
+Jaén,Albacete,260.591,3.17019,0.0,{}
+Jaén,Alacant/Alicante,434.226,4.44078,0.0,{}
+Jaén,Almería,245.068,2.50342,0.0,{}
+Jaén,Oviedo,791.441,9.22072,0.0,{}
+Jaén,Ávila,413.957,4.76044,0.0,{}
+Jaén,Badajoz,374.945,4.96978,0.0,{}
+Jaén,Barcelona,817.932,8.08506,0.0,{}
+Jaén,Bilbao,759.104,8.13317,0.0,{}
+Jaén,Burgos,583.968,5.90328,0.0,{}
+Jaén,Cáceres,429.365,5.20483,0.0,{}
+Jaén,Cádiz,371.61,4.01619,0.0,{}
+Jaén,Santander,792.227,7.90547,0.0,{}
+Jaén,Castelló de la Plana/Castellón de la Plana,527.871,5.328,0.0,{}
+Jaén,Ciudad Real,214.068,2.30978,0.0,{}
+Jaén,Córdoba,120.62,1.55625,0.0,{}
+Jaén,A Coruña,937.645,9.69628,0.0,{}
+Jaén,Cuenca,372.454,4.11489,0.0,{}
+Jaén,Donostia/San Sebastián,804.21,8.08742,0.0,{}
+Jaén,Girona,895.454,8.73656,0.0,{}
+Jaén,Granada,94.348,1.09458,0.0,{}
+Jaén,Guadalajara,386.368,3.98089,0.0,{}
+Jaén,Huelva,349.748,3.79583,0.0,{}
+Jaén,Huesca,715.091,7.13978,0.0,{}
+Jaén,Logroño,654.681,6.87058,0.0,{}
+Jaén,León,672.84,7.27492,0.0,{}
+Jaén,Lleida,787.556,7.7635,0.0,{}
+Jaén,Lugo,834.217,8.75839,0.0,{}
+Jaén,Madrid,334.763,3.56308,0.0,{}
+Jaén,Málaga,204.931,2.44767,0.0,{}
+Jaén,Murcia,361.836,3.72086,0.0,{}
+Jaén,Pamplona/Iruña,738.169,7.77469,0.0,{}
+Jaén,Ourense,836.347,8.81108,0.0,{}
+Jaén,Palencia,585.225,6.31803,0.0,{}
+Jaén,Pontevedra,929.225,9.97867,0.0,{}
+Jaén,Salamanca,518.196,5.85064,0.0,{}
+Jaén,Segovia,432.459,4.99931,0.075,"{""AP-6"": 0.075}"
+Jaén,Sevilla,254.327,2.91833,0.0,{}
+Jaén,Soria,554.147,5.54856,0.0,{}
+Jaén,Tarragona,713.157,6.99367,0.0,{}
+Jaén,Teruel,499.058,5.18936,0.0,{}
+Jaén,Toledo,286.283,3.05564,0.0,{}
+Jaén,Valencia,461.083,4.62433,0.0,{}
+Jaén,Valladolid,548.725,6.07431,0.075,"{""AP-6"": 0.075}"
+Jaén,Zamora,589.342,6.51883,0.0,{}
+Jaén,Zaragoza,642.606,6.42428,0.0,{}
+Logroño,Vitoria-Gasteiz,91.517,1.11547,0.0,{}
+Logroño,Albacete,564.228,5.86011,0.0,{}
+Logroño,Alacant/Alicante,665.707,6.50714,0.0,{}
+Logroño,Almería,910.64,8.77958,0.0,{}
+Logroño,Oviedo,485.082,4.9895,0.0,{}
+Logroño,Ávila,390.597,4.11431,0.0,{}
+Logroño,Badajoz,666.024,6.84178,0.0,{}
+Logroño,Barcelona,477.6,4.79053,0.0,{}
+Logroño,Bilbao,159.146,2.33831,0.0,{}
+Logroño,Burgos,134.321,1.63953,0.0,{}
+Logroño,Cáceres,576.119,5.69436,0.0,{}
+Logroño,Cádiz,953.358,9.33956,0.0,{}
+Logroño,Santander,256.77,3.38997,0.0,{}
+Logroño,Castelló de la Plana/Castellón de la Plana,488.64,4.95431,0.0,{}
+Logroño,Ciudad Real,524.229,5.71003,0.0,{}
+Logroño,Córdoba,714.544,7.40097,0.0,{}
+Logroño,A Coruña,625.163,6.37561,0.0,{}
+Logroño,Cuenca,373.328,4.89486,0.0,{}
+Logroño,Donostia/San Sebastián,167.89,1.96122,0.0,{}
+Logroño,Girona,546.262,5.38081,0.0,{}
+Logroño,Granada,739.017,7.59911,0.0,{}
+Logroño,Guadalajara,271.173,3.04322,0.0,{}
+Logroño,Huelva,918.39,8.85628,0.0,{}
+Logroño,Huesca,244.26,2.48283,0.0,{}
+Logroño,Jaén,655.298,6.84319,0.0,{}
+Logroño,León,306.56,3.19464,0.0,{}
+Logroño,Lleida,316.725,3.10658,0.0,{}
+Logroño,Lugo,521.735,5.43775,0.0,{}
+Logroño,Madrid,325.845,3.64242,0.0,{}
+Logroño,Málaga,849.6,8.95219,0.0,{}
+Logroño,Murcia,702.923,6.85806,0.0,{}
+Logroño,Pamplona/Iruña,85.748,1.04411,0.0,{}
+Logroño,Ourense,584.065,5.77756,0.0,{}
+Logroño,Palencia,217.97,2.35894,0.0,{}
+Logroño,Pontevedra,676.943,6.94514,0.0,{}
+Logroño,Salamanca,371.81,3.77506,0.0,{}
+Logroño,Segovia,367.488,3.90042,0.0,{}
+Logroño,Sevilla,836.725,8.22742,0.0,{}
+Logroño,Soria,101.39,1.43197,0.0,{}
+Logroño,Tarragona,400.243,4.02592,0.0,{}
+Logroño,Teruel,340.644,3.36014,0.0,{}
+Logroño,Toledo,400.548,4.38767,0.0,{}
+Logroño,Valencia,478.791,4.79897,0.0,{}
+Logroño,Valladolid,254.779,2.72469,0.0,{}
+Logroño,Zamora,351.791,3.63539,0.0,{}
+Logroño,Zaragoza,171.775,1.76736,0.0,{}
+León,Vitoria-Gasteiz,288.376,2.92864,0.0,{}
+León,Albacete,610.648,6.42433,0.0,{}
+León,Alacant/Alicante,774.994,7.93914,0.0,{}
+León,Almería,906.984,9.29403,0.0,{}
+León,Oviedo,115.055,2.03008,0.0,{}
+León,Ávila,264.518,2.80297,0.0,{}
+León,Badajoz,498.216,5.18053,0.0,{}
+León,Barcelona,781.32,7.75444,0.0,{}
+León,Bilbao,352.665,3.81808,0.0,{}
+León,Burgos,181.067,1.94608,0.0,{}
+León,Cáceres,408.31,4.03311,0.0,{}
+León,Cádiz,785.55,7.67831,0.0,{}
+León,Santander,264.998,2.79067,0.0,{}
+León,Castelló de la Plana/Castellón de la Plana,792.36,7.91819,0.0,{}
+León,Ciudad Real,524.765,5.99567,0.0,{}
+León,Córdoba,722.816,7.68103,0.0,{}
+León,A Coruña,326.329,3.48983,0.0,{}
+León,Cuenca,522.654,5.68233,0.0,{}
+León,Donostia/San Sebastián,401.111,4.10569,0.0,{}
+León,Girona,849.982,8.34472,0.0,{}
+León,Granada,756.264,7.88522,0.0,{}
+León,Guadalajara,446.664,4.42319,0.0,{}
+León,Huelva,750.581,7.19503,0.0,{}
+León,Huesca,547.98,5.44675,0.0,{}
+León,Jaén,672.544,7.12931,0.0,{}
+León,Logroño,308.18,3.24067,0.0,{}
+León,Lleida,620.445,6.0705,0.0,{}
+León,Lugo,222.901,2.55194,0.0,{}
+León,Madrid,339.435,3.96064,0.0,{}
+León,Málaga,873.701,8.84753,0.0,{}
+León,Murcia,752.499,7.73481,0.0,{}
+León,Pamplona/Iruña,383.93,3.91214,0.0,{}
+León,Ourense,296.346,3.00917,0.0,{}
+León,Palencia,133.276,1.65683,0.0,{}
+León,Pontevedra,389.224,4.17672,0.0,{}
+León,Salamanca,206.052,2.14664,0.0,{}
+León,Segovia,293.153,3.06925,0.0,{}
+León,Sevilla,668.917,6.56617,0.0,{}
+León,Soria,313.465,3.90458,0.0,{}
+León,Tarragona,703.963,6.98983,0.0,{}
+León,Teruel,644.364,6.32406,0.0,{}
+León,Toledo,407.722,4.58011,0.0,{}
+León,Valencia,710.109,7.39353,0.0,{}
+León,Valladolid,184.247,1.91728,0.0,{}
+León,Zamora,141.374,1.56953,0.0,{}
+León,Zaragoza,475.495,4.73128,0.0,{}
+Lleida,Vitoria-Gasteiz,403.213,3.90583,0.0,{}
+Lleida,Albacete,543.331,5.40489,0.0,{}
+Lleida,Alacant/Alicante,535.481,5.30453,0.0,{}
+Lleida,Almería,780.414,7.57697,0.0,{}
+Lleida,Oviedo,796.778,7.77986,0.0,{}
+Lleida,Ávila,570.402,6.08211,0.017,"{""R-2"": 0.017}"
+Lleida,Badajoz,865.415,8.18711,0.0,{}
+Lleida,Barcelona,177.176,1.9975,0.0,{}
+Lleida,Bilbao,470.843,5.12867,0.0,{}
+Lleida,Burgos,446.017,4.42989,0.0,{}
+Lleida,Cáceres,763.856,7.30897,0.0,{}
+Lleida,Cádiz,1114.696,10.67017,0.0,{}
+Lleida,Santander,568.466,6.18033,0.0,{}
+Lleida,Castelló de la Plana/Castellón de la Plana,277.88,2.96033,0.0,{}
+Lleida,Ciudad Real,656.648,6.53722,0.0,{}
+Lleida,Córdoba,846.962,8.22814,0.0,{}
+Lleida,A Coruña,936.859,9.16597,0.0,{}
+Lleida,Cuenca,470.985,4.96542,0.0,{}
+Lleida,Donostia/San Sebastián,360.381,4.42256,0.0,{}
+Lleida,Girona,228.956,2.50569,0.0,{}
+Lleida,Granada,834.666,8.27642,0.0,{}
+Lleida,Guadalajara,403.591,3.87039,0.0,{}
+Lleida,Huelva,1079.727,10.18689,0.0,{}
+Lleida,Huesca,117.253,1.4295,0.0,{}
+Lleida,Jaén,787.716,7.67039,0.0,{}
+Lleida,Logroño,315.972,3.04528,0.0,{}
+Lleida,León,618.256,5.985,0.0,{}
+Lleida,Lugo,833.431,8.22811,0.0,{}
+Lleida,Madrid,458.264,4.46958,0.0,{}
+Lleida,Málaga,958.704,9.64594,0.0,{}
+Lleida,Murcia,572.698,5.65544,0.0,{}
+Lleida,Pamplona/Iruña,273.245,3.45581,0.0,{}
+Lleida,Ourense,895.761,8.56792,0.0,{}
+Lleida,Palencia,529.667,5.14931,0.0,{}
+Lleida,Pontevedra,988.639,9.7355,0.0,{}
+Lleida,Salamanca,683.506,6.56542,0.0,{}
+Lleida,Segovia,559.051,6.01719,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Lleida,Sevilla,998.062,9.55803,0.0,{}
+Lleida,Soria,311.306,3.26375,0.0,{}
+Lleida,Tarragona,99.818,1.23286,0.0,{}
+Lleida,Teruel,322.801,3.1345,0.0,{}
+Lleida,Toledo,532.967,5.21483,0.0,{}
+Lleida,Valencia,349.144,3.57978,0.0,{}
+Lleida,Valladolid,566.475,5.51506,0.0,{}
+Lleida,Zamora,663.487,6.42575,0.0,{}
+Lleida,Zaragoza,149.912,1.50853,0.0,{}
+Lugo,Vitoria-Gasteiz,505.797,5.19128,0.0,{}
+Lugo,Albacete,773.789,7.92889,0.0,{}
+Lugo,Alacant/Alicante,938.135,9.44369,0.0,{}
+Lugo,Almería,1070.125,10.79858,0.0,{}
+Lugo,Oviedo,249.67,2.57597,0.0,{}
+Lugo,Ávila,427.659,4.3075,0.0,{}
+Lugo,Badajoz,661.357,6.68508,0.0,{}
+Lugo,Barcelona,998.741,10.01708,0.0,{}
+Lugo,Bilbao,508.769,5.29736,0.0,{}
+Lugo,Burgos,398.487,4.20872,0.0,{}
+Lugo,Cáceres,571.451,5.53767,0.0,{}
+Lugo,Cádiz,948.691,9.18286,0.0,{}
+Lugo,Santander,417.365,4.27128,0.0,{}
+Lugo,Castelló de la Plana/Castellón de la Plana,940.038,9.60172,0.0,{}
+Lugo,Ciudad Real,687.906,7.50019,0.0,{}
+Lugo,Córdoba,885.957,9.18556,0.0,{}
+Lugo,A Coruña,108.676,1.31422,0.0,{}
+Lugo,Cuenca,685.795,7.18689,0.0,{}
+Lugo,Donostia/San Sebastián,618.531,6.36833,0.0,{}
+Lugo,Girona,1067.402,10.60736,0.0,{}
+Lugo,Granada,919.405,9.38978,0.0,{}
+Lugo,Guadalajara,562.313,6.05614,0.0,{}
+Lugo,Huelva,913.722,8.69958,0.0,{}
+Lugo,Huesca,765.401,7.70942,0.0,{}
+Lugo,Jaén,835.686,8.63386,0.0,{}
+Lugo,Logroño,525.6,5.50331,0.0,{}
+Lugo,León,223.069,2.56586,0.0,{}
+Lugo,Lleida,837.866,8.33314,0.0,{}
+Lugo,Madrid,502.576,5.46517,0.0,{}
+Lugo,Málaga,1036.843,10.35208,0.0,{}
+Lugo,Murcia,915.641,9.23933,0.0,{}
+Lugo,Pamplona/Iruña,601.351,6.17478,0.0,{}
+Lugo,Ourense,94.268,1.38003,0.0,{}
+Lugo,Palencia,393.052,3.84897,0.0,{}
+Lugo,Pontevedra,141.538,2.23217,0.0,{}
+Lugo,Salamanca,369.193,3.65119,0.0,{}
+Lugo,Segovia,456.294,4.57381,0.0,{}
+Lugo,Sevilla,832.058,8.07072,0.0,{}
+Lugo,Soria,551.272,6.07336,0.0,{}
+Lugo,Tarragona,921.383,9.25247,0.0,{}
+Lugo,Teruel,861.784,8.58669,0.0,{}
+Lugo,Toledo,570.864,6.08467,0.0,{}
+Lugo,Valencia,873.25,8.89806,0.0,{}
+Lugo,Valladolid,347.388,3.42183,0.0,{}
+Lugo,Zamora,304.515,3.07408,0.0,{}
+Lugo,Zaragoza,692.916,6.99392,0.0,{}
+Madrid,Vitoria-Gasteiz,350.132,3.58156,0.0,{}
+Madrid,Albacete,255.311,2.55639,0.0,{}
+Madrid,Alacant/Alicante,419.657,4.07119,0.0,{}
+Madrid,Almería,572.481,5.68678,0.0,{}
+Madrid,Oviedo,589.846,5.92464,0.0,{}
+Madrid,Ávila,110.128,1.82097,0.0,{}
+Madrid,Badajoz,401.387,3.92522,0.0,{}
+Madrid,Barcelona,619.672,6.20772,0.0,{}
+Madrid,Bilbao,417.761,4.80436,0.0,{}
+Madrid,Burgos,242.625,2.57447,0.0,{}
+Madrid,Cáceres,299.828,3.04708,0.0,{}
+Madrid,Cádiz,650.668,6.40831,0.0,{}
+Madrid,Santander,450.885,4.57667,0.0,{}
+Madrid,Castelló de la Plana/Castellón de la Plana,421.56,4.22922,0.0,{}
+Madrid,Ciudad Real,206.973,2.38889,0.0,{}
+Madrid,Córdoba,397.287,4.07981,0.0,{}
+Madrid,A Coruña,603.963,6.453,0.0,{}
+Madrid,Cuenca,167.317,1.81439,0.0,{}
+Madrid,Donostia/San Sebastián,462.867,4.75861,0.0,{}
+Madrid,Girona,688.334,6.798,0.0,{}
+Madrid,Granada,421.761,4.27797,0.0,{}
+Madrid,Guadalajara,57.609,0.74114,0.0,{}
+Madrid,Huelva,615.699,5.92503,0.0,{}
+Madrid,Huesca,386.332,3.90003,0.0,{}
+Madrid,Jaén,338.041,3.52206,0.0,{}
+Madrid,Logroño,325.921,3.63083,0.0,{}
+Madrid,León,339.158,4.03167,0.0,{}
+Madrid,Lleida,458.797,4.52375,0.0,{}
+Madrid,Lugo,500.535,5.51514,0.0,{}
+Madrid,Málaga,532.344,5.63103,0.0,{}
+Madrid,Murcia,397.162,3.86683,0.0,{}
+Madrid,Pamplona/Iruña,409.41,4.53494,0.0,{}
+Madrid,Ourense,502.664,5.56783,0.0,{}
+Madrid,Palencia,243.882,2.98925,0.0,{}
+Madrid,Pontevedra,595.542,6.73539,0.0,{}
+Madrid,Salamanca,216.879,2.86897,0.0,{}
+Madrid,Segovia,98.776,1.75606,0.075,"{""AP-6"": 0.075}"
+Madrid,Sevilla,534.035,5.29614,0.0,{}
+Madrid,Soria,225.388,2.30881,0.0,{}
+Madrid,Tarragona,542.315,5.44308,0.0,{}
+Madrid,Teruel,310.717,3.52597,0.0,{}
+Madrid,Toledo,75.334,1.00525,0.0,{}
+Madrid,Valencia,354.772,3.52556,0.0,{}
+Madrid,Valladolid,215.043,2.83103,0.075,"{""AP-6"": 0.075}"
+Madrid,Zamora,255.659,3.27556,0.0,{}
+Madrid,Zaragoza,313.847,3.18453,0.0,{}
+Málaga,Vitoria-Gasteiz,886.21,8.88578,0.0,{}
+Málaga,Albacete,453.068,5.16233,0.0,{}
+Málaga,Alacant/Alicante,473.832,4.92697,0.0,{}
+Málaga,Almería,198.485,2.50461,0.0,{}
+Málaga,Oviedo,991.72,10.70653,0.0,{}
+Málaga,Ávila,608.692,6.73589,0.0,{}
+Málaga,Badajoz,449.584,4.77375,0.0,{}
+Málaga,Barcelona,976.201,9.756,0.0,{}
+Málaga,Bilbao,953.839,10.10861,0.0,{}
+Málaga,Burgos,778.703,7.87872,0.0,{}
+Málaga,Cáceres,468.967,4.98067,0.0,{}
+Málaga,Cádiz,290.778,3.42864,0.0,{}
+Málaga,Santander,986.963,9.88089,0.0,{}
+Málaga,Castelló de la Plana/Castellón de la Plana,686.139,6.99892,0.0,{}
+Málaga,Ciudad Real,344.559,3.97869,0.0,{}
+Málaga,Córdoba,159.702,1.87047,0.0,{}
+Málaga,A Coruña,1137.925,11.18206,0.0,{}
+Málaga,Cuenca,567.19,6.09031,0.0,{}
+Málaga,Donostia/San Sebastián,998.945,10.06283,0.0,{}
+Málaga,Girona,1053.723,10.4075,0.0,{}
+Málaga,Granada,127.621,1.59011,0.0,{}
+Málaga,Guadalajara,581.103,5.95631,0.0,{}
+Málaga,Huelva,303.961,3.41808,0.0,{}
+Málaga,Huesca,909.827,9.11522,0.0,{}
+Málaga,Jaén,206.672,2.34244,0.0,{}
+Málaga,Logroño,849.416,8.84603,0.0,{}
+Málaga,León,873.12,8.76069,0.0,{}
+Málaga,Lleida,958.61,9.47889,0.0,{}
+Málaga,Lugo,1034.496,10.24419,0.0,{}
+Málaga,Madrid,529.499,5.5385,0.0,{}
+Málaga,Murcia,401.442,4.20706,0.0,{}
+Málaga,Pamplona/Iruña,932.904,9.75014,0.0,{}
+Málaga,Ourense,992.384,10.20983,0.0,{}
+Málaga,Palencia,779.96,8.29347,0.0,{}
+Málaga,Pontevedra,1085.262,11.37739,0.0,{}
+Málaga,Salamanca,666.976,6.86306,0.0,{}
+Málaga,Segovia,627.194,6.97475,0.075,"{""AP-6"": 0.075}"
+Málaga,Sevilla,208.56,2.47944,0.0,{}
+Málaga,Soria,748.883,7.524,0.0,{}
+Málaga,Tarragona,871.425,8.66461,0.0,{}
+Málaga,Teruel,693.793,7.16481,0.0,{}
+Málaga,Toledo,481.019,5.03106,0.0,{}
+Málaga,Valencia,602.614,6.20794,0.0,{}
+Málaga,Valladolid,788.99,7.93594,0.0,{}
+Málaga,Zamora,734.087,7.48761,0.0,{}
+Málaga,Zaragoza,837.342,8.39972,0.0,{}
+Murcia,Vitoria-Gasteiz,742.876,7.16286,0.0,{}
+Murcia,Albacete,146.656,1.5635,0.0,{}
+Murcia,Alacant/Alicante,81.816,0.93203,0.0,{}
+Murcia,Almería,223.159,2.24567,0.0,{}
+Murcia,Oviedo,982.59,9.50592,0.0,{}
+Murcia,Ávila,519.145,5.58503,0.017,"{""R-2"": 0.017}"
+Murcia,Badajoz,667.984,6.96536,0.0,{}
+Murcia,Barcelona,590.206,5.86194,0.0,{}
+Murcia,Bilbao,810.505,8.38567,0.0,{}
+Murcia,Burgos,635.369,6.15578,0.0,{}
+Murcia,Cáceres,659.975,6.39106,0.0,{}
+Murcia,Cádiz,607.53,6.41683,0.0,{}
+Murcia,Santander,843.628,8.15797,0.0,{}
+Murcia,Castelló de la Plana/Castellón de la Plana,300.144,3.10486,0.0,{}
+Murcia,Ciudad Real,362.799,3.503,0.0,{}
+Murcia,Córdoba,435.253,4.80369,0.0,{}
+Murcia,A Coruña,1012.981,10.21708,0.017,"{""R-2"": 0.017}"
+Murcia,Cuenca,306.811,3.32792,0.0,{}
+Murcia,Donostia/San Sebastián,794.708,8.28811,0.199,"{""AP-15"": 0.199}"
+Murcia,Girona,667.728,6.51344,0.0,{}
+Murcia,Granada,277.41,2.94511,0.0,{}
+Murcia,Guadalajara,437.769,4.23339,0.0,{}
+Murcia,Huelva,620.713,6.40628,0.0,{}
+Murcia,Huesca,613.356,5.97406,0.0,{}
+Murcia,Jaén,362.741,3.69142,0.0,{}
+Murcia,Logroño,704.845,6.89956,0.0,{}
+Murcia,León,804.067,7.71108,0.0,{}
+Murcia,Lleida,572.615,5.58483,0.0,{}
+Murcia,Lugo,909.553,9.27919,0.017,"{""R-2"": 0.017}"
+Murcia,Madrid,397.901,3.876,0.0,{}
+Murcia,Málaga,401.449,4.31464,0.0,{}
+Murcia,Pamplona/Iruña,707.572,7.32133,0.199,"{""AP-15"": 0.199}"
+Murcia,Ourense,911.682,9.33189,0.017,"{""R-2"": 0.017}"
+Murcia,Palencia,636.626,6.57053,0.0,{}
+Murcia,Pontevedra,1004.56,10.49947,0.017,"{""R-2"": 0.017}"
+Murcia,Salamanca,625.896,6.63306,0.017,"{""R-2"": 0.017}"
+Murcia,Segovia,507.794,5.52014,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Murcia,Sevilla,525.312,5.46764,0.0,{}
+Murcia,Soria,605.548,5.80106,0.0,{}
+Murcia,Tarragona,485.43,4.77056,0.0,{}
+Murcia,Teruel,370.226,3.71028,0.0,{}
+Murcia,Toledo,403.038,3.95478,0.0,{}
+Murcia,Valencia,216.619,2.31392,0.0,{}
+Murcia,Valladolid,617.612,6.48956,0.0,{}
+Murcia,Zamora,664.677,7.03964,0.017,"{""R-2"": 0.017}"
+Murcia,Zaragoza,540.301,5.33542,0.0,{}
+Pamplona/Iruña,Vitoria-Gasteiz,98.683,1.26439,0.0,{}
+Pamplona/Iruña,Albacete,575.795,6.54864,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Alacant/Alicante,672.791,6.93206,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Almería,917.724,9.2045,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Oviedo,441.709,5.16481,0.0,{}
+Pamplona/Iruña,Ávila,468.078,4.82469,0.0,{}
+Pamplona/Iruña,Badajoz,743.505,7.55217,0.0,{}
+Pamplona/Iruña,Barcelona,436.728,5.21486,0.0,{}
+Pamplona/Iruña,Bilbao,155.494,2.35764,0.0,{}
+Pamplona/Iruña,Burgos,211.802,2.34992,0.0,{}
+Pamplona/Iruña,Cáceres,653.6,6.40475,0.0,{}
+Pamplona/Iruña,Cádiz,1030.839,10.04994,0.0,{}
+Pamplona/Iruña,Santander,259.726,3.45317,0.0,{}
+Pamplona/Iruña,Castelló de la Plana/Castellón de la Plana,495.724,5.37919,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Ciudad Real,607.848,6.63753,0.0,{}
+Pamplona/Iruña,Córdoba,798.162,8.32844,0.0,{}
+Pamplona/Iruña,A Coruña,702.644,7.086,0.0,{}
+Pamplona/Iruña,Cuenca,495.911,5.61597,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Donostia/San Sebastián,83.511,1.17936,0.0,{}
+Pamplona/Iruña,Girona,501.062,5.6595,0.0,{}
+Pamplona/Iruña,Granada,822.636,8.52661,0.0,{}
+Pamplona/Iruña,Guadalajara,354.791,3.97069,0.0,{}
+Pamplona/Iruña,Huelva,995.87,9.56667,0.0,{}
+Pamplona/Iruña,Huesca,159.921,2.28394,0.0,{}
+Pamplona/Iruña,Jaén,738.916,7.77069,0.0,{}
+Pamplona/Iruña,Logroño,85.557,1.03311,0.0,{}
+Pamplona/Iruña,León,384.041,3.90503,0.0,{}
+Pamplona/Iruña,Lleida,323.809,3.53147,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Lugo,599.216,6.14814,0.0,{}
+Pamplona/Iruña,Madrid,447.122,4.56958,0.0,{}
+Pamplona/Iruña,Málaga,933.219,9.87967,0.0,{}
+Pamplona/Iruña,Murcia,710.008,7.28297,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Ourense,661.545,6.48794,0.0,{}
+Pamplona/Iruña,Palencia,295.451,3.06933,0.0,{}
+Pamplona/Iruña,Pontevedra,754.424,7.65553,0.0,{}
+Pamplona/Iruña,Salamanca,449.291,4.48544,0.0,{}
+Pamplona/Iruña,Segovia,444.969,4.61081,0.0,{}
+Pamplona/Iruña,Sevilla,914.206,8.93781,0.0,{}
+Pamplona/Iruña,Soria,171.544,2.32806,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Tarragona,407.327,4.45081,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Teruel,347.728,3.78506,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Toledo,484.167,5.31517,0.0,{}
+Pamplona/Iruña,Valencia,485.875,5.22389,0.01,"{""AP-15"": 0.01}"
+Pamplona/Iruña,Valladolid,332.26,3.43508,0.0,{}
+Pamplona/Iruña,Zamora,429.272,4.34578,0.0,{}
+Pamplona/Iruña,Zaragoza,178.859,2.19225,0.01,"{""AP-15"": 0.01}"
+Ourense,Vitoria-Gasteiz,564.062,5.48869,0.0,{}
+Ourense,Albacete,771.354,7.94172,0.0,{}
+Ourense,Alacant/Alicante,935.699,9.4565,0.0,{}
+Ourense,Almería,1067.689,10.81142,0.0,{}
+Ourense,Oviedo,347.216,3.65661,0.0,{}
+Ourense,Ávila,425.224,4.32033,0.0,{}
+Ourense,Badajoz,615.462,6.60114,0.0,{}
+Ourense,Barcelona,1057.006,10.31453,0.0,{}
+Ourense,Bilbao,606.315,6.37803,0.0,{}
+Ourense,Burgos,456.752,4.50617,0.0,{}
+Ourense,Cáceres,525.557,5.45372,0.0,{}
+Ourense,Cádiz,902.796,9.09892,0.0,{}
+Ourense,Santander,540.684,5.35075,0.0,{}
+Ourense,Castelló de la Plana/Castellón de la Plana,937.602,9.61456,0.0,{}
+Ourense,Ciudad Real,685.471,7.51303,0.0,{}
+Ourense,Córdoba,840.063,9.10161,0.0,{}
+Ourense,A Coruña,206.222,2.39489,0.0,{}
+Ourense,Cuenca,683.36,7.19972,0.0,{}
+Ourense,Donostia/San Sebastián,676.796,6.66575,0.0,{}
+Ourense,Girona,1125.667,10.90481,0.0,{}
+Ourense,Granada,916.97,9.40258,0.0,{}
+Ourense,Guadalajara,559.877,6.06894,0.0,{}
+Ourense,Huelva,867.827,8.61564,0.0,{}
+Ourense,Huesca,823.666,8.00683,0.0,{}
+Ourense,Jaén,833.25,8.64667,0.0,{}
+Ourense,Logroño,583.865,5.80072,0.0,{}
+Ourense,León,295.383,3.01508,0.0,{}
+Ourense,Lleida,896.131,8.63056,0.0,{}
+Ourense,Lugo,93.896,1.36306,0.0,{}
+Ourense,Madrid,500.14,5.478,0.0,{}
+Ourense,Málaga,990.948,10.26814,0.0,{}
+Ourense,Murcia,913.205,9.25217,0.0,{}
+Ourense,Pamplona/Iruña,659.616,6.47222,0.0,{}
+Ourense,Palencia,390.616,3.86178,0.0,{}
+Ourense,Pontevedra,97.507,1.40994,0.0,{}
+Ourense,Salamanca,323.298,3.56725,0.0,{}
+Ourense,Segovia,453.859,4.58664,0.0,{}
+Ourense,Sevilla,786.163,7.98678,0.0,{}
+Ourense,Soria,548.837,6.08619,0.0,{}
+Ourense,Tarragona,979.648,9.54989,0.0,{}
+Ourense,Teruel,778.553,8.77828,0.0,{}
+Ourense,Toledo,568.428,6.09747,0.0,{}
+Ourense,Valencia,870.815,8.91089,0.0,{}
+Ourense,Valladolid,344.952,3.43464,0.0,{}
+Ourense,Zamora,258.62,2.99014,0.0,{}
+Ourense,Zaragoza,751.181,7.29133,0.0,{}
+Palencia,Vitoria-Gasteiz,199.902,2.13258,0.0,{}
+Palencia,Albacete,494.86,5.3145,0.0,{}
+Palencia,Alacant/Alicante,659.205,6.82931,0.0,{}
+Palencia,Almería,820.369,8.46233,0.0,{}
+Palencia,Oviedo,339.504,3.51631,0.0,{}
+Palencia,Ávila,184.828,2.09658,0.0,{}
+Palencia,Badajoz,460.256,4.82408,0.0,{}
+Palencia,Barcelona,692.846,6.95839,0.0,{}
+Palencia,Bilbao,288.21,3.19575,0.0,{}
+Palencia,Burgos,92.592,1.15006,0.0,{}
+Palencia,Cáceres,370.35,3.67667,0.0,{}
+Palencia,Cádiz,747.59,7.32186,0.0,{}
+Palencia,Santander,200.543,2.16833,0.0,{}
+Palencia,Castelló de la Plana/Castellón de la Plana,661.109,6.98733,0.0,{}
+Palencia,Ciudad Real,454.861,5.16444,0.0,{}
+Palencia,Córdoba,645.176,6.85536,0.0,{}
+Palencia,A Coruña,494.326,4.79514,0.0,{}
+Palencia,Cuenca,406.865,4.5725,0.0,{}
+Palencia,Donostia/San Sebastián,312.637,3.30964,0.0,{}
+Palencia,Girona,761.508,7.54867,0.0,{}
+Palencia,Granada,669.649,7.05353,0.0,{}
+Palencia,Guadalajara,279.555,3.29206,0.0,{}
+Palencia,Huelva,712.621,6.83858,0.0,{}
+Palencia,Huesca,459.506,4.65072,0.0,{}
+Palencia,Jaén,585.929,6.29761,0.0,{}
+Palencia,Logroño,219.705,2.44461,0.0,{}
+Palencia,León,133.423,1.68078,0.0,{}
+Palencia,Lleida,531.971,5.27444,0.0,{}
+Palencia,Lugo,390.898,3.85725,0.0,{}
+Palencia,Madrid,244.485,2.99681,0.0,{}
+Palencia,Málaga,780.232,8.40658,0.0,{}
+Palencia,Murcia,636.711,6.62497,0.0,{}
+Palencia,Pamplona/Iruña,295.456,3.11608,0.0,{}
+Palencia,Ourense,393.027,3.90994,0.0,{}
+Palencia,Pontevedra,485.905,5.0775,0.0,{}
+Palencia,Salamanca,166.041,1.75733,0.0,{}
+Palencia,Segovia,161.719,1.88272,0.0,{}
+Palencia,Sevilla,630.957,6.20972,0.0,{}
+Palencia,Soria,205.674,2.79572,0.0,{}
+Palencia,Tarragona,615.489,6.19378,0.0,{}
+Palencia,Teruel,435.39,5.48781,0.0,{}
+Palencia,Toledo,331.18,3.84208,0.0,{}
+Palencia,Valencia,594.321,6.28369,0.0,{}
+Palencia,Valladolid,49.01,0.707,0.0,{}
+Palencia,Zamora,146.022,1.61767,0.0,{}
+Palencia,Zaragoza,387.021,3.93522,0.0,{}
+Pontevedra,Vitoria-Gasteiz,657.039,6.58597,0.0,{}
+Pontevedra,Albacete,864.331,9.03897,0.0,{}
+Pontevedra,Alacant/Alicante,1028.677,10.55378,0.0,{}
+Pontevedra,Almería,1160.667,11.90867,0.0,{}
+Pontevedra,Oviedo,362.159,4.39531,0.0,{}
+Pontevedra,Ávila,518.201,5.41761,0.0,{}
+Pontevedra,Badajoz,708.439,7.69839,0.0,{}
+Pontevedra,Barcelona,1149.983,11.41178,0.0,{}
+Pontevedra,Bilbao,621.258,7.11672,0.0,{}
+Pontevedra,Burgos,549.729,5.60342,0.0,{}
+Pontevedra,Cáceres,618.534,6.55097,0.0,{}
+Pontevedra,Cádiz,995.773,10.19617,0.0,{}
+Pontevedra,Santander,529.854,6.09061,0.0,{}
+Pontevedra,Castelló de la Plana/Castellón de la Plana,1030.58,10.71181,0.0,{}
+Pontevedra,Ciudad Real,778.448,8.61028,0.0,{}
+Pontevedra,Córdoba,933.04,10.19889,0.0,{}
+Pontevedra,A Coruña,133.361,2.43425,0.0,{}
+Pontevedra,Cuenca,776.337,8.29697,0.0,{}
+Pontevedra,Donostia/San Sebastián,769.773,7.76303,0.0,{}
+Pontevedra,Girona,1218.645,12.00206,0.0,{}
+Pontevedra,Granada,1009.947,10.49986,0.0,{}
+Pontevedra,Guadalajara,652.854,7.16622,0.0,{}
+Pontevedra,Huelva,960.805,9.71292,0.0,{}
+Pontevedra,Huesca,916.643,9.10408,0.0,{}
+Pontevedra,Jaén,926.227,9.74394,0.0,{}
+Pontevedra,Logroño,676.842,6.898,0.0,{}
+Pontevedra,León,388.36,4.11236,0.0,{}
+Pontevedra,Lleida,989.108,9.72783,0.0,{}
+Pontevedra,Lugo,140.246,2.18119,0.0,{}
+Pontevedra,Madrid,593.118,6.57525,0.0,{}
+Pontevedra,Málaga,1083.925,11.36539,0.0,{}
+Pontevedra,Murcia,1006.182,10.34942,0.0,{}
+Pontevedra,Pamplona/Iruña,752.593,7.56947,0.0,{}
+Pontevedra,Ourense,96.944,1.36667,0.0,{}
+Pontevedra,Palencia,483.593,4.95906,0.0,{}
+Pontevedra,Salamanca,416.275,4.6645,0.0,{}
+Pontevedra,Segovia,546.836,5.68389,0.0,{}
+Pontevedra,Sevilla,879.14,9.08403,0.0,{}
+Pontevedra,Soria,641.814,7.18344,0.0,{}
+Pontevedra,Tarragona,1072.626,10.64717,0.0,{}
+Pontevedra,Teruel,871.53,9.87553,0.0,{}
+Pontevedra,Toledo,661.405,7.19475,0.0,{}
+Pontevedra,Valencia,963.792,10.00814,0.0,{}
+Pontevedra,Valladolid,437.93,4.53192,0.0,{}
+Pontevedra,Zamora,351.597,4.08742,0.0,{}
+Pontevedra,Zaragoza,844.158,8.38858,0.0,{}
+Salamanca,Vitoria-Gasteiz,353.491,3.51533,0.0,{}
+Salamanca,Albacete,488.648,5.27675,0.0,{}
+Salamanca,Alacant/Alicante,652.994,6.79156,0.0,{}
+Salamanca,Almería,757.82,7.92978,0.0,{}
+Salamanca,Oviedo,324.67,4.12303,0.0,{}
+Salamanca,Ávila,106.732,1.23311,0.0,{}
+Salamanca,Badajoz,291.813,3.30675,0.0,{}
+Salamanca,Barcelona,846.435,8.34114,0.0,{}
+Salamanca,Bilbao,451.386,4.68236,0.0,{}
+Salamanca,Burgos,246.181,2.53281,0.0,{}
+Salamanca,Cáceres,201.908,2.15933,0.0,{}
+Salamanca,Cádiz,579.147,5.80453,0.0,{}
+Salamanca,Santander,363.719,3.65494,0.0,{}
+Salamanca,Castelló de la Plana/Castellón de la Plana,654.897,6.94961,0.0,{}
+Salamanca,Ciudad Real,357.885,4.55419,0.0,{}
+Salamanca,Córdoba,516.414,5.80722,0.0,{}
+Salamanca,A Coruña,470.875,4.59858,0.0,{}
+Salamanca,Cuenca,400.654,4.53475,0.0,{}
+Salamanca,Donostia/San Sebastián,466.225,4.69239,0.0,{}
+Salamanca,Girona,915.096,8.93142,0.0,{}
+Salamanca,Granada,607.1,6.52097,0.0,{}
+Salamanca,Guadalajara,277.172,3.404,0.0,{}
+Salamanca,Huelva,544.178,5.32125,0.0,{}
+Salamanca,Huesca,613.095,6.03347,0.0,{}
+Salamanca,Jaén,523.381,5.76506,0.0,{}
+Salamanca,Logroño,373.294,3.82736,0.0,{}
+Salamanca,León,206.07,2.17722,0.0,{}
+Salamanca,Lleida,685.56,6.65719,0.0,{}
+Salamanca,Lugo,367.447,3.66069,0.0,{}
+Salamanca,Madrid,217.435,2.81306,0.0,{}
+Salamanca,Málaga,667.299,6.97375,0.0,{}
+Salamanca,Murcia,630.5,6.58722,0.0,{}
+Salamanca,Pamplona/Iruña,449.045,4.49883,0.0,{}
+Salamanca,Ourense,325.334,3.62633,0.0,{}
+Salamanca,Palencia,166.341,1.7575,0.0,{}
+Salamanca,Pontevedra,418.212,4.79389,0.0,{}
+Salamanca,Segovia,173.953,2.27169,0.019,"{""AP-51"": 0.019}"
+Salamanca,Sevilla,462.514,4.69239,0.0,{}
+Salamanca,Soria,324.562,3.98189,0.0,{}
+Salamanca,Tarragona,769.078,7.57653,0.0,{}
+Salamanca,Teruel,544.055,6.24636,0.0,{}
+Salamanca,Toledo,239.428,3.13175,0.0,{}
+Salamanca,Valencia,588.109,6.24594,0.0,{}
+Salamanca,Valladolid,120.678,1.33036,0.0,{}
+Salamanca,Zamora,67.038,0.90411,0.0,{}
+Salamanca,Zaragoza,540.61,5.31797,0.0,{}
+Segovia,Vitoria-Gasteiz,347.212,3.58506,0.0,{}
+Segovia,Albacete,369.919,4.17475,0.0,{}
+Segovia,Alacant/Alicante,534.264,5.68956,0.0,{}
+Segovia,Almería,666.254,7.04444,0.0,{}
+Segovia,Oviedo,409.542,5.02275,0.0,{}
+Segovia,Ávila,70.977,1.28153,0.0,{}
+Segovia,Badajoz,478.261,5.12122,0.0,{}
+Segovia,Barcelona,720.505,7.76858,0.0,{}
+Segovia,Bilbao,445.108,4.75208,0.0,{}
+Segovia,Burgos,239.903,2.60253,0.0,{}
+Segovia,Cáceres,302.222,4.04275,0.0,{}
+Segovia,Cádiz,727.541,7.60428,0.0,{}
+Segovia,Santander,357.441,3.72469,0.0,{}
+Segovia,Castelló de la Plana/Castellón de la Plana,536.167,5.84758,0.0,{}
+Segovia,Ciudad Real,284.036,3.74606,0.0,{}
+Segovia,Córdoba,491.061,5.43747,0.0,{}
+Segovia,A Coruña,555.747,5.49831,0.0,{}
+Segovia,Cuenca,281.924,3.43275,0.0,{}
+Segovia,Donostia/San Sebastián,459.947,4.76211,0.0,{}
+Segovia,Girona,789.167,8.35886,0.0,{}
+Segovia,Granada,515.535,5.63564,0.0,{}
+Segovia,Guadalajara,158.442,2.302,0.0,{}
+Segovia,Huelva,692.572,7.121,0.0,{}
+Segovia,Huesca,487.165,5.46089,0.0,{}
+Segovia,Jaén,431.815,4.87972,0.0,{}
+Segovia,Logroño,367.015,3.89708,0.0,{}
+Segovia,León,290.942,3.07694,0.0,{}
+Segovia,Lleida,559.63,6.08461,0.0,{}
+Segovia,Lugo,452.319,4.56042,0.0,{}
+Segovia,Madrid,98.706,1.71103,0.0,{}
+Segovia,Málaga,626.117,6.98869,0.0,{}
+Segovia,Murcia,511.77,5.48519,0.0,{}
+Segovia,Pamplona/Iruña,442.766,4.56858,0.0,{}
+Segovia,Ourense,454.448,4.61311,0.0,{}
+Segovia,Palencia,160.063,1.82722,0.0,{}
+Segovia,Pontevedra,547.326,5.78069,0.0,{}
+Segovia,Salamanca,152.397,2.22886,0.0,{}
+Segovia,Sevilla,610.908,6.49214,0.0,{}
+Segovia,Soria,191.301,2.97394,0.0,{}
+Segovia,Tarragona,643.148,7.00394,0.0,{}
+Segovia,Teruel,425.325,5.14433,0.0,{}
+Segovia,Toledo,166.993,2.33053,0.0,{}
+Segovia,Valencia,469.38,5.14392,0.0,{}
+Segovia,Valladolid,114.863,1.40022,0.0,{}
+Segovia,Zamora,207.443,2.32086,0.0,{}
+Segovia,Zaragoza,414.68,4.74539,0.0,{}
+Sevilla,Vitoria-Gasteiz,814.939,7.85356,0.0,{}
+Sevilla,Albacete,524.837,5.36256,0.0,{}
+Sevilla,Alacant/Alicante,599.423,6.19986,0.0,{}
+Sevilla,Almería,410.264,4.2625,0.0,{}
+Sevilla,Oviedo,784.856,8.43914,0.0,{}
+Sevilla,Ávila,491.466,5.42825,0.0,{}
+Sevilla,Badajoz,242.72,2.50636,0.0,{}
+Sevilla,Barcelona,1013.965,10.05386,0.0,{}
+Sevilla,Bilbao,912.835,9.02056,0.0,{}
+Sevilla,Burgos,707.63,6.871,0.0,{}
+Sevilla,Cáceres,262.103,2.71331,0.0,{}
+Sevilla,Cádiz,121.539,1.45328,0.0,{}
+Sevilla,Santander,825.168,7.99317,0.0,{}
+Sevilla,Castelló de la Plana/Castellón de la Plana,723.904,7.29681,0.0,{}
+Sevilla,Ciudad Real,329.205,3.80961,0.0,{}
+Sevilla,Córdoba,144.357,1.72386,0.0,{}
+Sevilla,A Coruña,931.061,8.91469,0.0,{}
+Sevilla,Cuenca,568.487,6.08369,0.0,{}
+Sevilla,Donostia/San Sebastián,927.674,9.03061,0.0,{}
+Sevilla,Girona,1091.487,10.70536,0.0,{}
+Sevilla,Granada,253.212,2.863,0.0,{}
+Sevilla,Guadalajara,587.79,5.71106,0.0,{}
+Sevilla,Huelva,91.458,1.05883,0.0,{}
+Sevilla,Huesca,916.514,8.86997,0.0,{}
+Sevilla,Jaén,256.096,2.96706,0.0,{}
+Sevilla,Logroño,834.742,8.16558,0.0,{}
+Sevilla,León,666.256,6.49333,0.0,{}
+Sevilla,Lleida,988.979,9.49369,0.0,{}
+Sevilla,Lugo,827.633,7.97681,0.0,{}
+Sevilla,Madrid,531.635,5.21983,0.0,{}
+Sevilla,Málaga,209.793,2.58828,0.0,{}
+Sevilla,Murcia,527.032,5.47997,0.0,{}
+Sevilla,Pamplona/Iruña,910.493,8.83706,0.0,{}
+Sevilla,Ourense,785.52,7.94244,0.0,{}
+Sevilla,Palencia,627.79,6.09572,0.0,{}
+Sevilla,Pontevedra,878.399,9.11003,0.0,{}
+Sevilla,Salamanca,460.112,4.59567,0.0,{}
+Sevilla,Segovia,608.891,6.47728,0.075,"{""AP-6"": 0.075}"
+Sevilla,Soria,755.57,7.27875,0.0,{}
+Sevilla,Tarragona,909.19,8.96247,0.0,{}
+Sevilla,Teruel,695.091,7.15817,0.0,{}
+Sevilla,Toledo,494.039,4.91375,0.0,{}
+Sevilla,Valencia,657.116,6.59314,0.0,{}
+Sevilla,Valladolid,582.126,5.66858,0.0,{}
+Sevilla,Zamora,527.224,5.22022,0.0,{}
+Sevilla,Zaragoza,844.029,8.15447,0.0,{}
+Soria,Vitoria-Gasteiz,183.739,2.27108,0.0,{}
+Soria,Albacete,464.17,4.56056,0.0,{}
+Soria,Alacant/Alicante,553.587,5.92719,0.0,{}
+Soria,Almería,789.679,7.70839,0.0,{}
+Soria,Oviedo,550.932,5.711,0.0,{}
+Soria,Ávila,257.367,3.87428,0.0,{}
+Soria,Badajoz,632.938,6.06039,0.0,{}
+Soria,Barcelona,473.35,4.99169,0.0,{}
+Soria,Bilbao,251.368,3.49389,0.0,{}
+Soria,Burgos,203.711,2.36083,0.0,{}
+Soria,Cáceres,531.379,5.18225,0.0,{}
+Soria,Cádiz,882.219,8.54344,0.0,{}
+Soria,Santander,411.971,4.36303,0.0,{}
+Soria,Castelló de la Plana/Castellón de la Plana,376.52,4.37433,0.0,{}
+Soria,Ciudad Real,424.171,4.4105,0.0,{}
+Soria,Córdoba,614.486,6.10142,0.0,{}
+Soria,A Coruña,657.304,6.97661,0.0,{}
+Soria,Cuenca,273.27,3.59531,0.0,{}
+Soria,Donostia/San Sebastián,266.96,3.25167,0.0,{}
+Soria,Girona,542.011,5.58197,0.0,{}
+Soria,Granada,638.959,6.29958,0.0,{}
+Soria,Guadalajara,171.114,1.74367,0.0,{}
+Soria,Huelva,847.25,8.06017,0.0,{}
+Soria,Huesca,240.01,2.68403,0.0,{}
+Soria,Jaén,555.239,5.54367,0.0,{}
+Soria,Logroño,101.33,1.43047,0.0,{}
+Soria,León,372.41,3.91617,0.0,{}
+Soria,Lleida,312.475,3.30775,0.0,{}
+Soria,Lugo,553.876,6.03872,0.0,{}
+Soria,Madrid,225.787,2.34286,0.0,{}
+Soria,Málaga,749.542,7.65264,0.0,{}
+Soria,Murcia,606.021,5.87103,0.0,{}
+Soria,Pamplona/Iruña,184.818,2.33458,0.0,{}
+Soria,Ourense,556.006,6.09142,0.0,{}
+Soria,Palencia,204.969,2.77561,0.0,{}
+Soria,Pontevedra,648.884,7.259,0.0,{}
+Soria,Salamanca,329.02,3.93883,0.0,{}
+Soria,Segovia,191.448,2.97375,0.0,{}
+Soria,Sevilla,765.585,7.43131,0.0,{}
+Soria,Tarragona,395.993,4.22708,0.0,{}
+Soria,Teruel,228.524,2.78019,0.0,{}
+Soria,Toledo,300.49,3.08814,0.0,{}
+Soria,Valencia,366.672,4.21903,0.0,{}
+Soria,Valladolid,213.616,2.86742,0.0,{}
+Soria,Zamora,309.001,3.79917,0.0,{}
+Soria,Zaragoza,167.525,1.96853,0.0,{}
+Tarragona,Vitoria-Gasteiz,485.481,4.77061,0.0,{}
+Tarragona,Albacete,453.942,4.50367,0.0,{}
+Tarragona,Alacant/Alicante,446.092,4.40333,0.0,{}
+Tarragona,Almería,691.026,6.67575,0.0,{}
+Tarragona,Oviedo,879.046,8.64464,0.0,{}
+Tarragona,Ávila,652.67,6.94689,0.017,"{""R-2"": 0.017}"
+Tarragona,Badajoz,947.683,9.05189,0.0,{}
+Tarragona,Barcelona,111.911,1.437,0.0,{}
+Tarragona,Bilbao,553.11,5.99344,0.0,{}
+Tarragona,Burgos,528.285,5.29467,0.0,{}
+Tarragona,Cáceres,846.124,8.17375,0.0,{}
+Tarragona,Cádiz,1022.428,9.97528,0.0,{}
+Tarragona,Santander,650.734,7.04511,0.0,{}
+Tarragona,Castelló de la Plana/Castellón de la Plana,188.492,2.05911,0.0,{}
+Tarragona,Ciudad Real,601.966,5.79739,0.0,{}
+Tarragona,Córdoba,771.437,7.51533,0.0,{}
+Tarragona,A Coruña,1019.127,10.03075,0.0,{}
+Tarragona,Cuenca,450.301,4.84658,0.0,{}
+Tarragona,Donostia/San Sebastián,492.99,5.32697,0.199,"{""AP-15"": 0.199}"
+Tarragona,Girona,189.433,2.0885,0.0,{}
+Tarragona,Granada,745.277,7.37519,0.0,{}
+Tarragona,Guadalajara,485.859,4.73517,0.0,{}
+Tarragona,Huelva,1000.566,9.75492,0.0,{}
+Tarragona,Huesca,228.972,2.4685,0.0,{}
+Tarragona,Jaén,712.191,6.95758,0.0,{}
+Tarragona,Logroño,398.24,3.91006,0.0,{}
+Tarragona,León,700.524,6.84978,0.0,{}
+Tarragona,Lleida,97.549,1.15833,0.0,{}
+Tarragona,Lugo,915.699,9.09289,0.0,{}
+Tarragona,Madrid,540.532,5.33436,0.0,{}
+Tarragona,Málaga,869.315,8.74472,0.0,{}
+Tarragona,Murcia,483.309,4.75422,0.0,{}
+Tarragona,Pamplona/Iruña,405.854,4.36019,0.199,"{""AP-15"": 0.199}"
+Tarragona,Ourense,978.029,9.43269,0.0,{}
+Tarragona,Palencia,611.934,6.01408,0.0,{}
+Tarragona,Pontevedra,1070.907,10.60028,0.0,{}
+Tarragona,Salamanca,765.774,7.43019,0.0,{}
+Tarragona,Segovia,641.318,6.88197,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Tarragona,Sevilla,905.145,8.87742,0.0,{}
+Tarragona,Soria,393.574,4.12853,0.0,{}
+Tarragona,Teruel,336.921,3.51861,0.0,{}
+Tarragona,Toledo,615.235,6.07964,0.0,{}
+Tarragona,Valencia,259.755,2.67856,0.0,{}
+Tarragona,Valladolid,648.743,6.37983,0.0,{}
+Tarragona,Zamora,745.755,7.29053,0.0,{}
+Tarragona,Zaragoza,232.179,2.37331,0.0,{}
+Teruel,Vitoria-Gasteiz,429.519,4.29258,0.0,{}
+Teruel,Albacete,229.292,2.91231,0.0,{}
+Teruel,Alacant/Alicante,328.425,3.38461,0.0,{}
+Teruel,Almería,573.358,5.65703,0.0,{}
+Teruel,Oviedo,823.083,8.16661,0.0,{}
+Teruel,Ávila,432.156,5.29736,0.017,"{""R-2"": 0.017}"
+Teruel,Badajoz,685.806,7.28044,0.0,{}
+Teruel,Barcelona,439.696,4.6225,0.0,{}
+Teruel,Bilbao,497.148,5.51542,0.0,{}
+Teruel,Burgos,472.322,4.81664,0.0,{}
+Teruel,Cáceres,584.247,6.40231,0.0,{}
+Teruel,Cádiz,810.474,8.21086,0.0,{}
+Teruel,Santander,594.771,6.56708,0.0,{}
+Teruel,Castelló de la Plana/Castellón de la Plana,151.358,1.83175,0.0,{}
+Teruel,Ciudad Real,390.012,4.03297,0.0,{}
+Teruel,Córdoba,559.483,5.75092,0.0,{}
+Teruel,A Coruña,963.164,9.55272,0.0,{}
+Teruel,Cuenca,149.409,1.97961,0.0,{}
+Teruel,Donostia/San Sebastián,432.14,4.82058,0.199,"{""AP-15"": 0.199}"
+Teruel,Girona,517.217,5.274,0.0,{}
+Teruel,Granada,583.957,5.94906,0.0,{}
+Teruel,Guadalajara,247.287,3.14439,0.0,{}
+Teruel,Huelva,788.612,7.9905,0.0,{}
+Teruel,Huesca,250.789,2.50653,0.0,{}
+Teruel,Jaén,500.237,5.19314,0.0,{}
+Teruel,Logroño,342.277,3.43203,0.0,{}
+Teruel,León,644.561,6.37175,0.0,{}
+Teruel,Lleida,323.448,3.18275,0.0,{}
+Teruel,Lugo,859.736,8.61486,0.0,{}
+Teruel,Madrid,310.912,3.58831,0.0,{}
+Teruel,Málaga,694.54,7.30214,0.0,{}
+Teruel,Murcia,365.642,3.7355,0.0,{}
+Teruel,Pamplona/Iruña,345.004,3.85383,0.199,"{""AP-15"": 0.199}"
+Teruel,Ourense,785.913,8.79842,0.0,{}
+Teruel,Palencia,434.876,5.48261,0.0,{}
+Teruel,Pontevedra,878.791,9.966,0.0,{}
+Teruel,Salamanca,538.907,6.34536,0.017,"{""R-2"": 0.017}"
+Teruel,Segovia,420.805,5.23244,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Teruel,Sevilla,693.191,7.113,0.0,{}
+Teruel,Soria,228.886,2.82164,0.0,{}
+Teruel,Tarragona,334.92,3.53111,0.0,{}
+Teruel,Toledo,329.943,4.00406,0.0,{}
+Teruel,Valencia,141.51,1.67642,0.0,{}
+Teruel,Valladolid,443.524,5.57439,0.0,{}
+Teruel,Zamora,538.908,6.50617,0.0,{}
+Teruel,Zaragoza,177.733,1.86789,0.0,{}
+Toledo,Vitoria-Gasteiz,436.802,4.37581,0.0,{}
+Toledo,Albacete,259.179,2.62517,0.0,{}
+Toledo,Alacant/Alicante,423.524,4.13994,0.0,{}
+Toledo,Almería,519.745,5.09492,0.0,{}
+Toledo,Oviedo,526.405,6.60594,0.0,{}
+Toledo,Ávila,135.739,2.02681,0.0,{}
+Toledo,Badajoz,366.561,3.63639,0.0,{}
+Toledo,Barcelona,693.759,6.91292,0.0,{}
+Toledo,Bilbao,504.431,5.59864,0.0,{}
+Toledo,Burgos,329.295,3.36875,0.0,{}
+Toledo,Cáceres,265.002,2.75825,0.0,{}
+Toledo,Cádiz,595.542,5.94789,0.0,{}
+Toledo,Santander,537.555,5.37094,0.0,{}
+Toledo,Castelló de la Plana/Castellón de la Plana,458.246,4.55939,0.0,{}
+Toledo,Ciudad Real,124.232,1.72053,0.0,{}
+Toledo,Córdoba,344.552,3.48797,0.0,{}
+Toledo,A Coruña,672.609,7.0815,0.0,{}
+Toledo,Cuenca,185.602,2.22489,0.0,{}
+Toledo,Donostia/San Sebastián,549.537,5.55289,0.0,{}
+Toledo,Girona,762.42,7.50319,0.0,{}
+Toledo,Granada,369.025,3.68611,0.0,{}
+Toledo,Guadalajara,131.695,1.44636,0.0,{}
+Toledo,Huelva,580.873,5.63617,0.0,{}
+Toledo,Huesca,460.419,4.60525,0.0,{}
+Toledo,Jaén,285.306,2.93019,0.0,{}
+Toledo,Logroño,400.008,4.33606,0.0,{}
+Toledo,León,407.804,4.66014,0.0,{}
+Toledo,Lleida,532.884,5.22897,0.0,{}
+Toledo,Lugo,569.181,6.14361,0.0,{}
+Toledo,Madrid,74.789,0.98708,0.0,{}
+Toledo,Málaga,479.608,5.03919,0.0,{}
+Toledo,Murcia,401.03,3.93561,0.0,{}
+Toledo,Pamplona/Iruña,483.496,5.24017,0.0,{}
+Toledo,Ourense,571.311,6.19631,0.0,{}
+Toledo,Palencia,330.552,3.7835,0.0,{}
+Toledo,Pontevedra,664.189,7.36389,0.0,{}
+Toledo,Salamanca,239.978,3.11697,0.0,{}
+Toledo,Segovia,167.423,2.38453,0.075,"{""AP-6"": 0.075}"
+Toledo,Sevilla,478.259,4.85003,0.0,{}
+Toledo,Soria,299.475,3.01403,0.0,{}
+Toledo,Tarragona,616.401,6.14831,0.0,{}
+Toledo,Teruel,329.003,3.9365,0.0,{}
+Toledo,Valencia,391.458,3.85572,0.0,{}
+Toledo,Valladolid,283.689,3.45953,0.075,"{""AP-6"": 0.075}"
+Toledo,Zamora,309.617,3.82514,0.0,{}
+Toledo,Zaragoza,387.934,3.88975,0.0,{}
+Valencia,Vitoria-Gasteiz,566.78,5.69378,0.0,{}
+Valencia,Albacete,186.371,2.01972,0.0,{}
+Valencia,Alacant/Alicante,178.04,1.92447,0.0,{}
+Valencia,Almería,423.455,4.19181,0.0,{}
+Valencia,Oviedo,939.327,9.19453,0.0,{}
+Valencia,Ávila,475.884,5.27364,0.017,"{""R-2"": 0.017}"
+Valencia,Badajoz,657.096,6.91872,0.0,{}
+Valencia,Barcelona,365.593,3.80431,0.0,{}
+Valencia,Bilbao,634.409,6.91661,0.0,{}
+Valencia,Burgos,592.107,5.84436,0.0,{}
+Valencia,Cáceres,649.087,6.34444,0.0,{}
+Valencia,Cádiz,772.373,7.63425,0.0,{}
+Valencia,Santander,800.366,7.84656,0.0,{}
+Valencia,Castelló de la Plana/Castellón de la Plana,75.531,1.04725,0.0,{}
+Valencia,Ciudad Real,351.911,3.45636,0.0,{}
+Valencia,Córdoba,521.383,5.17431,0.0,{}
+Valencia,A Coruña,969.719,9.90569,0.017,"{""R-2"": 0.017}"
+Valencia,Cuenca,200.247,2.50556,0.0,{}
+Valencia,Donostia/San Sebastián,569.402,6.22178,0.199,"{""AP-15"": 0.199}"
+Valencia,Girona,443.115,4.45581,0.0,{}
+Valencia,Granada,477.706,4.89125,0.0,{}
+Valencia,Guadalajara,394.507,3.92197,0.0,{}
+Valencia,Huelva,750.512,7.41389,0.0,{}
+Valencia,Huesca,388.05,3.90772,0.0,{}
+Valencia,Jaén,462.137,4.61656,0.0,{}
+Valencia,Logroño,479.539,4.83322,0.0,{}
+Valencia,León,760.805,7.39969,0.0,{}
+Valencia,Lleida,348.002,3.52719,0.0,{}
+Valencia,Lugo,866.291,8.96781,0.017,"{""R-2"": 0.017}"
+Valencia,Madrid,354.639,3.56461,0.0,{}
+Valencia,Málaga,601.744,6.26075,0.0,{}
+Valencia,Murcia,215.738,2.27028,0.0,{}
+Valencia,Pamplona/Iruña,482.266,5.25503,0.199,"{""AP-15"": 0.199}"
+Valencia,Ourense,868.42,9.0205,0.017,"{""R-2"": 0.017}"
+Valencia,Palencia,593.364,6.25914,0.0,{}
+Valencia,Pontevedra,961.298,10.18808,0.017,"{""R-2"": 0.017}"
+Valencia,Salamanca,582.635,6.32167,0.017,"{""R-2"": 0.017}"
+Valencia,Segovia,464.532,5.20872,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Valencia,Sevilla,655.09,6.53639,0.0,{}
+Valencia,Soria,366.147,4.22283,0.0,{}
+Valencia,Tarragona,260.817,2.71292,0.0,{}
+Valencia,Teruel,144.92,1.64394,0.0,{}
+Valencia,Toledo,392.15,3.90817,0.0,{}
+Valencia,Valladolid,574.35,6.17817,0.0,{}
+Valencia,Zamora,621.415,6.72825,0.017,"{""R-2"": 0.017}"
+Valencia,Zaragoza,314.995,3.26908,0.0,{}
+Valladolid,Vitoria-Gasteiz,236.532,2.44881,0.0,{}
+Valladolid,Albacete,475.862,5.24136,0.0,{}
+Valladolid,Alacant/Alicante,640.208,6.75617,0.0,{}
+Valladolid,Almería,782.12,8.17056,0.0,{}
+Valladolid,Oviedo,302.948,3.90247,0.0,{}
+Valladolid,Ávila,139.655,1.67947,0.0,{}
+Valladolid,Badajoz,415.082,4.40697,0.0,{}
+Valladolid,Barcelona,729.476,7.27464,0.0,{}
+Valladolid,Bilbao,334.427,3.61583,0.0,{}
+Valladolid,Burgos,129.222,1.46628,0.0,{}
+Valladolid,Cáceres,325.176,3.25956,0.0,{}
+Valladolid,Cádiz,702.416,6.90475,0.0,{}
+Valladolid,Santander,246.76,2.58844,0.0,{}
+Valladolid,Castelló de la Plana/Castellón de la Plana,642.111,6.91419,0.0,{}
+Valladolid,Ciudad Real,399.901,4.87217,0.0,{}
+Valladolid,Córdoba,606.927,6.56358,0.0,{}
+Valladolid,A Coruña,449.152,4.37803,0.0,{}
+Valladolid,Cuenca,387.868,4.49936,0.0,{}
+Valladolid,Donostia/San Sebastián,349.266,3.62586,0.0,{}
+Valladolid,Girona,798.137,7.86492,0.0,{}
+Valladolid,Granada,631.4,6.76172,0.0,{}
+Valladolid,Guadalajara,260.558,3.21889,0.0,{}
+Valladolid,Huelva,667.447,6.42147,0.0,{}
+Valladolid,Huesca,496.136,4.96694,0.0,{}
+Valladolid,Jaén,547.681,6.00581,0.0,{}
+Valladolid,Logroño,256.335,2.76083,0.0,{}
+Valladolid,León,184.347,1.95667,0.0,{}
+Valladolid,Lleida,568.601,5.59067,0.0,{}
+Valladolid,Lugo,345.724,3.44014,0.0,{}
+Valladolid,Madrid,214.571,2.83714,0.0,{}
+Valladolid,Málaga,790.568,8.07397,0.0,{}
+Valladolid,Murcia,617.714,6.55181,0.0,{}
+Valladolid,Pamplona/Iruña,332.086,3.43233,0.0,{}
+Valladolid,Ourense,347.854,3.49283,0.0,{}
+Valladolid,Palencia,49.382,0.69097,0.0,{}
+Valladolid,Pontevedra,440.732,4.66039,0.0,{}
+Valladolid,Salamanca,120.868,1.34022,0.0,{}
+Valladolid,Segovia,116.168,1.45364,0.0,{}
+Valladolid,Sevilla,585.783,5.79261,0.0,{}
+Valladolid,Soria,209.051,2.94606,0.0,{}
+Valladolid,Tarragona,652.119,6.51,0.0,{}
+Valladolid,Teruel,438.767,5.63814,0.0,{}
+Valladolid,Toledo,282.859,3.45661,0.0,{}
+Valladolid,Valencia,575.323,6.21053,0.0,{}
+Valladolid,Zamora,100.849,1.20056,0.0,{}
+Valladolid,Zaragoza,423.651,4.25144,0.0,{}
+Zamora,Vitoria-Gasteiz,334.175,3.35847,0.0,{}
+Zamora,Albacete,527.763,5.68056,0.0,{}
+Zamora,Alacant/Alicante,692.109,7.19536,0.0,{}
+Zamora,Almería,824.099,8.55028,0.0,{}
+Zamora,Oviedo,260.569,3.51994,0.0,{}
+Zamora,Ávila,176.816,1.92244,0.0,{}
+Zamora,Badajoz,359.401,3.90997,0.0,{}
+Zamora,Barcelona,827.119,8.18428,0.0,{}
+Zamora,Bilbao,432.071,4.5255,0.0,{}
+Zamora,Burgos,226.866,2.37594,0.0,{}
+Zamora,Cáceres,269.496,2.76253,0.0,{}
+Zamora,Cádiz,646.735,6.40775,0.0,{}
+Zamora,Santander,344.404,3.49808,0.0,{}
+Zamora,Castelló de la Plana/Castellón de la Plana,694.012,7.35342,0.0,{}
+Zamora,Ciudad Real,427.97,5.24356,0.0,{}
+Zamora,Córdoba,584.002,6.41044,0.0,{}
+Zamora,A Coruña,406.774,3.9955,0.0,{}
+Zamora,Cuenca,439.769,4.93858,0.0,{}
+Zamora,Donostia/San Sebastián,446.91,4.53553,0.0,{}
+Zamora,Girona,895.781,8.77456,0.0,{}
+Zamora,Granada,673.379,7.14144,0.0,{}
+Zamora,Guadalajara,316.287,3.80781,0.0,{}
+Zamora,Huelva,611.766,5.92447,0.0,{}
+Zamora,Huesca,593.779,5.87661,0.0,{}
+Zamora,Jaén,589.659,6.38553,0.0,{}
+Zamora,Logroño,353.978,3.6705,0.0,{}
+Zamora,León,141.969,1.57414,0.0,{}
+Zamora,Lleida,666.244,6.50033,0.0,{}
+Zamora,Lugo,303.346,3.05761,0.0,{}
+Zamora,Madrid,256.55,3.21686,0.0,{}
+Zamora,Málaga,734.887,7.57697,0.0,{}
+Zamora,Murcia,669.615,6.99103,0.0,{}
+Zamora,Pamplona/Iruña,429.729,4.34197,0.0,{}
+Zamora,Ourense,261.233,3.02325,0.0,{}
+Zamora,Palencia,147.026,1.60064,0.0,{}
+Zamora,Pontevedra,354.111,4.19081,0.0,{}
+Zamora,Salamanca,67.237,0.87608,0.0,{}
+Zamora,Segovia,210.268,2.32547,0.0,{}
+Zamora,Sevilla,530.102,5.29558,0.0,{}
+Zamora,Soria,305.246,3.82503,0.0,{}
+Zamora,Tarragona,749.762,7.41967,0.0,{}
+Zamora,Teruel,534.963,6.51714,0.0,{}
+Zamora,Toledo,309.513,3.82111,0.0,{}
+Zamora,Valencia,627.224,6.64975,0.0,{}
+Zamora,Valladolid,101.362,1.1735,0.0,{}
+Zamora,Zaragoza,521.294,5.16111,0.0,{}
+Zaragoza,Vitoria-Gasteiz,259.599,2.61714,0.0,{}
+Zaragoza,Albacete,405.284,4.59747,0.0,{}
+Zaragoza,Alacant/Alicante,502.279,4.98089,0.0,{}
+Zaragoza,Almería,747.213,7.25333,0.0,{}
+Zaragoza,Oviedo,653.163,6.49114,0.0,{}
+Zaragoza,Ávila,426.787,4.79339,0.017,"{""R-2"": 0.017}"
+Zaragoza,Badajoz,721.8,6.89839,0.0,{}
+Zaragoza,Barcelona,311.046,3.21794,0.0,{}
+Zaragoza,Bilbao,327.228,3.83994,0.0,{}
+Zaragoza,Burgos,302.403,3.14117,0.0,{}
+Zaragoza,Cáceres,620.241,6.02025,0.0,{}
+Zaragoza,Cádiz,971.081,9.38144,0.0,{}
+Zaragoza,Santander,424.851,4.89164,0.0,{}
+Zaragoza,Castelló de la Plana/Castellón de la Plana,325.213,3.42803,0.0,{}
+Zaragoza,Ciudad Real,513.033,5.2485,0.0,{}
+Zaragoza,Córdoba,703.347,6.93942,0.0,{}
+Zaragoza,A Coruña,793.244,7.87728,0.0,{}
+Zaragoza,Cuenca,325.4,3.66481,0.0,{}
+Zaragoza,Donostia/San Sebastián,267.107,3.17347,0.199,"{""AP-15"": 0.199}"
+Zaragoza,Girona,379.708,3.80822,0.0,{}
+Zaragoza,Granada,727.821,7.13758,0.0,{}
+Zaragoza,Guadalajara,259.976,2.58169,0.0,{}
+Zaragoza,Huelva,936.112,8.89819,0.0,{}
+Zaragoza,Huesca,73.504,0.86931,0.0,{}
+Zaragoza,Jaén,644.101,6.38167,0.0,{}
+Zaragoza,Logroño,172.357,1.75656,0.0,{}
+Zaragoza,León,474.641,4.69628,0.0,{}
+Zaragoza,Lleida,150.171,1.534,0.0,{}
+Zaragoza,Lugo,689.816,6.93939,0.0,{}
+Zaragoza,Madrid,314.649,3.18089,0.0,{}
+Zaragoza,Málaga,838.404,8.49067,0.0,{}
+Zaragoza,Murcia,539.496,5.33181,0.0,{}
+Zaragoza,Pamplona/Iruña,179.971,2.20672,0.199,"{""AP-15"": 0.199}"
+Zaragoza,Ourense,752.146,7.27922,0.0,{}
+Zaragoza,Palencia,386.052,3.86058,0.0,{}
+Zaragoza,Pontevedra,845.024,8.44678,0.0,{}
+Zaragoza,Salamanca,539.891,5.27669,0.0,{}
+Zaragoza,Segovia,415.436,4.72847,0.092,"{""AP-6"": 0.075, ""R-2"": 0.017}"
+Zaragoza,Sevilla,854.447,8.26931,0.0,{}
+Zaragoza,Soria,167.691,1.97503,0.0,{}
+Zaragoza,Tarragona,233.689,2.45333,0.0,{}
+Zaragoza,Teruel,177.216,1.83389,0.0,{}
+Zaragoza,Toledo,389.352,3.92614,0.0,{}
+Zaragoza,Valencia,315.364,3.27272,0.0,{}
+Zaragoza,Valladolid,422.86,4.22636,0.0,{}
+Zaragoza,Zamora,519.872,5.13703,0.0,{}

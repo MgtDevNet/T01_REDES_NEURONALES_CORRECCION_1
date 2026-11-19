@@ -1,0 +1,29 @@
+via,eur_km,precio_ref_eur,km_ref,recorrido_ref,criterio,fuente,url,fecha_consulta
+AP-1,0.2176,10.04,46.13,Vitoria (Etxabarri-Ibiña)-Eibar,ligero; tarifa única,Bidegi (2026) tarifas vigentes desde 01-01-2026; coincide con AEA (2026),https://www.bidegi.eus/documents/42696171/0/2026__AP-8_AP-1_AP-636_tarifak.pdf/0c9dbcf3-f3e7-e6f6-709b-8cbb7d9da9d5,2026-11-19
+AP-6,0.2256,15.70,69.60,Villalba-Adanero,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-7,0.1155,9.55,82.66,Málaga-Estepona,ligero; temporada baja (noviembre),AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-8,0.1606,16.96,105.60,Bilbao-Behobia,ligero; tarifa única,AEA (2026); tabla oficial Bidegi/Interbiak 2026,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-9,0.1280,28.10,219.60,Ferrol-Tui,ligero; tarifa general,AEA (2026); coincide con Enfoques (2026),https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-15,0.1248,14.05,112.60,Tudela-Irurtzun,ligero; sin descuentos de usuario habitual,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-36,0.1149,14.15,123.20,Ocaña-La Roda (SEITT),ligero; efectivo; 6:00-24:00,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-41,0.1149,5.95,51.80,Madrid-Toledo (SEITT),ligero; efectivo; 6:00-24:00,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-46,0.2354,6.60,28.04,Alto de las Pedrizas-Málaga,ligero; temporada alta (valor conservador),AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-51,0.0758,1.75,23.10,Ávila-Villacastín,ligero; tarifa normal (hay punta y valle),AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-53,0.1281,7.25,56.60,Santiago-Alto de Santo Domingo,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-61,0.1102,3.05,27.68,Segovia-San Rafael,ligero; tarifa normal (hay punta y valle),AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-66,0.2083,16.20,77.76,León-Campomanes,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-68 Bizkaia,0.1502,3.35,22.30,Bilbao-Ziorraga (tramo de Bizkaia),ligero; desde 11-11-2026 (gestión foral),GasteizBerri (2026) AP-68: nuevos precios y peajes desde el 11 de noviembre,https://gasteizberri.com/2026/11/ap-68-nuevos-precios-peajes-2026/,2026-11-19
+AP-68 Álava,0.0346,0.90,26.00,Ziorraga-Altube (tramo de Álava),ligero; desde 11-11-2026 (rebaja del 70 %); km_ref estimado (3.52 € / 0.1355 €/km),Radio Llodio (2026); GasteizBerri (2026),https://radiollodio.com/2026/08/24/alava-bajara-un-70-el-peaje-de-la-ap-68-al-asumir-su-gestion-en-noviembre/,2026-11-19
+AP-71,0.1645,6.20,37.70,León-Astorga,ligero; tarifa diurna,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AP-636,0.1606,16.96,105.60,Accesos de Gipuzkoa (Bidegi),ligero; se asimila a la AP-8,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AG-55,0.0798,2.60,32.60,A Coruña-Carballo,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AG-57,0.0694,1.75,25.20,Puxeiros-Baiona,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+AG-57N,0.0694,1.75,25.20,Puxeiros-Baiona,ligero; se asimila a la AG-57,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+C-16,0.3005,12.95,43.10,Sant Cugat-Manresa,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+C-32,0.2389,13.45,56.30,Castelldefels-El Vendrell,ligero; tarifa general,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+M-12,0.1190,1.00,8.40,Aeropuerto de Barajas (SEITT),ligero; efectivo; 6:00-24:00,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+M-203,0.1149,0.00,0.00,Enlace de radial (SEITT),ligero; se asimila a la tarifa SEITT,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19
+R-2,0.1053,5.80,55.10,Alcobendas-Taracena (N-II),ligero; efectivo; 6:00-24:00,SEITT (2026) Peaje 2026 R2 (0.60 € + 5.20 €),https://cdn.transportes.gob.es/portal-web-seitt/media/document/tarifas_r2_2026.pdf,2026-11-19
+R-3,0.1160,3.40,29.30,Madrid (M-40)-Conexión A-3,ligero; efectivo; 6:00-24:00,SEITT (2026) Peajes 2026 Radial 3,https://cdn.transportes.gob.es/portal-web-seitt/media/document/precios_web_r3_2026.pdf,2026-11-19
+R-4,0.1137,6.15,54.10,M-50-Ocaña/A-40,ligero; efectivo; 6:00-24:00,SEITT (2026) Peaje 2026 R4,https://cdn.transportes.gob.es/portal-web-seitt/media/document/tarifas_r4_2026_0.pdf,2026-11-19
+R-5,0.1159,3.65,31.50,Madrid-Navalcarnero (SEITT),ligero; efectivo; 6:00-24:00,AEA (2026) Informe precio de los peajes,https://aeaclub.org/informe-precio-peajes/,2026-11-19

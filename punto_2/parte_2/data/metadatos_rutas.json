@@ -1,0 +1,16 @@
+{
+  "fuente": "OpenRouteService v8.1.1 (servidor local, docker-compose.yml), perfil driving-car",
+  "endpoint": "/ors/v2/directions/driving-car/geojson",
+  "preferencia": "fastest",
+  "deteccion_peaje": "nodos OSM toll=yes (vias_peaje_osm_nodos.csv), tolerancia 5 m",
+  "variantes": {
+    "con_peaje": "sin restricciones",
+    "sin_peaje": "options.avoid_features = ['tollways']"
+  },
+  "mapa": "Geofabrik spain-latest.osm.pbf (OpenStreetMap)",
+  "fecha_mapa": "2026-11-17",
+  "fecha_descarga_mapa": "2026-11-18",
+  "fecha_consulta": "2026-11-19",
+  "n_capitales": 47,
+  "pares_ordenados": 2162
+}
