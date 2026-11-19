@@ -1,8 +1,24 @@
 #!/usr/bin/env python3
-"""TSP de las 47 capitales con costos: ACO y GA, escenarios 2016/2026 y GIF de rutas.
+"""TSP de las 47 capitales con costos reales (datos de noviembre de 2026): ACO y GA.
 
-Ejecución:   python3 src/tsp_espana.py
-Parámetros:  config.ini (junto a este README)  ·  opciones de terminal (--help)
+Costo de ir de la capital i a la j, con el valor de la hora Vh (€/h):
+
+    para cada variante r ∈ {con_peaje, sin_peaje} de la ruta por carretera:
+        C_ij^r(Vh) = Vh · horas_ij^r  +  k · km_ij^r  +  peaje_ij^r
+    C_ij(Vh) = min(C_ij^con_peaje, C_ij^sin_peaje)
+
+    k = consumo/100 · precio del combustible  (€/km)
+    horas, km : OpenRouteService (servidor local, mapa OSM del 17-nov-2026)
+    peaje     : Σ km recorridos en cada autopista · tarifa €/km de 2026 (data/tarifas_peaje_2026.csv)
+
+Para cada tramo el vendedor elige pagar el peaje (ruta más rápida) o ir por la red
+libre (más lenta pero gratis): por eso la ruta óptima SÍ depende de Vh.
+
+Los algoritmos son los de la parte 1 (punto_2/parte_1/tsp_bio.py): ACO elitista y GA
+(con búsqueda local 2-opt + Or-opt opcional), aplicados a la matriz de costos en €.
+
+Ejecución:   python3 src/tsp_espana.py            (desde punto_2/parte_2)
+Parámetros:  config.ini  ·  opciones de terminal (--help)
 Prioridad:   terminal  >  config.ini  >  valores por defecto
 """
 
@@ -10,56 +26,78 @@ from pathlib import Path
 import argparse
 import configparser
 import json
+import random
 import sys
+import time
 
 import numpy as np
 import pandas as pd
 import matplotlib
 
-matplotlib.use("Agg")
+if "ipykernel" not in sys.modules:                 # en un notebook se usa el backend inline
+    matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation, PillowWriter
 
-
-ROOT = Path(__file__).resolve().parents[1]     # .../punto_2/parte_2
+ROOT = Path(__file__).resolve().parents[1]          # .../punto_2/parte_2
 DATA = ROOT / "data"
 RESULTS = ROOT / "results"
-SCENARIOS = ("2016", "2026")
+PARTE_1 = ROOT.parent / "parte_1"
+
+sys.path.insert(0, str(PARTE_1))
+import tsp_bio as tb                                 # noqa: E402  (ACO, GA, 2-opt, Or-opt)
+import optimo_exacto as ox                           # noqa: E402  (óptimo exacto por PLE)
+
+VARIANTES = ("con_peaje", "sin_peaje")
 
 
 # ═════════════════════════════════════════════════════════════════════════════
 # CONFIGURACIÓN (config.ini)
 # ═════════════════════════════════════════════════════════════════════════════
-# Valores por defecto: si una línea falta en config.ini se usa el de aquí.
-# El tipo del valor por defecto (int, float, bool, str) indica cómo leer el texto.
+# Si una línea falta en config.ini se usa el valor de aquí. El tipo del valor
+# por defecto (int, float, bool, str) indica cómo se lee el texto.
 POR_DEFECTO = {
     "general": {
-        "escenario": "both",       # 2016 | 2026 | both
-        "algoritmo": "both",       # aco | ga | both
+        "algoritmo": "both",            # aco | ga | both
         "semilla": 20261008,
-        "inicio": "Madrid",        # solo cambia desde dónde se MUESTRA el ciclo
+        "inicio": "Madrid",             # solo cambia desde dónde se MUESTRA el ciclo
         "generar_gif": True,
+        "verificar_exacto": True,       # compara con el óptimo exacto (PLE, ~3 s)
+        "modo": "hibrido",              # hibrido = con búsqueda local · puro = ACO/GA clásicos
+        "resultados": "results",        # carpeta de salida (relativa a parte_2/); se añade /<modo>
     },
     "costos": {
-        "valor_hora_2016": 19.77,          # €/h
-        "valor_hora_2026": 26.18,
-        "precio_combustible_2016": 1.17,   # €/L
-        "precio_combustible_2026": 1.799,
-        "velocidad_kmh": 80.0,             # supuesto: velocidad constante
-        "consumo_l_100km": 4.7,            # Toyota Corolla (ver data/parametros.json)
+        "valor_hora": 26.18,            # €/h (INE, coste laboral por hora, 2T 2026)
+        "precio_combustible": 1.799,    # €/L (gasolina 95, 5-oct-2026)
+        "consumo_l_100km": 4.7,         # Toyota Corolla Hybrid 140H (WLTP, extremo alto)
     },
     "aco": {
-        "n_hormigas": 25,
-        "iteraciones": 80,
-        "alpha": 1.0,     # peso de la feromona
-        "beta": 3.0,      # peso de la heurística 1/costo
-        "rho": 0.5,       # evaporación
+        "n_hormigas": 20,
+        "iteraciones": 200,
+        "alpha": 1.0,                   # peso de la feromona
+        "beta": 3.0,                    # peso de la heurística 1/costo
+        "rho": 0.1,                     # evaporación
+        "elitismo": 5.0,                # refuerzo extra de la mejor ruta global
+        "busqueda_local": True,         # 2-opt + Or-opt a la mejor hormiga de cada iteración
     },
     "ga": {
-        "tam_poblacion": 60,
-        "generaciones": 150,
-        "p_mutacion": 0.2,
+        "tam_poblacion": 150,
+        "generaciones": 300,
+        "p_cruce": 0.9,
+        "p_mutacion": 0.3,
+        "p_busqueda_local": 0.05,       # fracción de hijos pulidos con 2-opt + Or-opt
+        "n_elite": 2,
         "k_torneo": 3,
+    },
+    "puro": {                           # sustituye a [aco]/[ga] cuando modo = puro
+        "aco_n_hormigas": 47,
+        "aco_iteraciones": 300,
+        "ga_generaciones": 1500,
+    },
+    "sensibilidad": {
+        "vh_min": 0.0,                  # €/h
+        "vh_max": 100.0,
+        "vh_paso": 1.0,
     },
 }
 VERDADERO, FALSO = {"si", "sí", "true", "1", "yes"}, {"no", "false", "0"}
@@ -69,14 +107,14 @@ def convertir(texto, ejemplo, donde):
     """Convierte el texto del .ini al tipo del valor por defecto."""
     t = texto.strip()
     try:
-        if isinstance(ejemplo, bool):              # bool antes que int (bool es subclase de int)
+        if isinstance(ejemplo, bool):               # bool antes que int (bool es subclase de int)
             if t.lower() in VERDADERO | FALSO:
                 return t.lower() in VERDADERO
             raise ValueError
         if isinstance(ejemplo, int):
             return int(t)
         if isinstance(ejemplo, float):
-            return float(t.replace(",", "."))      # tolera la coma decimal
+            return float(t.replace(",", "."))       # tolera la coma decimal
         return t
     except ValueError:
         tipo = {bool: "si/no", int: "entero", float: "número"}[type(ejemplo)]
@@ -88,19 +126,18 @@ def cargar_config(ruta):
     cfg = {sec: dict(vals) for sec, vals in POR_DEFECTO.items()}
     ruta = Path(ruta)
     if not ruta.is_absolute() and not ruta.exists():
-        ruta = ROOT / ruta                          # una ruta relativa se busca también en parte_2/
+        ruta = ROOT / ruta                           # una ruta relativa se busca también en parte_2/
     if not ruta.exists():
         print(f"AVISO: no se encontró {ruta}. Se usan los valores por defecto.")
         return cfg
-
     ini = configparser.ConfigParser(inline_comment_prefixes=(";", "#"))
-    ini.read(ruta, encoding="utf-8-sig")            # -sig: tolera el BOM del Bloc de notas
+    ini.read(ruta, encoding="utf-8-sig")             # -sig: tolera el BOM del Bloc de notas
     print(f"Configuración leída de: {ruta}")
     for sec in ini.sections():
         if sec not in cfg:
             sys.exit(f"Error en {ruta}: sección desconocida [{sec}].")
         for clave, texto in ini.items(sec):
-            if clave not in cfg[sec]:               # detecta erratas: 'betta', 'n_hormiga'...
+            if clave not in cfg[sec]:                # detecta erratas: 'betta', 'n_hormiga'...
                 sys.exit(f"Error en {ruta} → [{sec}]: parámetro desconocido '{clave}'. "
                          f"Válidos: {', '.join(cfg[sec])}")
             cfg[sec][clave] = convertir(texto, POR_DEFECTO[sec][clave], f"[{sec}] {clave}")
@@ -108,10 +145,10 @@ def cargar_config(ruta):
 
 
 def validar_config(cfg, ciudades):
-    g, a, ga_, c = cfg["general"], cfg["aco"], cfg["ga"], cfg["costos"]
+    g, a, ga_, c, s = cfg["general"], cfg["aco"], cfg["ga"], cfg["costos"], cfg["sensibilidad"]
     err = []
-    if g["escenario"] not in ("2016", "2026", "both"):
-        err.append("[general] escenario debe ser 2016, 2026 o both")
+    if g["modo"] not in ("hibrido", "puro"):
+        err.append("[general] modo debe ser hibrido o puro")
     if g["algoritmo"] not in ("aco", "ga", "both"):
         err.append("[general] algoritmo debe ser aco, ga o both")
     if g["inicio"] not in ciudades:
@@ -122,142 +159,127 @@ def validar_config(cfg, ciudades):
         err.append("[aco] rho debe estar en (0, 1]")
     if ga_["tam_poblacion"] < 2 or ga_["generaciones"] < 1:
         err.append("[ga] tam_poblacion ≥ 2 y generaciones ≥ 1")
-    if not 0 <= ga_["p_mutacion"] <= 1:
-        err.append("[ga] p_mutacion debe estar entre 0 y 1")
+    for p in ("p_cruce", "p_mutacion", "p_busqueda_local"):
+        if not 0 <= ga_[p] <= 1:
+            err.append(f"[ga] {p} debe estar entre 0 y 1")
+    if not 0 <= ga_["n_elite"] < ga_["tam_poblacion"]:
+        err.append("[ga] n_elite debe estar entre 0 y tam_poblacion - 1")
     if not 1 <= ga_["k_torneo"] <= ga_["tam_poblacion"]:
         err.append("[ga] k_torneo debe estar entre 1 y tam_poblacion")
-    if c["velocidad_kmh"] <= 0:
-        err.append("[costos] velocidad_kmh debe ser > 0")
+    if c["valor_hora"] < 0 or c["precio_combustible"] < 0 or c["consumo_l_100km"] < 0:
+        err.append("[costos] valor_hora, precio_combustible y consumo deben ser ≥ 0")
+    if s["vh_paso"] <= 0 or s["vh_max"] < s["vh_min"]:
+        err.append("[sensibilidad] vh_paso > 0 y vh_max ≥ vh_min")
     if err:
         sys.exit("Errores en la configuración:\n  - " + "\n  - ".join(err))
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# DATOS
+# DATOS Y MODELO DE COSTO
 # ═════════════════════════════════════════════════════════════════════════════
-def read_matrix(path):
-    """Lee una matriz CSV con columna inicial Capital y mismo orden en filas/columnas."""
-    df = pd.read_csv(path)
-    if "Capital" not in df.columns:
-        raise ValueError(f"La matriz debe tener una columna llamada 'Capital': {path}")
-    names = df["Capital"].astype(str).tolist()
-    cols = list(df.columns[1:])
-    if cols != names:
-        raise ValueError(
-            f"Filas/columnas desalineadas en {path}. "
-            "Deben tener el mismo orden de capitales."
-        )
-    m = df.iloc[:, 1:].to_numpy(float)
-    if m.shape != (len(names), len(names)) or not np.isfinite(m).all():
-        raise ValueError(f"Matriz inválida: {path}")
-    if (m < 0).any():
-        raise ValueError(f"La matriz contiene distancias/costes negativos: {path}")
-    np.fill_diagonal(m, 0)
-    return names, m
+def cargar_datos():
+    """Lee coordenadas, rutas con/sin peaje y tarifas. Devuelve un dict de matrices 47×47."""
+    for f in ("coordenadas.csv", "rutas_con_peaje.csv", "rutas_sin_peaje.csv",
+              "tarifas_peaje_2026.csv"):
+        if not (DATA / f).is_file():
+            sys.exit(f"Falta el archivo de datos {DATA / f}")
+    coords = pd.read_csv(DATA / "coordenadas.csv", encoding="utf-8-sig")
+    names = coords["Capital"].astype(str).tolist()
+    idx = {c: k for k, c in enumerate(names)}
+    n = len(names)
+    tarifas = pd.read_csv(DATA / "tarifas_peaje_2026.csv").set_index("via")["eur_km"].to_dict()
+
+    datos = {"names": names, "coords": coords, "tarifas": tarifas}
+    for v in VARIANTES:
+        df = pd.read_csv(DATA / f"rutas_{v}.csv")
+        km, horas, peaje = (np.zeros((n, n)) for _ in range(3))
+        vias = np.full((n, n), "", dtype=object)
+        for r in df.itertuples():
+            i, j = idx[r.origen], idx[r.destino]
+            por_via = json.loads(r.peaje_por_via)
+            sin_tarifa = set(por_via) - set(tarifas)
+            if sin_tarifa:
+                sys.exit(f"Vías de peaje sin tarifa en tarifas_peaje_2026.csv: {sorted(sin_tarifa)}")
+            km[i, j], horas[i, j] = r.km, r.horas
+            peaje[i, j] = sum(x * tarifas[via] for via, x in por_via.items())
+            vias[i, j] = ", ".join(f"{via} {x:.0f} km" for via, x in por_via.items() if x >= 1)
+        faltan = n * (n - 1) - len(df)
+        if faltan:
+            sys.exit(f"rutas_{v}.csv incompleto: faltan {faltan} pares")
+        datos[v] = {"km": km, "horas": horas, "peaje": peaje, "vias": vias}
+    return datos
 
 
-def find_required_matrix(filename):
-    """Lee exclusivamente el nombre de archivo indicado; no usa nombres alternativos."""
-    path = DATA / filename
-    if not path.is_file():
-        raise FileNotFoundError(
-            f"No se encontró el archivo obligatorio: {path}\n"
-            "El programa solo admite los archivos de matriz definidos para 2016 y 2026."
-        )
-    return path
+def matriz_costos(datos, vh, precio, consumo):
+    """Costo de cada tramo eligiendo, para cada par, la variante (con/sin peaje) más barata.
+
+    Devuelve un dict con la matriz de costo C y los componentes de la variante elegida."""
+    k = consumo / 100 * precio                                   # €/km de combustible
+    total = {v: vh * datos[v]["horas"] + k * datos[v]["km"] + datos[v]["peaje"]
+             for v in VARIANTES}
+    con = total["con_peaje"] <= total["sin_peaje"]               # empate: la más rápida
+    elige = lambda campo: np.where(con, datos["con_peaje"][campo], datos["sin_peaje"][campo])
+    m = {
+        "costo": np.where(con, total["con_peaje"], total["sin_peaje"]),
+        "km": elige("km"), "horas": elige("horas"), "peaje": elige("peaje"),
+        "vias": elige("vias"), "usa_con_peaje": con,
+    }
+    m["combustible"] = k * m["km"]
+    m["tiempo"] = vh * m["horas"]
+    m["paga_peaje"] = m["peaje"] > 0.005
+    for M in m.values():
+        if M.dtype != object:
+            np.fill_diagonal(M, 0)
+    return m
 
 
-def tour_cost(tour, cost):
-    return float(sum(cost[tour[i], tour[(i + 1) % len(tour)]] for i in range(len(tour))))
-
-
-# ═════════════════════════════════════════════════════════════════════════════
-# ALGORITMOS
-# ═════════════════════════════════════════════════════════════════════════════
-def aco(cost, ants=25, iterations=80, seed=20261008, alpha=1.0, beta=3.0, rho=0.5):
-    """Ant System: p_ij ∝ tau_ij^alpha · (1/c_ij)^beta ;  tau ← (1-rho)·tau + Σ 1/C_k."""
-    rng = np.random.default_rng(seed)
-    n = len(cost)
-    pos = cost[cost > 0]
-    eps = max(1e-9, float(pos.min()) if pos.size else 1)
-    eta = 1 / np.maximum(cost, eps)                 # heurística: tramos baratos atraen
-    np.fill_diagonal(eta, 0)
-    tau = np.ones((n, n))                           # feromona inicial
-    best, bestv, hist = None, float("inf"), []
-    for _ in range(iterations):
-        tours = []
-        for _a in range(ants):
-            tour = [0]
-            avail = set(range(1, n))
-            while avail:
-                i = tour[-1]
-                js = np.array(sorted(avail))
-                w = tau[i, js] ** alpha * eta[i, js] ** beta   # regla de transición
-                if not np.isfinite(w).all() or w.sum() <= 0:
-                    nxt = int(rng.choice(js))
-                else:
-                    nxt = int(rng.choice(js, p=w / w.sum()))
-                tour.append(nxt)
-                avail.remove(nxt)
-            val = tour_cost(tour, cost)
-            tours.append((tour, val))
-            if val < bestv:
-                best, bestv = tour[:], val
-        tau *= (1 - rho)                            # evaporación
-        for tour, val in tours:                     # depósito: más feromona a rutas baratas
-            dep = 1 / max(val, 1e-9)
-            for i in range(n):
-                tau[tour[i], tour[(i + 1) % n]] += dep
-        hist.append(bestv)
-    return best, bestv, hist
-
-
-def ga(cost, population=60, generations=150, mutation_rate=0.2, seed=20261008, k=3):
-    """GA: torneo de tamaño k, cruce OX, mutación por inversión, élite de 1."""
-    rng = np.random.default_rng(seed)
-    n = len(cost)
-
-    def new():
-        a = np.arange(1, n)
-        rng.shuffle(a)
-        return [0] + a.tolist()
-
-    pop = [new() for _ in range(population)]
-    best, bestv, hist = None, float("inf"), []
-
-    def tournament():                               # gana la ruta más barata de k al azar
-        ids = rng.integers(0, len(pop), size=k)
-        best_idx = min(ids, key=lambda idx: tour_cost(pop[int(idx)], cost))
-        return pop[int(best_idx)][:]
-
-    for _ in range(generations):
-        vals = [tour_cost(t, cost) for t in pop]
-        ix = int(np.argmin(vals))
-        if vals[ix] < bestv:
-            best, bestv = pop[ix][:], vals[ix]
-        nxt = [best[:]]                             # elitismo: la mejor pasa intacta
-        while len(nxt) < population:
-            p1, p2 = tournament(), tournament()
-            lo, hi = sorted(rng.choice(np.arange(1, n), size=2, replace=False))
-            child = [None] * n                      # cruce OX
-            child[0] = 0
-            child[lo:hi + 1] = p1[lo:hi + 1]
-            fill = [x for x in p2[1:] if x not in child]
-            it = iter(fill)
-            for j in range(1, n):
-                if child[j] is None:
-                    child[j] = next(it)
-            if rng.random() < mutation_rate:        # mutación por inversión
-                i, kk = sorted(rng.choice(np.arange(1, n), size=2, replace=False))
-                child[i:kk + 1] = child[i:kk + 1][::-1]
-            nxt.append(child)
-        pop = nxt
-        hist.append(bestv)
-    return best, bestv, hist
+def costo_ciclo(tour, C):
+    return float(sum(C[tour[i - 1], tour[i]] for i in range(len(tour))))
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# PRESENTACIÓN DEL ORDEN DE LAS CIUDADES
+# ALGORITMOS (los de la parte 1 sobre la matriz de costos)
+# ═════════════════════════════════════════════════════════════════════════════
+def usar_matriz(C):
+    """Pone la matriz de costos como matriz activa de tsp_bio (la parte 1 usa una global)."""
+    tb.D = C.tolist()
+    tb.N = len(C)
+    tb.SIMETRICA = bool(np.allclose(C, C.T))
+
+
+def resolver(alg, C, cfg, semilla, registrar=False):
+    """Ejecuta ACO o GA de la parte 1. Devuelve (ruta, costo, historial, it_mejor, mejoras).
+
+    mejoras = [(iteración, ruta, costo), ...] cada vez que mejora la mejor solución
+    (solo si registrar=True; se usa para el GIF de la evolución)."""
+    usar_matriz(C)
+    mejoras = []
+    cb = (lambda it, ruta, L: mejoras.append((it, ruta, L))) if registrar else None
+    rng = random.Random(semilla)
+    if alg == "aco":
+        p = cfg["aco"]
+        ruta, L, hist, it = tb.aco(rng, n_hormigas=p["n_hormigas"], iteraciones=p["iteraciones"],
+                                   alpha=p["alpha"], beta=p["beta"], rho=p["rho"],
+                                   elitismo=p["elitismo"], busqueda_local=p["busqueda_local"],
+                                   log_cada=0, al_mejorar=cb)
+    else:
+        p = cfg["ga"]
+        ruta, L, hist, it = tb.ga(rng, tam_poblacion=p["tam_poblacion"],
+                                  generaciones=p["generaciones"], p_cruce=p["p_cruce"],
+                                  p_mutacion=p["p_mutacion"], p_busqueda_local=p["p_busqueda_local"],
+                                  n_elite=p["n_elite"], k_torneo=p["k_torneo"],
+                                  log_cada=0, al_mejorar=cb)
+    return ruta, L, hist, it, mejoras
+
+
+def optimo_exacto(C):
+    """Óptimo global por programación lineal entera (optimo_exacto.py de la parte 1)."""
+    L, ruta = ox.resolver(C.tolist())
+    return ruta, L
+
+
+# ═════════════════════════════════════════════════════════════════════════════
+# PRESENTACIÓN
 # ═════════════════════════════════════════════════════════════════════════════
 def rotar(tour, inicio):
     """Mismo ciclo, empezando en la ciudad 'inicio' (el costo no cambia)."""
@@ -265,36 +287,37 @@ def rotar(tour, inicio):
     return tour[k:] + tour[:k]
 
 
-def tabla_ruta(tour, names, D, H, F, T, C):
-    """Una fila por tramo: desde, hasta, km, horas y cada componente del costo."""
+def tabla_ruta(tour, names, m):
+    """Una fila por tramo: desde, hasta, variante elegida, km, horas y cada componente del costo."""
     filas, acum = [], 0.0
-    n = len(tour)
-    for k in range(n):
-        a, b = tour[k], tour[(k + 1) % n]           # el último tramo regresa al inicio
-        acum += C[a, b]
+    for k in range(len(tour)):
+        a, b = tour[k], tour[(k + 1) % len(tour)]               # el último tramo regresa al inicio
+        acum += m["costo"][a, b]
         filas.append({
             "orden": k + 1, "desde": names[a], "hasta": names[b],
-            "km": D[a, b], "horas": H[a, b],
-            "tiempo_eur": C[a, b] - F[a, b] - T[a, b],
-            "combustible_eur": F[a, b], "peaje_eur": T[a, b],
-            "costo_eur": C[a, b], "costo_acumulado_eur": acum,
+            "variante": "con peaje" if m["paga_peaje"][a, b] else "libre",
+            "vias_peaje": m["vias"][a, b],
+            "km": m["km"][a, b], "horas": m["horas"][a, b],
+            "tiempo_eur": m["tiempo"][a, b], "combustible_eur": m["combustible"][a, b],
+            "peaje_eur": m["peaje"][a, b], "costo_eur": m["costo"][a, b],
+            "costo_acumulado_eur": acum,
         })
     return pd.DataFrame(filas)
 
 
-def corto(nombre, w=24):
+def corto(nombre, w=22):
     """Recorta nombres largos solo para la pantalla (el CSV guarda el nombre completo)."""
     return nombre if len(nombre) <= w else nombre[:w - 1] + "…"
 
 
 def imprimir_ruta(titulo, df):
-    w = min(24, max(12, int(df["desde"].str.len().max())))
     print(f"\n{titulo}")
-    print(f"   {'#':>2}  {'Desde':<{w}}  {'Hasta':<{w}} {'km':>7} {'horas':>6} "
-          f"{'Tramo €':>8} {'Acum. €':>9}")
+    print(f"   {'#':>2}  {'Desde':<22}  {'Hasta':<22} {'km':>6} {'horas':>5} {'peaje €':>7} "
+          f"{'tramo €':>7} {'acum. €':>8}  vías de peaje")
     for r in df.itertuples():
-        print(f"   {r.orden:>2}  {corto(r.desde, w):<{w}}  {corto(r.hasta, w):<{w}} {r.km:7.1f} {r.horas:6.2f} "
-              f"{r.costo_eur:8.2f} {r.costo_acumulado_eur:9.2f}")
+        print(f"   {r.orden:>2}  {corto(r.desde):<22}  {corto(r.hasta):<22} {r.km:6.1f} "
+              f"{r.horas:5.2f} {r.peaje_eur:7.2f} {r.costo_eur:7.2f} {r.costo_acumulado_eur:8.2f}"
+              f"  {r.vias_peaje}")
 
 
 def totales(df):
@@ -302,235 +325,273 @@ def totales(df):
         "km": df["km"].sum(), "horas": df["horas"].sum(),
         "tiempo_eur": df["tiempo_eur"].sum(), "combustible_eur": df["combustible_eur"].sum(),
         "peaje_eur": df["peaje_eur"].sum(), "costo_total_eur": df["costo_eur"].sum(),
+        "tramos_con_peaje": int((df["variante"] == "con peaje").sum()),
     }
 
 
-def comparar(sc, res):
-    """Tabla ACO vs GA de un escenario y cuál es mejor (menor costo total)."""
-    print(f"\nCOMPARACIÓN — escenario {sc}")
-    print(f"   {'Algoritmo':<10} {'Costo total €':>14} {'km':>9} {'horas':>7} "
-          f"{'Tiempo €':>9} {'Combust. €':>11} {'Peajes €':>9}")
+def comparar(res, optimo=None):
+    """Tabla ACO vs GA (y frente al óptimo exacto si se calculó)."""
+    print("\nCOMPARACIÓN")
+    print(f"   {'Algoritmo':<10} {'Costo €':>9} {'Gap %':>6} {'km':>8} {'horas':>6} "
+          f"{'Tiempo €':>9} {'Combust. €':>10} {'Peajes €':>9} {'Tramos peaje':>12}")
     for alg, t in res.items():
-        print(f"   {alg:<10} {t['costo_total_eur']:14.2f} {t['km']:9.1f} {t['horas']:7.1f} "
-              f"{t['tiempo_eur']:9.2f} {t['combustible_eur']:11.2f} {t['peaje_eur']:9.2f}")
-    if len(res) == 2:
-        (a1, t1), (a2, t2) = sorted(res.items(), key=lambda x: x[1]["costo_total_eur"])
-        dif = t2["costo_total_eur"] - t1["costo_total_eur"]
-        print(f"   → Mejor: {a1}. Cuesta {dif:.2f} € menos que {a2} "
-              f"({100 * dif / t2['costo_total_eur']:.1f} % más barato) "
-              f"y recorre {t2['km'] - t1['km']:.1f} km menos.")
+        gap = f"{100 * (t['costo_total_eur'] / optimo - 1):6.2f}" if optimo else "     -"
+        print(f"   {alg:<10} {t['costo_total_eur']:9.2f} {gap} {t['km']:8.1f} {t['horas']:6.1f} "
+              f"{t['tiempo_eur']:9.2f} {t['combustible_eur']:10.2f} {t['peaje_eur']:9.2f} "
+              f"{t['tramos_con_peaje']:>12}")
+    if optimo:
+        print(f"   {'Óptimo':<10} {optimo:9.2f}   0.00   (programación lineal entera)")
 
 
 # ═════════════════════════════════════════════════════════════════════════════
-# GIF
+# GIF: evolución de la mejor solución sobre el mapa
 # ═════════════════════════════════════════════════════════════════════════════
-def save_route_gif(route_indices, names, coords_df, output_path, title):
-    """Crea un GIF que dibuja progresivamente la ruta sobre las coordenadas geográficas."""
-    required_cols = {"Capital", "Longitud", "Latitud"}
-    if not required_cols.issubset(coords_df.columns):
-        raise ValueError("coordenadas.csv debe tener las columnas Capital, Longitud y Latitud.")
-    coords = coords_df.copy()
-    coords["Capital"] = coords["Capital"].astype(str)
-    coords = coords.set_index("Capital")
-    missing = [names[i] for i in route_indices if names[i] not in coords.index]
-    if missing:
-        raise ValueError("Faltan coordenadas para estas capitales: " + ", ".join(missing))
-
-    route_names = [names[i] for i in route_indices] + [names[route_indices[0]]]
-    lon = np.array([float(coords.loc[x, "Longitud"]) for x in route_names])
-    lat = np.array([float(coords.loc[x, "Latitud"]) for x in route_names])
-    all_lon = coords["Longitud"].astype(float).to_numpy()
-    all_lat = coords["Latitud"].astype(float).to_numpy()
-
-    fig, ax = plt.subplots(figsize=(9, 7))
-    ax.scatter(all_lon, all_lat, s=18, zorder=2)
-    for city in coords.index:
-        ax.annotate(
-            city,
-            (float(coords.loc[city, "Longitud"]), float(coords.loc[city, "Latitud"])),
-            fontsize=5,
-            xytext=(2, 2),
-            textcoords="offset points",
-        )
-    line, = ax.plot([], [], linewidth=1.6, marker="o", markersize=2.5, zorder=3)
-    progress = ax.text(
-        0.02, 0.02, "", transform=ax.transAxes, fontsize=9,
-        bbox=dict(facecolor="white", alpha=0.8, edgecolor="none")
-    )
-    ax.set_title(title)
+def dibujar_mapa_base(ax, coords):
+    """Contorno de la península (data/contorno_espana.csv, Natural Earth 1:50m) y las capitales.
+    España en color crema; Portugal, Francia y Andorra en gris como referencia."""
+    contorno = DATA / "contorno_espana.csv"
+    ax.set_facecolor("#dfe9f2")                                  # mar
+    if contorno.is_file():
+        c = pd.read_csv(contorno)
+        for (_, pais), g in c.groupby(["parte", "pais"]):
+            ax.fill(g["lon"], g["lat"], color="#f3efe6" if pais == "ESP" else "#e2e2e2",
+                    ec="#9a9488", lw=0.6, zorder=0)
+    ax.scatter(coords["Longitud"], coords["Latitud"], s=12, color="#333", zorder=3)
+    ax.set_xlim(-9.6, 3.5)
+    ax.set_ylim(35.8, 44.0)
+    ax.set_aspect(1 / np.cos(np.radians(40)))
     ax.set_xlabel("Longitud")
     ax.set_ylabel("Latitud")
-    ax.grid(alpha=0.2)
-    ax.set_xlim(all_lon.min() - 0.6, all_lon.max() + 0.6)
-    ax.set_ylim(all_lat.min() - 0.4, all_lat.max() + 0.4)
+
+
+def mapa_ruta(tour, m, names, coords, path, titulo):
+    """Mapa estático de una ruta: tramos con peaje en rojo (con la autopista), red libre en azul."""
+    lon, lat = coords["Longitud"].to_numpy(), coords["Latitud"].to_numpy()
+    fig, ax = plt.subplots(figsize=(8, 6.6))
+    dibujar_mapa_base(ax, coords)
+    for k in range(len(tour)):
+        a, b = tour[k - 1], tour[k]
+        peaje = m["paga_peaje"][a, b]
+        ax.annotate("", xy=(lon[b], lat[b]), xytext=(lon[a], lat[a]),
+                    arrowprops=dict(arrowstyle="-|>", lw=1.8 if peaje else 1.1, mutation_scale=9,
+                                    color="#c0392b" if peaje else "#2c6fb0"), zorder=2)
+        if peaje:
+            ax.text((lon[a] + lon[b]) / 2, (lat[a] + lat[b]) / 2, m["vias"][a, b].split(" ")[0],
+                    fontsize=7, color="#c0392b", ha="center", va="bottom", zorder=4)
+    for i in range(len(names)):
+        ax.annotate(names[i].split("/")[0], (lon[i], lat[i]), fontsize=5.5, xytext=(2, 2),
+                    textcoords="offset points", zorder=4)
+    ax.set_title(titulo)
+    fig.tight_layout()
+    fig.savefig(path, dpi=150)
+    plt.close(fig)
+
+
+def gif_evolucion(mejoras, m, coords, path, titulo, etiqueta="iteración", max_cuadros=45):
+    """Un cuadro por cada mejora de la mejor solución (submuestreado si hay muchas).
+    Tramos con peaje en rojo, tramos por red libre en azul."""
+    if len(mejoras) > max_cuadros:
+        sel = np.unique(np.linspace(0, len(mejoras) - 1, max_cuadros).round().astype(int))
+        mejoras = [mejoras[i] for i in sel]
+    mejoras = mejoras + [mejoras[-1]] * 6                       # pausa al final
+    lon, lat = coords["Longitud"].to_numpy(), coords["Latitud"].to_numpy()
+
+    fig, ax = plt.subplots(figsize=(8, 6.6))
+    dibujar_mapa_base(ax, coords)
+    lineas = []
+    texto = ax.text(0.02, 0.02, "", transform=ax.transAxes, fontsize=9,
+                    bbox=dict(facecolor="white", alpha=0.85, edgecolor="none"))
+    ax.set_title(titulo)
     fig.tight_layout()
 
-    def update(frame):
-        end = min(frame + 1, len(lon))
-        line.set_data(lon[:end], lat[:end])
-        if end > 1:
-            progress.set_text(
-                f"Tramo {min(frame, len(route_indices))}/{len(route_indices)}: "
-                f"{route_names[end - 2]} → {route_names[end - 1]}"
-            )
-        else:
-            progress.set_text(f"Inicio: {route_names[0]}")
-        return line, progress
+    def update(f):
+        for ln in lineas:
+            ln.remove()
+        lineas.clear()
+        it, ruta, L = mejoras[f]
+        for k in range(len(ruta)):
+            a, b = ruta[k - 1], ruta[k]
+            peaje = m["paga_peaje"][a, b]
+            ln, = ax.plot([lon[a], lon[b]], [lat[a], lat[b]], lw=1.6 if peaje else 1.1,
+                          color="#c0392b" if peaje else "#2c6fb0", zorder=2)
+            lineas.append(ln)
+        texto.set_text(f"{etiqueta} {it}  ·  mejor costo {L:,.2f} €\n"
+                       f"rojo: tramo con peaje · azul: red libre")
+        return lineas + [texto]
 
-    anim = FuncAnimation(fig, update, frames=len(route_names), interval=220, blit=False, repeat=True)
-    anim.save(output_path, writer=PillowWriter(fps=4))
+    anim = FuncAnimation(fig, update, frames=len(mejoras), interval=350, blit=False)
+    anim.save(path, writer=PillowWriter(fps=3))
     plt.close(fig)
 
 
 # ═════════════════════════════════════════════════════════════════════════════
 # PROGRAMA PRINCIPAL
 # ═════════════════════════════════════════════════════════════════════════════
-def main():
-    # Las opciones de terminal valen None si no se escriben: así no pisan config.ini.
-    p = argparse.ArgumentParser(description="TSP 47 capitales con costos (ACO y GA).")
+def leer_argumentos(descripcion):
+    """Opciones de terminal comunes (valen None si no se escriben: así no pisan config.ini)."""
+    p = argparse.ArgumentParser(description=descripcion)
     p.add_argument("--config", default=str(ROOT / "config.ini"),
                    help="archivo de parámetros (por defecto: parte_2/config.ini)")
-    p.add_argument("--scenario", choices=["2016", "2026", "both"])
     p.add_argument("--algorithm", choices=["aco", "ga", "both"])
+    p.add_argument("--modo", choices=["hibrido", "puro"],
+                   help="hibrido = con búsqueda local 2-opt + Or-opt; puro = ACO y GA clásicos")
     p.add_argument("--seed", type=int)
     p.add_argument("--inicio", help="ciudad desde la que se muestra el recorrido")
+    p.add_argument("--valor-hora", type=float, help="valor de la hora del vendedor (€/h)")
     p.add_argument("--aco-ants", type=int)
     p.add_argument("--aco-iterations", type=int)
     p.add_argument("--ga-population", type=int)
     p.add_argument("--ga-generations", type=int)
     p.add_argument("--sin-gif", action="store_true", help="no generar los GIF (más rápido)")
-    args = p.parse_args()
+    p.add_argument("--sin-exacto", action="store_true", help="no calcular el óptimo exacto")
+    return p
 
+
+def config_desde_argumentos(args):
     cfg = cargar_config(args.config)
     for valor, sec, clave in [
-        (args.scenario, "general", "escenario"), (args.algorithm, "general", "algoritmo"),
-        (args.seed, "general", "semilla"), (args.inicio, "general", "inicio"),
+        (args.algorithm, "general", "algoritmo"), (args.seed, "general", "semilla"),
+        (args.modo, "general", "modo"),
+        (args.inicio, "general", "inicio"), (args.valor_hora, "costos", "valor_hora"),
         (args.aco_ants, "aco", "n_hormigas"), (args.aco_iterations, "aco", "iteraciones"),
         (args.ga_population, "ga", "tam_poblacion"), (args.ga_generations, "ga", "generaciones"),
     ]:
-        if valor is not None:                       # la terminal tiene prioridad
+        if valor is not None:                        # la terminal tiene prioridad
             cfg[sec][clave] = valor
+    if cfg["general"]["modo"] == "puro":             # ACO y GA clásicos, sin búsqueda local
+        aplicar_modo_puro(cfg)
+        for valor, sec, clave in [(args.aco_ants, "aco", "n_hormigas"),
+                                  (args.aco_iterations, "aco", "iteraciones"),
+                                  (args.ga_generations, "ga", "generaciones")]:
+            if valor is not None:                    # la terminal sigue mandando
+                cfg[sec][clave] = valor
     if args.sin_gif:
         cfg["general"]["generar_gif"] = False
+    if args.sin_exacto:
+        cfg["general"]["verificar_exacto"] = False
+    return cfg
 
-    gen, cst, pa, pg = cfg["general"], cfg["costos"], cfg["aco"], cfg["ga"]
-    RESULTS.mkdir(parents=True, exist_ok=True)
 
-    # Solo se admiten estas matrices exactas. No hay respaldo a nombres antiguos.
-    distance_paths = {sc: find_required_matrix(f"distancias_km_{sc}.csv") for sc in SCENARIOS}
-    toll_paths = {sc: find_required_matrix(f"peajes_sinteticos_eur_{sc}.csv") for sc in SCENARIOS}
+def aplicar_modo_puro(cfg):
+    """Con modo = puro, sustituye los parámetros de [aco] y [ga] por los de la sección [puro]."""
+    if cfg["general"]["modo"] == "puro":
+        pu = cfg["puro"]
+        cfg["aco"].update(n_hormigas=pu["aco_n_hormigas"], iteraciones=pu["aco_iteraciones"],
+                          busqueda_local=False)
+        cfg["ga"].update(generaciones=pu["ga_generaciones"], p_busqueda_local=0.0)
+    return cfg
 
-    coords_path = DATA / "coordenadas.csv"
-    if not coords_path.is_file():
-        raise FileNotFoundError(f"No se encontró el archivo obligatorio: {coords_path}")
-    coords_df = pd.read_csv(coords_path)
 
-    matrices = {}
-    for sc in SCENARIOS:
-        names, D = read_matrix(distance_paths[sc])
-        toll_names, T = read_matrix(toll_paths[sc])
-        if names != toll_names:
-            raise ValueError(f"El orden de capitales difiere entre distancias y peajes del escenario {sc}.")
-        matrices[sc] = (names, D, T)
+def grafico_convergencia(hist, alg, vh, optimo=None, ax=None):
+    """Mejor costo por iteración (ACO) o generación (GA), con el óptimo exacto como referencia."""
+    fig = None
+    if ax is None:
+        fig, ax = plt.subplots(figsize=(8, 4))
+    ax.plot(range(1, len(hist) + 1), hist, color="#2c6fb0", label=alg.upper())
+    if optimo:
+        ax.axhline(optimo, ls="--", color="#555", lw=1, label=f"óptimo exacto {optimo:,.2f} €")
+    ax.legend()
+    ax.set_xlabel("Iteración" if alg == "aco" else "Generación")
+    ax.set_ylabel("Mejor costo (€)")
+    ax.set_title(f"Convergencia {alg.upper()} (Vh = {vh} €/h)")
+    ax.grid(alpha=0.25)
+    if fig is not None:
+        fig.tight_layout()
+    return fig
 
-    validar_config(cfg, matrices["2026"][0])
-    print("=== TSP ESPAÑA: EJECUCIÓN ===")
-    print(f"Capitales: {len(matrices['2026'][0])} | semilla: {gen['semilla']} | salida fijada: 12:00")
-    print(f"ACO: {pa['n_hormigas']} hormigas, {pa['iteraciones']} iter., alpha={pa['alpha']}, "
-          f"beta={pa['beta']}, rho={pa['rho']}")
-    print(f"GA : población {pg['tam_poblacion']}, {pg['generaciones']} gen., "
-          f"p_mutación={pg['p_mutacion']}, torneo k={pg['k_torneo']}")
 
-    summaries = []
-    scenarios = list(SCENARIOS) if gen["escenario"] == "both" else [gen["escenario"]]
+def ejecutar(cfg, datos=None, verbose=True):
+    """Experimento completo con la configuración cfg (la de config.ini o la del notebook).
+
+    Construye la matriz de costos, calcula el óptimo exacto (si se pide), ejecuta ACO y/o GA,
+    guarda tablas, figuras y GIF en results/<modo>/ y devuelve un dict con todo:
+        m, optimo, ruta_optima, carpeta, resumen (DataFrame) y
+        resultados[alg] = {ruta, costo, historial, it_mejor, segundos, tabla, totales, mejoras}
+    """
+    gen, cst = cfg["general"], cfg["costos"]
+    datos = datos or cargar_datos()
+    names, coords = datos["names"], datos["coords"]
+    validar_config(cfg, names)
+    out = ROOT / gen["resultados"] / gen["modo"]                 # results/hibrido o results/puro
+    out.mkdir(parents=True, exist_ok=True)
+    say = print if verbose else (lambda *a, **k: None)
+
+    vh, precio, cons = cst["valor_hora"], cst["precio_combustible"], cst["consumo_l_100km"]
+    m = matriz_costos(datos, vh, precio, cons)
+    C = m["costo"]
+    say(f"=== TSP ESPAÑA CON COSTOS: EJECUCIÓN (modo {gen['modo']}) ===")
+    say(f"Capitales: {len(names)} | semilla: {gen['semilla']} | valor hora: {vh} €/h | "
+        f"combustible: {precio} €/L · {cons} L/100 km ({cons / 100 * precio:.4f} €/km)")
+    n_con = int((m["paga_peaje"] & ~np.eye(len(C), dtype=bool)).sum())
+    say(f"Tramos (pares ordenados) en los que conviene pagar peaje con Vh = {vh}: "
+        f"{n_con} de {len(C) * (len(C) - 1)}")
+
+    for fn, M in [("matriz_costos_eur.csv", C), ("matriz_tiempos_h.csv", m["horas"]),
+                  ("matriz_km.csv", m["km"]), ("matriz_combustible_eur.csv", m["combustible"]),
+                  ("matriz_peajes_eur.csv", m["peaje"]),
+                  ("matriz_usa_peaje.csv", m["paga_peaje"].astype(int))]:
+        pd.DataFrame(M, index=names, columns=names).round(4).to_csv(out / fn,
+                                                                    index_label="Capital")
+
+    optimo, ruta_opt = None, None
+    if gen["verificar_exacto"]:
+        t0 = time.time()
+        import contextlib, io
+        with contextlib.redirect_stdout(io.StringIO()):          # silencia los subtours
+            ruta_opt, optimo = optimo_exacto(C)
+        ruta_opt = rotar(ruta_opt, names.index(gen["inicio"]))
+        say(f"Óptimo exacto (programación lineal entera): {optimo:.2f} € ({time.time() - t0:.0f} s)")
+
     algos = ["aco", "ga"] if gen["algoritmo"] == "both" else [gen["algoritmo"]]
+    res, tot_por_alg, resumen = {}, {}, []
+    for alg in algos:
+        t0 = time.time()
+        tour, val, hist, it_mejor, mejoras = resolver(alg, C, cfg, gen["semilla"],
+                                                      registrar=gen["generar_gif"])
+        seg = time.time() - t0
+        tour = rotar(tour, names.index(gen["inicio"]))
+        df = tabla_ruta(tour, names, m)
+        if verbose:
+            imprimir_ruta(f"RUTA {alg.upper()} — {val:.2f} € (mejor en la iteración {it_mejor}, "
+                          f"{seg:.1f} s)", df)
+        df.round(4).to_csv(out / f"ruta_{alg}.csv", index=False)
+        tot = totales(df)
+        tot_por_alg[alg.upper()] = tot
 
-    for sc in scenarios:
-        out = RESULTS / sc
-        out.mkdir(parents=True, exist_ok=True)
-        names, D, T = matrices[sc]
+        pd.DataFrame({"iteracion": range(1, len(hist) + 1), "mejor_costo_eur": hist}).to_csv(
+            out / f"convergencia_{alg}.csv", index=False)
+        fig = grafico_convergencia(hist, alg, vh, optimo)
+        fig.savefig(out / f"convergencia_{alg}.png", dpi=140)
+        plt.close(fig)
+        mapa_ruta(tour, m, names, coords, out / f"mapa_ruta_{alg}.png",
+                  f"Ruta {alg.upper()} {gen['modo']} — {val:,.2f} € (Vh = {vh} €/h)")
+        if gen["generar_gif"]:
+            gif_evolucion(mejoras, m, coords, out / f"evolucion_{alg}.gif",
+                          f"Evolución de la mejor ruta — {alg.upper()} {gen['modo']} (Vh = {vh} €/h)",
+                          etiqueta="iteración" if alg == "aco" else "generación")
+        resumen.append({
+            "algoritmo": alg.upper(), "semilla": gen["semilla"], "valor_hora_eur": vh,
+            "combustible_eur_l": precio, "consumo_l_100km": cons,
+            **{k: round(v, 3) for k, v in tot.items()},
+            "gap_optimo_pct": round(100 * (tot["costo_total_eur"] / optimo - 1), 3) if optimo else "",
+            "iteracion_mejor": it_mejor, "segundos": round(seg, 1),
+            "orden_ciudades": " → ".join([names[i] for i in tour] + [names[tour[0]]]),
+        })
+        res[alg] = {"ruta": tour, "costo": val, "historial": hist, "it_mejor": it_mejor,
+                    "segundos": seg, "tabla": df, "totales": tot, "mejoras": mejoras}
+    if verbose:
+        comparar(tot_por_alg, optimo)
 
-        # ── Matriz de costos: C = vh·tiempo + combustible + peaje ────────────
-        vh = cst[f"valor_hora_{sc}"]
-        speed = cst["velocidad_kmh"]
-        fuelprice = cst[f"precio_combustible_{sc}"]
-        cons = cst["consumo_l_100km"]
-        time = D / speed                            # supuesto: velocidad constante
-        fuel = D * (cons / 100) * fuelprice
-        timecost = vh * time
-        cost = timecost + fuel + T
+    resumen = pd.DataFrame(resumen)
+    resumen.to_csv(out / "resumen.csv", index=False)
+    say(f"\nResultados en {out}")
+    return {"m": m, "optimo": optimo, "ruta_optima": ruta_opt, "carpeta": out,
+            "resumen": resumen, "resultados": res, "datos": datos}
 
-        print(f"\n{'=' * 78}\nESCENARIO {sc}: valor hora {vh} €/h · combustible {fuelprice} €/L · "
-              f"{cons} L/100 km · {speed} km/h\n{'=' * 78}")
 
-        for fn, mat in [
-            ("matriz_costos_eur.csv", cost),
-            ("matriz_tiempos_estimados_h.csv", time),
-            ("matriz_combustible_eur.csv", fuel),
-            (f"matriz_peajes_sinteticos_eur_{sc}.csv", T),
-        ]:
-            pd.DataFrame(mat, index=names, columns=names).to_csv(out / fn, index_label="Capital")
-
-        res_sc = {}
-        for alg in algos:
-            if alg == "aco":
-                tour, val, hist = aco(cost, pa["n_hormigas"], pa["iteraciones"], gen["semilla"],
-                                      pa["alpha"], pa["beta"], pa["rho"])
-            else:
-                tour, val, hist = ga(cost, pg["tam_poblacion"], pg["generaciones"],
-                                     pg["p_mutacion"], gen["semilla"], pg["k_torneo"])
-
-            # ── Orden de las ciudades, tramo a tramo, desde la ciudad de inicio ──
-            tour = rotar(tour, names.index(gen["inicio"]))
-            df_ruta = tabla_ruta(tour, names, D, time, fuel, T, cost)
-            imprimir_ruta(f"RUTA {alg.upper()} — escenario {sc} — {val:.2f} €", df_ruta)
-            df_ruta.round(3).to_csv(out / f"ruta_{alg}.csv", index=False)
-            tot = totales(df_ruta)
-            res_sc[alg.upper()] = tot
-
-            pd.DataFrame(
-                {"iteracion": range(1, len(hist) + 1), "mejor_costo_eur": hist}
-            ).to_csv(out / f"convergencia_{alg}.csv", index=False)
-
-            fig, ax = plt.subplots(figsize=(9, 4.5))
-            ax.plot(range(1, len(hist) + 1), hist)
-            ax.set_xlabel("Iteración/generación")
-            ax.set_ylabel("Mejor costo (€)")
-            ax.set_title(f"Convergencia {alg.upper()} — escenario {sc}")
-            fig.tight_layout()
-            fig.savefig(out / f"convergencia_{alg}.png", dpi=140)
-            plt.close(fig)
-
-            gif_path = out / f"mapa_ruta_{alg}.gif"
-            if gen["generar_gif"]:
-                save_route_gif(tour, names, coords_df, gif_path,
-                               f"Ruta TSP — {alg.upper()} — escenario {sc}")
-            summaries.append({
-                "escenario": sc,
-                "algoritmo": alg.upper(),
-                "capitales": len(names),
-                "semilla": gen["semilla"],
-                "salida": "12:00",
-                "valor_hora_eur": vh,
-                "velocidad_media_kmh_sup": speed,
-                "combustible_eur_l": fuelprice,
-                "consumo_l_100km": cons,
-                **{k: round(v, 3) for k, v in tot.items()},
-                "orden_ciudades": " → ".join([names[i] for i in tour] + [names[tour[0]]]),
-                "archivo_distancias": distance_paths[sc].name,
-                "archivo_peajes": toll_paths[sc].name,
-                "gif_ruta": str(gif_path.relative_to(ROOT)) if gen["generar_gif"] else "",
-            })
-        comparar(sc, res_sc)
-
-    df = pd.DataFrame(summaries)
-    df.to_csv(RESULTS / "resumen.csv", index=False)
-    print(f"\n{'=' * 78}\nRESUMEN")
-    print(df[["escenario", "algoritmo", "valor_hora_eur", "costo_total_eur", "km", "horas"]]
-          .to_string(index=False))
-    print("\nResultados:", RESULTS)
-    print("  ruta_<alg>.csv  → orden de las ciudades tramo a tramo")
-    print("  resumen.csv     → totales y orden completo de cada algoritmo")
+def main():
+    args = leer_argumentos("TSP 47 capitales con costos reales (ACO y GA).").parse_args()
+    ejecutar(config_desde_argumentos(args))
 
 
 if __name__ == "__main__":

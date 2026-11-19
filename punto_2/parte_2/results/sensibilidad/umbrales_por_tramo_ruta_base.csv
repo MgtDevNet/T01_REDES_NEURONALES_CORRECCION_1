@@ -1,0 +1,48 @@
+desde,hasta,vias_peaje,peaje_eur,ahorro_min,km_extra_sin_peaje,vh_umbral_eur_h,nota
+Toledo,Madrid,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Madrid,Guadalajara,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Guadalajara,Cuenca,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Cuenca,Teruel,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Teruel,Valencia,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Valencia,Castelló de la Plana/Castellón de la Plana,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Castelló de la Plana/Castellón de la Plana,Tarragona,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Barcelona,Girona,,0.0,0.5,0.2,0.0,la ruta rápida no tiene peaje
+Zaragoza,Soria,,0.0,0.3,-0.2,0.0,la ruta rápida no tiene peaje
+Girona,Lleida,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Lleida,Huesca,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Huesca,Zaragoza,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Logroño,Pamplona/Iruña,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Soria,Logroño,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Ourense,Lugo,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Santander,Oviedo,,0.0,0.0,-0.0,0.0,la ruta rápida no tiene peaje
+Ávila,Salamanca,,0.0,0.2,0.0,0.0,la ruta rápida no tiene peaje
+Palencia,Valladolid,,0.0,0.7,0.1,0.0,la ruta rápida no tiene peaje
+Pontevedra,Ourense,,0.0,0.0,-1.5,0.0,la ruta rápida no tiene peaje
+Salamanca,Zamora,,0.0,0.0,-0.1,0.0,la ruta rápida no tiene peaje
+Valladolid,Segovia,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+León,Burgos,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Burgos,Palencia,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Alacant/Alicante,Albacete,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Jaén,Granada,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Córdoba,Jaén,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Málaga,Córdoba,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Sevilla,Cádiz,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Huelva,Sevilla,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Badajoz,Huelva,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Cáceres,Badajoz,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Zamora,Cáceres,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Ciudad Real,Toledo,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Granada,Almería,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Almería,Murcia,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Murcia,Alacant/Alicante,,0.0,0.0,0.0,0.0,la ruta rápida no tiene peaje
+Albacete,Ciudad Real,,0.0,0.1,-0.0,0.0,la ruta rápida no tiene peaje
+Oviedo,A Coruña,AP-9 11 km,1.44,6.9,10.0,5.16,
+Vitoria-Gasteiz,Bilbao,"AP-68 Bizkaia 22 km, AP-68 Álava 15 km",3.84,34.8,3.3,6.15,
+Cádiz,Málaga,AP-7 71 km,8.2,45.2,3.0,10.54,
+A Coruña,Pontevedra,AP-9 111 km,14.18,58.0,-1.1,14.75,
+Lugo,León,AP-71 35 km,5.77,12.8,-1.9,27.91,
+Pamplona/Iruña,Donostia/San Sebastián,AP-15 13 km,1.56,3.2,0.1,29.56,
+Tarragona,Barcelona,C-32 32 km,7.72,6.4,15.7,60.04,
+Donostia/San Sebastián,Vitoria-Gasteiz,"AP-1 74 km, AP-8 9 km",17.68,14.0,14.4,70.76,
+Segovia,Ávila,"AP-51 23 km, AP-6 22 km, AP-61 26 km",9.46,7.0,-14.2,91.18,
+Bilbao,Santander,AP-8 12 km,1.95,1.5,-4.6,91.87,

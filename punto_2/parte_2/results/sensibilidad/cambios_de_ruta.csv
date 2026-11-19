@@ -1,0 +1,14 @@
+vh_umbral,tipo,costo_antes_eur,tramos_peaje_antes,tramos_peaje_despues,km_antes,km_despues,cambio
+4.27,orden,866.43,0,0,6225.3,6300.9,salen: Albacete→Murcia; Alacant/Alicante→Valencia; Oviedo→León; Burgos→Soria; Córdoba→Ciudad Real; Lugo→A Coruña; Málaga→Almería; Ourense→Zamora; Salamanca→Cáceres; Toledo→Ávila; Zaragoza→Teruel | entran: Alacant/Alicante→Albacete; Almería→Murcia; Oviedo→A Coruña; Ávila→Salamanca; Ciudad Real→Toledo; León→Burgos; Málaga→Córdoba; Ourense→Lugo; Teruel→Valencia; Zamora→Cáceres; Zaragoza→Soria
+5.16,variante,936.09,0,1,6300.9,6290.9,pasan a peaje: Oviedo→A Coruña
+6.145,variante,1012.98,1,2,6290.9,6287.6,pasan a peaje: Vitoria-Gasteiz→Bilbao
+7.621,orden,1127.46,2,2,6287.6,6324.2,salen: Cádiz→Málaga; Granada→Almería; Málaga→Córdoba | entran: Almería→Málaga; Córdoba→Cádiz; Málaga→Granada
+13.668,orden,1593.9,2,3,6324.2,6284.6,salen: Almería→Málaga; Córdoba→Cádiz; Málaga→Granada | entran: Cádiz→Málaga; Granada→Almería; Málaga→Córdoba
+13.668,variante,1593.9,2,3,6324.2,6284.6,pasan a peaje: Cádiz→Málaga
+14.754,variante,1677.27,3,4,6284.6,6285.7,pasan a peaje: A Coruña→Pontevedra
+27.91,variante,2674.6,4,5,6285.7,6287.6,pasan a peaje: Lugo→León
+29.566,variante,2799.8,5,6,6287.6,6287.5,pasan a peaje: Pamplona/Iruña→Donostia/San Sebastián
+60.043,variante,5102.02,6,7,6287.6,6272.0,pasan a peaje: Tarragona→Barcelona
+70.754,variante,5909.99,7,8,6272.0,6257.6,pasan a peaje: Donostia/San Sebastián→Vitoria-Gasteiz
+91.176,variante,7445.75,8,9,6257.6,6271.8,pasan a peaje: Segovia→Ávila
+91.869,variante,7497.82,9,10,6271.8,6276.4,pasan a peaje: Bilbao→Santander

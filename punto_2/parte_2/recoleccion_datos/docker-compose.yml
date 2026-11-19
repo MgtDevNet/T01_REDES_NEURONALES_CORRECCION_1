@@ -8,14 +8,18 @@ services:
     volumes:
       - ./ors-files:/home/ors/files      # aquí va spain-latest.osm.pbf
       - ./ors-logs:/home/ors/logs
+      - ./ors-config.yml:/home/ors/config/ors-config.yml:ro   # activa Tollways (avoid_features)
       - ors-graphs:/home/ors/graphs
     environment:
       - ORS_ENGINE_SOURCE_FILE=/home/ors/files/spain-latest.osm.pbf
       - ORS_ENGINE_PROFILES_CAR_ENABLED=true
       - XMS=2g
       - XMX=8g
-      - REBUILD_GRAPHS=false   # ponlo en true solo si cambias el .pbf
+      - REBUILD_GRAPHS=${REBUILD_GRAPHS:-false}   # REBUILD_GRAPHS=true docker compose up -d  (si cambias el .pbf o ors-config.yml)
       - ORS_ENGINE_PROFILES_CAR_MAXIMUM_DISTANCE=2000000
+      # Rutas que evitan peajes (avoid_features) entre capitales lejanas:
+      - ORS_ENGINE_PROFILES_CAR_MAXIMUM_DISTANCE_DYNAMIC_WEIGHTS=2000000
+      - ORS_ENGINE_PROFILES_CAR_MAXIMUM_VISITED_NODES=20000000
 
 volumes:
   ors-graphs:

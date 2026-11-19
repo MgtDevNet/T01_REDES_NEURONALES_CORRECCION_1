@@ -31,3 +31,6 @@ punto_2/parte_2/recoleccion_datos/ors-files/
 punto_2/parte_2/recoleccion_datos/ors-logs/
 
 *.osm.pbf
+
+# Caché de consultas al servidor ORS (se regenera)
+punto_2/parte_2/recoleccion_datos/rutas_cache.jsonl

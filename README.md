@@ -6,7 +6,7 @@ Este repositorio resuelve los dos problemas del trabajo. Cada uno se ejecuta **c
 |---|---|---|---|
 | **1** | Buscar el mínimo de las funciones Rosenbrock y Rastrigin (2D y 3D) con descenso por gradiente, algoritmo genético, PSO y evolución diferencial | `punto_1/` | < 1 min |
 | **2.1** | Ruta más **corta** para recorrer las 47 capitales de la España peninsular (TSP) con colonia de hormigas (ACO) y algoritmo genético (GA) | `punto_2/parte_1/` | ~10 s |
-| **2.2** | Ruta más **barata** para el mismo recorrido: tiempo + combustible + peajes, escenarios 2016 y 2026 | `punto_2/parte_2/` | ~1,5 min |
+| **2.2** | Ruta más **barata** para el mismo recorrido: tiempo + combustible + peajes reales de 2026, y cómo cambia con el valor de la hora | `punto_2/parte_2/` | ~30 s |
 
 Todos los datos están dentro del repositorio: **no hace falta conexión a internet** para ejecutar nada.
 
@@ -14,11 +14,11 @@ Todos los datos están dentro del repositorio: **no hace falta conexión a inter
 
 ## 1. Instalación (una sola vez)
 
-**Requisito:** Python **3.10 a 3.13**. Compruébalo con `python3 --version`.
+**Requisito:** Python **3.10 a 3.13**. Compruébalo con `python3 --version`. Si tu `python3` es 3.14 o posterior, crea el entorno con una versión compatible (por ejemplo, `python3.12 -m venv .venv`).
 
 ```bash
-git clone https://github.com/MgtDevNet/T01_REDES_NEURONALES_.git
-cd T01_REDES_NEURONALES_
+git clone https://github.com/MgtDevNet/T01_REDES_NEURONALES_CORRECCION_1.git
+cd T01_REDES_NEURONALES_CORRECCION_1
 
 python3 -m venv .venv                 # crea un entorno aislado
 source .venv/bin/activate             # Windows: .venv\Scripts\activate
@@ -83,40 +83,70 @@ Las distancias son kilómetros **por carretera** (OSRM sobre OpenStreetMap), y l
 
 ---
 
-## 4. Problema 2.2 — Ruta más barata (costos)
+## 4. Problema 2.2 — Ruta más barata (tiempo + combustible + peajes)
+
+**Forma recomendada: el cuaderno `punto_2/parte_2/Experimentos_parte_2.ipynb`.** Abre el cuaderno
+(`jupyter notebook punto_2/parte_2/Experimentos_parte_2.ipynb`, o desde VS Code), cambia los
+hiperparámetros en la celda de la sección 1 y ejecuta todas las celdas (*Run All*). El cuaderno
+muestra los datos, el modelo de costo, los dos experimentos (híbrido y puro) con sus mapas y GIF, el
+estudio de sensibilidad completo (~5 min) y una celda para probar un valor de la hora concreto.
+
+También se puede ejecutar desde la terminal, con los parámetros de `config.ini`:
 
 ```bash
 cd punto_2/parte_2
-python3 src/tsp_espana.py                      # completo: 2016 y 2026, con GIF (~1,5 min)
-python3 src/tsp_espana.py --scenario 2026      # demo rápida (~45 s)
+python3 src/tsp_espana.py                     # ACO y GA con búsqueda local + óptimo exacto + GIF (~30 s)
+python3 src/tsp_espana.py --modo puro         # ACO y GA clásicos: GIF de la evolución (~30 s)
+python3 src/sensibilidad.py                   # ¿cambia la ruta al variar el valor de la hora? (~4-5 min)
+python3 src/sensibilidad.py --vh-max 40       # solo el rango 0-40 €/h (más rápido)
 ```
 
-**Modelo de costo** de cada tramo:
+**Modelo de costo.** Para cada par de capitales hay dos rutas reales por carretera, la más rápida
+(que puede usar autopistas de pago) y la más rápida **sin peajes**. El vendedor elige la más barata:
 
 ```
-costo = valor_hora × tiempo  +  combustible  +  peaje
-        tiempo      = km / 80 km/h                 (supuesto: velocidad constante)
-        combustible = km × 4,7 L/100 km × precio   (Toyota Corolla)
-        peaje       = matriz de peajes sintéticos
+costo(i→j) = min( con peaje , sin peaje )  de
+             valor_hora × horas  +  km × 4,7 L/100 km × 1,799 €/L  +  peaje
+             horas, km : OpenRouteService sobre OpenStreetMap (noviembre de 2026)
+             peaje     : km en cada autopista × su tarifa de 2026 (data/tarifas_peaje_2026.csv)
 ```
 
-**Qué verás:** la ruta de cada algoritmo tramo a tramo (km, horas y €), una comparación ACO vs GA que indica cuál es mejor y un resumen final.
+Como pagar el peaje ahorra tiempo pero cuesta dinero, **la ruta óptima depende del valor de la hora**.
 
-**Resultados** (en `results/2016/` y `results/2026/`):
+**Qué verás:** la ruta de cada algoritmo tramo a tramo (km, horas, peaje y autopistas usadas), la
+comparación ACO vs GA y la distancia (gap) al **óptimo exacto**, calculado con programación lineal entera.
+
+**Resultados:**
 
 | Archivo | Contenido |
 |---|---|
-| `ruta_aco.csv`, `ruta_ga.csv` | Orden de las ciudades con el costo de cada tramo |
-| `mapa_ruta_*.gif` | Animación de la ruta sobre el mapa |
-| `convergencia_*.png` | Evolución del mejor costo |
-| `../resumen.csv` | Totales de cada escenario y algoritmo |
+| `results/<modo>/ruta_aco.csv`, `ruta_ga.csv` | Orden de las ciudades; en cada tramo, variante elegida (peaje/libre) y costos |
+| `results/<modo>/evolucion_*.gif` | Evolución de la mejor solución sobre el mapa de España |
+| `results/<modo>/convergencia_*.png` | Mejor costo por iteración, con el óptimo exacto como referencia |
+| `results/<modo>/matriz_*.csv` | Matriz de costos y sus componentes (km, horas, combustible, peajes) |
+| `results/<modo>/resumen.csv` | Totales de cada algoritmo |
+| `results/sensibilidad/` | Barrido del valor de la hora: umbrales, figuras y rutas distintas |
 
-**Parámetros:** se cambian en `config.ini` (valor de la hora, precio del combustible, consumo, velocidad, parámetros de ACO y GA). También desde la terminal:
+`<modo>` es `hibrido` (por defecto) o `puro`.
+
+**Parámetros:** se cambian en `config.ini` (valor de la hora, combustible, consumo, modo, parámetros
+de ACO y GA, rango del barrido). También desde la terminal:
 ```bash
-python3 src/tsp_espana.py --scenario 2016 --algorithm ga --seed 7 --sin-gif
+python3 src/tsp_espana.py --valor-hora 60 --algorithm ga --seed 7 --sin-gif
+python3 src/tsp_espana.py --help
 ```
 
-**Datos y fuentes:** ver `data/README_DATOS.md`. La carpeta `recoleccion_datos/` contiene los scripts y el `docker-compose.yml` con los que se obtuvieron las matrices desde un servidor OpenRouteService local. **No hace falta ejecutarlos**: las matrices ya están en `data/`.
+**Datos y fuentes:** ver `data/README_DATOS.md`. Las rutas se obtuvieron con un servidor
+OpenRouteService local (`recoleccion_datos/`). **No hace falta ejecutarlo**: los datos ya están en
+`data/`. Para regenerarlos:
+```bash
+cd punto_2/parte_2/recoleccion_datos
+mkdir -p ors-files && wget -O ors-files/spain-latest.osm.pbf https://download.geofabrik.de/europe/spain-latest.osm.pbf
+REBUILD_GRAPHS=true docker compose up -d      # construye el grafo (~30 min la primera vez)
+pip install -r requirements-recoleccion.txt
+python3 vias_peaje_osm.py                     # inventario de vías de peaje de OSM (~13 min)
+python3 rutas_con_sin_peaje.py                # 4324 rutas con y sin peaje (~2 min)
+```
 
 ---
 
@@ -136,11 +166,13 @@ python3 src/tsp_espana.py --scenario 2016 --algorithm ga --seed 7 --sin-gif
     │   ├── optimo_exacto.py  ← óptimo exacto (verificación)
     │   └── *.csv             ← coordenadas y distancias
     └── parte_2/              ← ruta más barata
-        ├── src/tsp_espana.py ← programa principal
+        ├── Experimentos_parte_2.ipynb ← cuaderno: hiperparámetros y todos los experimentos
+        ├── src/tsp_espana.py ← programa principal (usa ACO y GA de parte_1)
+        ├── src/sensibilidad.py ← barrido del valor de la hora
         ├── config.ini        ← parámetros
-        ├── data/             ← matrices de distancias, peajes y fuentes
+        ├── data/             ← rutas con/sin peaje, tarifas, fuentes (README_DATOS.md)
         ├── results/          ← se regenera al ejecutar
-        └── recoleccion_datos/← cómo se obtuvieron los datos (opcional)
+        └── recoleccion_datos/← servidor ORS y scripts de obtención de datos (opcional)
 ```
 
 ---

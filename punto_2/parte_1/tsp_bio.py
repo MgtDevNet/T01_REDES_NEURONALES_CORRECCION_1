@@ -170,7 +170,7 @@ def rotar(ruta, inicio):
 # PASO 1. COLONIA DE HORMIGAS (ACO) — Ant System elitista (+ búsqueda local opcional)
 # ═════════════════════════════════════════════════════════════════════════════
 def aco(rng, n_hormigas=20, iteraciones=200, alpha=1.0, beta=3.0, rho=0.1,
-        elitismo=5.0, busqueda_local=True, log_cada=50):
+        elitismo=5.0, busqueda_local=True, log_cada=50, al_mejorar=None):
     """
     1.1 Feromona inicial τ0 = m / L_nn en todas las aristas
         (m = nº de hormigas, L_nn = longitud del vecino más cercano).
@@ -181,6 +181,8 @@ def aco(rng, n_hormigas=20, iteraciones=200, alpha=1.0, beta=3.0, rho=0.1,
     1.5 Depósito: cada ruta suma 1/L en sus aristas; la mejor ruta global
         suma 'elitismo'/L adicional (refuerzo elitista).
     Devuelve (mejor_ruta, mejor_longitud, historial, iteración_del_mejor).
+    al_mejorar(iteración, ruta, longitud): función opcional que se llama cada vez que
+    mejora la mejor ruta global (la usa el punto 2.2 para animar la evolución).
     """
     # 1.1 Inicialización
     eta_b = [[0.0 if i == j else (1.0 / D[i][j]) ** beta for j in range(N)]
@@ -216,6 +218,8 @@ def aco(rng, n_hormigas=20, iteraciones=200, alpha=1.0, beta=3.0, rho=0.1,
 
         if L_it < mejor_L - 1e-9:
             mejor_ruta, mejor_L, it_mejor = ruta_it, L_it, it
+            if al_mejorar:
+                al_mejorar(it, mejor_ruta[:], mejor_L)
 
         # 1.4 Evaporación
         for fila in tau:
@@ -277,7 +281,7 @@ def torneo(poblacion, costes, k, rng):
 
 
 def ga(rng, tam_poblacion=150, generaciones=500, p_cruce=0.9, p_mutacion=0.3,
-       p_busqueda_local=0.05, n_elite=2, k_torneo=3, log_cada=100):
+       p_busqueda_local=0.05, n_elite=2, k_torneo=3, log_cada=100, al_mejorar=None):
     """
     2.1 Población inicial: permutaciones aleatorias de las 47 ciudades.
     2.2 Evaluación: coste = longitud de la ruta (menor es mejor).
@@ -289,6 +293,7 @@ def ga(rng, tam_poblacion=150, generaciones=500, p_cruce=0.9, p_mutacion=0.3,
     2.8 Se descartan hijos repetidos para conservar la diversidad
         (evita la convergencia prematura: toda la población igual).
     Devuelve (mejor_ruta, mejor_longitud, historial, generación_del_mejor).
+    al_mejorar(generación, ruta, longitud): opcional, igual que en aco().
     """
     # 2.1 Población inicial
     poblacion = [rng.sample(range(N), N) for _ in range(tam_poblacion)]
@@ -300,6 +305,8 @@ def ga(rng, tam_poblacion=150, generaciones=500, p_cruce=0.9, p_mutacion=0.3,
         orden = sorted(range(tam_poblacion), key=costes.__getitem__)
         if costes[orden[0]] < mejor_L - 1e-9:
             mejor_ruta, mejor_L, g_mejor = poblacion[orden[0]][:], costes[orden[0]], g
+            if al_mejorar:
+                al_mejorar(g, mejor_ruta[:], mejor_L)
 
         # 2.3 Elitismo
         nueva = [poblacion[i][:] for i in orden[:n_elite]]

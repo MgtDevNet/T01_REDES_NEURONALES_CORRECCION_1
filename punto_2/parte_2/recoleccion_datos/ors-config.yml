@@ -1,0 +1,17 @@
+# Configuración del servidor ORS local (se monta en el contenedor, ver docker-compose.yml).
+# Igual a la configuración por defecto del perfil "car", más el almacenamiento "Tollways".
+# Sin "Tollways", la opción avoid_features=["tollways"] se ignora en silencio y la ruta
+# "sin peaje" sale idéntica a la ruta con peaje.
+ors:
+  engine:
+    source_file: /home/ors/files/spain-latest.osm.pbf
+    profiles:
+      car:
+        enabled: true
+        ext_storages:
+          WayCategory:
+          HeavyVehicle:
+          WaySurfaceType:
+          RoadAccessRestrictions:
+            use_for_warnings: true
+          Tollways:
