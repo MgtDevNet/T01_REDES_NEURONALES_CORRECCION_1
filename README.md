@@ -1,12 +1,12 @@
 # Trabajo 1 — Optimización numérica, metaheurística y combinatoria
 
-Este repositorio resuelve los dos problemas del trabajo. Cada uno se ejecuta **con un solo comando** desde la terminal:
+Este repositorio resuelve los dos problemas del trabajo. Cada uno se ejecuta **con un solo comando** desde la terminal; el punto 2.2 se ejecuta, además, desde un **cuaderno de Jupyter** en el que se cambian los hiperparámetros y se ven todos los resultados:
 
 | Problema | Qué resuelve | Carpeta | Tiempo |
 |---|---|---|---|
 | **1** | Buscar el mínimo de las funciones Rosenbrock y Rastrigin (2D y 3D) con descenso por gradiente, algoritmo genético, PSO y evolución diferencial | `punto_1/` | < 1 min |
 | **2.1** | Ruta más **corta** para recorrer las 47 capitales de la España peninsular (TSP) con colonia de hormigas (ACO) y algoritmo genético (GA) | `punto_2/parte_1/` | ~10 s |
-| **2.2** | Ruta más **barata** para el mismo recorrido: tiempo + combustible + peajes reales de 2026, y cómo cambia con el valor de la hora | `punto_2/parte_2/` | ~30 s |
+| **2.2** | Ruta más **barata** para el mismo recorrido: tiempo + combustible + peajes reales de 2026, y cómo cambia con el valor de la hora | `punto_2/parte_2/` (cuaderno `Experimentos_parte_2.ipynb`) | ~30 s por experimento; ~6 min el cuaderno completo |
 
 Todos los datos están dentro del repositorio: **no hace falta conexión a internet** para ejecutar nada.
 
