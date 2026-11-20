@@ -537,7 +537,7 @@
 <h4>Paso 1. Qué cambia respecto a la ruta más corta</h4>
 <p>En la ruta más corta solo importaban los kilómetros. Ahora importa el <strong>dinero</strong>, y el dinero de un viaje sale de tres cosas:</p>
 <ul>
-  <li><strong>El tiempo del vendedor.</strong> Mientras conduce no trabaja, y cada hora de viaje cuesta lo que vale su hora de trabajo, \(V_h\) (en €/h). Si un tramo dura 2 horas y la hora vale 26,18 €, ese tiempo cuesta 52,36 €.</li>
+  <li><strong>El tiempo del vendedor.</strong> El tiempo de viaje se valora en dinero mediante el valor de la hora del vendedor, \(V_h\) (en €/h): un tramo que dura \(t\) horas cuesta \(V_h\,t\) euros. Este valor no se fija de antemano. Se trata como un parámetro y se estudia cómo afecta a la ruta óptima. Por ejemplo, con \(V_h = 26{,}18\) €/h, un tramo de 2 horas cuesta \(2 \times 26{,}18 = 52{,}36\) €.</li>
   <li><strong>El combustible.</strong> Depende de los kilómetros: el coche gasta 4,7 litros cada 100 km y el litro cuesta 1,799 €, así que cada kilómetro cuesta unos 8,5 céntimos.</li>
   <li><strong>Los peajes.</strong> Solo se pagan si la ruta pasa por una autopista de pago, y cada autopista tiene su tarifa.</li>
 </ul>
