@@ -1,12 +1,12 @@
 # Trabajo 1 — Optimización numérica, metaheurística y combinatoria
 
-Este repositorio resuelve los dos problemas del trabajo. Cada uno se ejecuta **con un solo comando** desde la terminal; el punto 2.2 se ejecuta, además, desde un **cuaderno de Jupyter** en el que se cambian los hiperparámetros y se ven todos los resultados:
+Este repositorio resuelve los dos problemas del trabajo. Cada uno se ejecuta **con un solo comando** desde la terminal; los experimentos del punto 2.2 se ejecutan, además, desde un **cuaderno de Jupyter** en el que se cambian los hiperparámetros:
 
 | Problema | Qué resuelve | Carpeta | Tiempo |
 |---|---|---|---|
 | **1** | Buscar el mínimo de las funciones Rosenbrock y Rastrigin (2D y 3D) con descenso por gradiente, algoritmo genético, PSO y evolución diferencial | `punto_1/` | < 1 min |
 | **2.1** | Ruta más **corta** para recorrer las 47 capitales de la España peninsular (TSP) con colonia de hormigas (ACO) y algoritmo genético (GA) | `punto_2/parte_1/` | ~10 s |
-| **2.2** | Ruta más **barata** para el mismo recorrido: tiempo + combustible + peajes reales de 2026, y cómo cambia con el valor de la hora | `punto_2/parte_2/` (cuaderno `Experimentos_parte_2.ipynb`) | ~30 s por experimento; ~6 min el cuaderno completo |
+| **2.2** | Ruta más **barata** para el mismo recorrido: tiempo + combustible + peajes reales de 2026, y cómo cambia con el valor de la hora | `punto_2/parte_2/` (cuaderno `Experimentos_parte_2.ipynb`) | ~1 min el cuaderno; ~5 min el barrido de sensibilidad |
 
 Todos los datos están dentro del repositorio: **no hace falta conexión a internet** para ejecutar nada.
 
@@ -85,11 +85,16 @@ Las distancias son kilómetros **por carretera** (OSRM sobre OpenStreetMap), y l
 
 ## 4. Problema 2.2 — Ruta más barata (tiempo + combustible + peajes)
 
-**Forma recomendada: el cuaderno `punto_2/parte_2/Experimentos_parte_2.ipynb`.** Abre el cuaderno
+**Experimentos: el cuaderno `punto_2/parte_2/Experimentos_parte_2.ipynb`.** Abre el cuaderno
 (`jupyter notebook punto_2/parte_2/Experimentos_parte_2.ipynb`, o desde VS Code), cambia los
-hiperparámetros en la celda de la sección 1 y ejecuta todas las celdas (*Run All*). El cuaderno
-muestra los datos, el modelo de costo, los dos experimentos (híbrido y puro) con sus mapas y GIF, el
-estudio de sensibilidad completo (~5 min) y una celda para probar un valor de la hora concreto.
+hiperparámetros en la celda de la sección 1 y ejecuta todas las celdas (*Run All*, ~1 min). El cuaderno
+solo ejecuta los dos experimentos, el híbrido (con búsqueda local) y el puro, y muestra la ruta, el mapa
+y el GIF de cada algoritmo. La explicación de los datos y del modelo de costo está en el informe
+(`docs/index.html`), y el estudio de sensibilidad al valor de la hora se ejecuta desde la terminal con
+`python3 src/sensibilidad.py` (ver más abajo).
+
+> Al ejecutarse, el cuaderno sobrescribe `results/hibrido/` y `results/puro/`, que usa el informe. Si
+> cambias hiperparámetros para probar, restaura los resultados con `git checkout -- punto_2/parte_2/results`.
 
 > **El cuaderno debe usar el Python del entorno `.venv`** (sección 1):
 > - **Jupyter en el navegador:** activa el entorno (`source .venv/bin/activate`) antes de ejecutar `jupyter notebook`.
@@ -172,7 +177,7 @@ python3 rutas_con_sin_peaje.py                # 4324 rutas con y sin peaje (~2 m
     │   ├── optimo_exacto.py  ← óptimo exacto (verificación)
     │   └── *.csv             ← coordenadas y distancias
     └── parte_2/              ← ruta más barata
-        ├── Experimentos_parte_2.ipynb ← cuaderno: hiperparámetros y todos los experimentos
+        ├── Experimentos_parte_2.ipynb ← cuaderno: hiperparámetros y experimentos 1 y 2
         ├── src/tsp_espana.py ← programa principal (usa ACO y GA de parte_1)
         ├── src/sensibilidad.py ← barrido del valor de la hora
         ├── config.ini        ← parámetros
