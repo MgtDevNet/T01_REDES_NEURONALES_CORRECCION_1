@@ -91,6 +91,12 @@ hiperparámetros en la celda de la sección 1 y ejecuta todas las celdas (*Run A
 muestra los datos, el modelo de costo, los dos experimentos (híbrido y puro) con sus mapas y GIF, el
 estudio de sensibilidad completo (~5 min) y una celda para probar un valor de la hora concreto.
 
+> **El cuaderno debe usar el Python del entorno `.venv`** (sección 1):
+> - **Jupyter en el navegador:** activa el entorno (`source .venv/bin/activate`) antes de ejecutar `jupyter notebook`.
+> - **VS Code:** abre el cuaderno, pulsa *Select Kernel* (arriba a la derecha) → *Python Environments* y elige `.venv/bin/python` (en Windows, `.venv\Scripts\python.exe`). Si VS Code pide instalar `ipykernel`, acepta.
+>
+> Si la primera celda da `ModuleNotFoundError: No module named 'numpy'`, el cuaderno está usando otro Python: cambia el kernel.
+
 También se puede ejecutar desde la terminal, con los parámetros de `config.ini`:
 
 ```bash
@@ -183,5 +189,6 @@ python3 rutas_con_sin_peaje.py                # 4324 rutas con y sin peaje (~2 m
 |---|---|
 | `python3: command not found` (Windows) | Usa `python` |
 | `ModuleNotFoundError: No module named 'numpy'` | Activa el entorno (`source .venv/bin/activate`) y repite `pip install -r requirements.txt` |
+| Ese mismo error, pero dentro del cuaderno | El cuaderno usa otro Python: en VS Code, *Select Kernel* → `.venv/bin/python` (ver sección 4) |
 | `No se encontró config.ini` | Ejecuta el comando desde la carpeta indicada en cada sección |
 | `Permission denied` en `recoleccion_datos/` | Son archivos creados por Docker: `sudo chown -R $USER:$USER punto_2/parte_2/recoleccion_datos` |
