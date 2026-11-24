@@ -105,9 +105,17 @@
   <div class="actions">
     <a class="btn primary" href="https://github.com/MgtDevNet/T01_REDES_NEURONALES_CORRECCION_1">Código en GitHub</a>
     <a class="btn" href="https://youtu.be/By5gqy9wKyw">Ver el video</a>
+    <a class="btn" href="https://youtu.be/RbTtDb6OPHg">Video: corrección del punto 1</a>
     <a class="btn" href="https://youtu.be/Xjd14xgLpGk">Video: corrección del punto 2.2</a>
   </div>
 </header>
+
+<figure class="video" id="video-punto1">
+  <div class="video-frame">
+    <iframe src="https://www.youtube-nocookie.com/embed/RbTtDb6OPHg" title="Corrección del punto 1: Rosenbrock y Rastrigin" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </div>
+  <figcaption><b>Video: corrección del punto 1.</b> Optimización numérica de las funciones de Rosenbrock y Rastrigin con métodos de gradiente y metaheurísticos. <a href="https://youtu.be/RbTtDb6OPHg">Abrir en YouTube</a>.</figcaption>
+</figure>
 
 <figure class="video" id="video-punto2">
   <div class="video-frame">
@@ -898,7 +906,7 @@
 
 <!-- ======================================================= CACERÍA -->
 <h2 id="caceria">Cacería de la alucinación</h2>
-<p>Errores de la IA (Claude Code) detectados durante la corrección del punto 2.2. Los prompts se citan de forma literal.</p>
+<p>Errores de la IA (Claude Code) detectados durante la corrección de los puntos 1 y 2.2. Los prompts se citan de forma literal.</p>
 
 <h3>Hallazgo 1. Un peaje copiado de la columna equivocada (datos del mundo real)</h3>
 <ul>
@@ -921,6 +929,33 @@
   <li><strong>Corrección:</strong> el estadístico se recalculó sobre los 957 pares cuya ruta rápida tiene peaje: mediana de 24 minutos y máximo de 90 minutos.</li>
   <li><strong>Lección:</strong> definir sobre qué conjunto se calcula cada estadístico, no confundir mediana y percentiles, y contrastar las cifras del informe con un cálculo independiente.</li>
 </ul>
+
+<h3>Hallazgo 3. Un método que nadie pidió (punto 1)</h3>
+<ol>
+  <li><strong>Prompt utilizado</strong>
+    <p><em>“Ya tengo implementada la función objetivo rosenbrock(x), por lo que NO debes volver a definirla ni modificarla. Debes utilizarla como función objetivo. Quiero una estructura modular donde: cada algoritmo esté implementado en una función independiente; exista una función principal llamada optimize() que permita seleccionar qué algoritmo ejecutar; el usuario pueda indicar si desea optimizar la función de Rosenbrock en 2 o en 3 dimensiones; la estructura facilite agregar posteriormente otros algoritmos o funciones de prueba; la arquitectura permita realizar corridas experimentales reproducibles mediante una semilla aleatoria (random_seed), la cual pueda ser modificada fácilmente por el usuario.”</em></p>
+  </li>
+  <li><strong>Parte relevante de la respuesta de la IA</strong>
+    <p>El docstring del archivo dice: "Métodos: descenso por gradiente (GD), algoritmo genético (GA), PSO y evolución diferencial (DE). Además una línea base opcional: búsqueda aleatoria." En el código aparece registrada como algoritmo más.</p>
+  </li>
+  <li><strong>¿Cómo sospechamos que había un error?</strong>
+    <p>Pedimos cuatro métodos y el archivo traía cinco. El quinto no está en la lista del enunciado de la Parte 1 (GD, evolutivos, PSO y DE) ni en nuestro prompt. Además, la IA lo presentó como "opcional", sin que lo hubiéramos solicitado.</p>
+  </li>
+  <li><strong>Evidencia que lo demuestra</strong>
+    <ul>
+      <li>El enunciado de la Parte 1 pide GD, algoritmos evolutivos, PSO y DE. La búsqueda aleatoria no está pedida.</li>
+      <li>El docstring del código la presenta como "línea base opcional" y está registrada en ALGORITHMS, pero no en MAIN_ALGOS.</li>
+      <li>Se ejecuta con --algos all y aparece en las Tablas 2 a 6 del blog con el mismo presupuesto de evaluaciones equivalentes que los demás métodos.</li>
+      <li>Reproduje las tablas con 30 semillas y 10 000 evaluaciones: la búsqueda aleatoria obtiene 3,3 % de éxito en Rosenbrock 2D y 0 % en los otros tres escenarios, que es el piso de referencia que el blog usa en la discusión.</li>
+    </ul>
+  </li>
+  <li><strong>Corrección</strong>
+    <p>No se eliminó. El equipo decidió conservarla como línea base y la declara en el reporte (sección "Métodos y configuración" y "Limitaciones")</p>
+  </li>
+  <li><strong>Lección aprendida</strong>
+    <p>La IA añadió código que nadie pidió. Aquí resultó útil, pero habría sido un problema si hubiera entrado a las tablas sin que el equipo lo supiera. Verificación: comparar lo entregado contra la lista del enunciado método por método.</p>
+  </li>
+</ol>
 
 <!-- ======================================================= CONCLUSIONES -->
 <h2 id="conclusiones">Resultados, discusión y conclusiones</h2>
